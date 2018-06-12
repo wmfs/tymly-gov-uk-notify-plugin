@@ -57,29 +57,29 @@ describe('Send Mail tests', function () {
     )
   })
 
-    it('should wait for the message to send and check it failed', async () => {
-      while (messageStatus === 'created' || messageStatus === 'sending') {
-        await new Promise((resolve, reject) => {
-          statebox.startExecution(
-            {notificationId},
-            GET_MESSAGE_STATUS_STATE_MACHINE_NAME,
-            {
-              sendResponse: 'COMPLETE'
-            },
-            (err, executionDescription) => {
-              if (err) {
-                reject(err)
-              } else if (executionDescription.status === 'FAILED') {
-                reject(new Error(executionDescription.errorCode))
-              }
-              messageStatus = executionDescription.ctx.message.status
-              resolve()
+  it('should wait for the message to send and check it failed', async () => {
+    while (messageStatus === 'created' || messageStatus === 'sending') {
+      await new Promise((resolve, reject) => {
+        statebox.startExecution(
+          {notificationId},
+          GET_MESSAGE_STATUS_STATE_MACHINE_NAME,
+          {
+            sendResponse: 'COMPLETE'
+          },
+          (err, executionDescription) => {
+            if (err) {
+              reject(err)
+            } else if (executionDescription.status === 'FAILED') {
+              reject(new Error(executionDescription.errorCode))
             }
-          )
-        })
-      }
-      expect(messageStatus).to.eql('permanent-failure')
-    })
+            messageStatus = executionDescription.ctx.message.status
+            resolve()
+          }
+        )
+      })
+    }
+    expect(messageStatus).to.eql('permanent-failure')
+  })
 
   it('start state machine to send mail without an email', done => {
     statebox.startExecution(

@@ -1,27 +1,51 @@
 {
-  "name": "tymly-gov-uk-notify-plugin",
-  "description": "Allows sending notifications via sms or email using the GOV UK Notify service.",
-  "version": "0.0.1",
-  "author": "WMFS",
+  "name": "@wmfs/tymly-gov-uk-notify-plugin",
+  "version": "0.0.0-semantically-rleased",
+  "description": "Allows sending notifications via sms or email using the GOV UK Notify service with Tymly framework.",
+  "homepage": "https://github.com/wmfs/tymly-gov-uk-notify-plugin#readme",
+  "author": "West Midlands Fire Service",
+  "keywords": [
+    "tymly",
+    "notifications",
+    "alerting",
+    "alerts",
+    "notify",
+    "GOV UK"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wmfs/tymly-gov-uk-notify-plugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wmfs/tymly-gov-uk-notify-plugin/issues"
+  },
   "main": "./lib/index.js",
   "dependencies": {
     "notifications-node-client": "4.1.0"
   },
   "devDependencies": {
     "chai": "4.1.2",
+    "codecov": "3.0.2",
+    "cz-conventional-changelog": "2.1.0",
     "mocha": "5.2.0",
+    "nyc": "12.0.2",
+    "semantic-release": "^15.5.2",
     "standard": "11.0.1",
-    "tymly": "^0.0.17"
+    "@wmfs/tymly": "1.0.1"
   },
   "scripts": {
-    "lint": "standard"
+    "lint": "standard",
+    "test": "nyc mocha && standard",
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post
   },
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/wmfs/tymly"
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   },
-  "bugs": {
-    "url": "https://github.com/wmfs/tymly/issues"
+  "publishConfig": {
+    "access": "public"
   }
 }

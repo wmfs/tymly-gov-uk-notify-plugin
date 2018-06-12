@@ -56,7 +56,7 @@ describe('Send Mail tests', function () {
       }
     )
   })
-  if (process.env.MISSING_GOV_UK_NOTIFY_API_KEY) {
+
     it('should wait for the message to send and check it failed', async () => {
       while (messageStatus === 'created' || messageStatus === 'sending') {
         await new Promise((resolve, reject) => {
@@ -80,7 +80,6 @@ describe('Send Mail tests', function () {
       }
       expect(messageStatus).to.eql('permanent-failure')
     })
-  }
 
   it('start state machine to send mail without an email', done => {
     statebox.startExecution(

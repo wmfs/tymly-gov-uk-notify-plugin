@@ -149,8 +149,7 @@ describe('Send SMS tests', function () {
     )
   })
 
-  if (process.env.MISSING_GOV_UK_NOTIFY_API_KEY){
-    it('should wait for the message to send and check it failed', async () => {
+     it('should wait for the message to send and check it failed', async () => {
       while (messageStatus === 'created' || messageStatus === 'sending') {
         await new Promise((resolve, reject) => {
           statebox.startExecution(
@@ -173,7 +172,6 @@ describe('Send SMS tests', function () {
       }
       expect(messageStatus).to.eql('permanent-failure')
     })
-  }
 
 
   it('should shutdown Tymly', async () => {

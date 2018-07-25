@@ -11,6 +11,8 @@ const GET_MESSAGE_STATUS_STATE_MACHINE_NAME = 'test_getMessageStatus'
 describe('Send Mail tests', function () {
   this.timeout(process.env.TIMEOUT || 15000)
 
+  const hasGovNotifyKey = !!process.env.GOV_UK_NOTIFY_API_KEY
+
   let tymlyService, statebox, notificationId
   let messageStatus = 'created'
 
@@ -44,7 +46,7 @@ describe('Send Mail tests', function () {
         sendResponse: 'COMPLETE'
       },
       (err, executionDescription) => {
-        if (process.env.GOV_UK_NOTIFY_API_KEY) {
+        if (hasGovNotifyKey) {
           expect(err).to.eql(null)
           expect(executionDescription.status).to.eql('SUCCEEDED')
           notificationId = executionDescription.ctx.sentMail.id
@@ -57,7 +59,8 @@ describe('Send Mail tests', function () {
     )
   })
 
-  it('should wait for the message to send and check it failed', async () => {
+  const testFn = hasGovNotifyKey ? it : xit
+  testFn('should wait for the message to send and check it failed', async () => {
     while (messageStatus === 'created' || messageStatus === 'sending') {
       await new Promise((resolve, reject) => {
         statebox.startExecution(
@@ -89,7 +92,7 @@ describe('Send Mail tests', function () {
         sendResponse: 'COMPLETE'
       },
       (err, executionDescription) => {
-        if (process.env.GOV_UK_NOTIFY_API_KEY) {
+        if (hasGovNotifyKey) {
           expect(err).to.eql(null)
           expect(executionDescription.status).to.eql('FAILED')
           expect(executionDescription.errorCode).to.eql('NO_EMAIL_OR_PHONE_NUMBER')

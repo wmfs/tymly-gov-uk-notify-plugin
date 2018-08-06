@@ -1,3 +1,15 @@
+## [1.1.1](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.1.0...v1.1.1) (2018-08-06)
+
+
+### 🐛 Bug Fixes
+
+* personalisation passed properly ([45ce1c3](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/45ce1c3))
+
+
+### 📦 Code Refactoring
+
+* tidy up ([72bffd7](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/72bffd7))
+
 # [1.1.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.0.3...v1.1.0) (2018-08-06)
 
 

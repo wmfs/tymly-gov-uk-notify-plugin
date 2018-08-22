@@ -1,3 +1,21 @@
+## [1.1.2](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.1.1...v1.1.2) (2018-08-22)
+
+
+### 🐛 Bug Fixes
+
+* Rework so that missing API key is the first check performed ([19da8f4](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/19da8f4))
+
+
+### 🛠 Builds
+
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.14.0 to 1.15.0 ([cede7e0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/cede7e0))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.15.0 to 1.15.1 ([7bd4abb](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/7bd4abb))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.15.1 to 1.15.2 ([0b8a467](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/0b8a467))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.15.2 to 1.16.0 ([5c5ba18](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/5c5ba18))
+* **deps-dev:** update semantic-release requirement from 15.9.5 to 15.9.6 ([d91c403](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/d91c403))
+* **deps-dev:** update semantic-release requirement from 15.9.6 to 15.9.8 ([ef14900](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/ef14900))
+* **deps-dev:** update semantic-release requirement from 15.9.8 to 15.9.9 ([2d5a71b](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/2d5a71b))
+
 ## [1.1.1](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.1.0...v1.1.1) (2018-08-06)
 
 

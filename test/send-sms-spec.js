@@ -133,8 +133,8 @@ describe('Send SMS tests', function () {
     )
   })
 
-  it('start state machine to send SMS with a phone number expected to fail', done => {
-    statebox.startExecution(
+  it('start state machine to send SMS with a phone number expected to fail', async () => {
+    const executionDescription = await statebox.startExecution(
       {
         phoneNumber: '07700900002',
         firstName: 'Robert'
@@ -142,42 +142,35 @@ describe('Send SMS tests', function () {
       SEND_SMS_STATE_MACHINE_NAME,
       {
         sendResponse: 'COMPLETE'
-      },
-      (err, executionDescription) => {
-        if (hasGovNotifyKey) {
-          expect(err).to.eql(null)
-          expect(executionDescription.status).to.eql('SUCCEEDED')
-          notificationId = executionDescription.ctx.sentSms.id
-        } else {
-          expect(executionDescription.status).to.eql('FAILED')
-          expect(executionDescription.errorCode).to.eql('MISSING_GOV_UK_NOTIFY_API_KEY')
-        }
-        done()
       }
     )
+    if (hasGovNotifyKey) {
+      expect(executionDescription.status).to.eql('SUCCEEDED')
+      notificationId = executionDescription.ctx.sentSms.id
+    } else {
+      expect(executionDescription.status).to.eql('FAILED')
+      expect(executionDescription.errorCode).to.eql('MISSING_GOV_UK_NOTIFY_API_KEY')
+    }
   })
 
-  it('start state machine to send SMS without a firstName expected to fail', done => {
-    statebox.startExecution(
+  it('start state machine to send SMS without a firstName expected to fail', async () => {
+    const executionDescription = await statebox.startExecution(
       {
         phoneNumber: '07700900002'
       },
       SEND_SMS_STATE_MACHINE_NAME,
       {
         sendResponse: 'COMPLETE'
-      },
-      (err, executionDescription) => {
-        if (hasGovNotifyKey) {
-          expect(err).to.eql(null)
-          expect(executionDescription.status).to.eql('FAILED')
-          expect(executionDescription.errorCode).to.eql('MISSING_INPUT')
-        } else {
-          expect(executionDescription.status).to.eql('FAILED')
-          expect(executionDescription.errorCode).to.eql('MISSING_GOV_UK_NOTIFY_API_KEY')
-        }
-        done()
       }
     )
+
+    if (hasGovNotifyKey) {
+      expect(executionDescription.status).to.eql('FAILED')
+      expect(executionDescription.errorCode).to.eql('MISSING_INPUT')
+    } else {
+      expect(executionDescription.status).to.eql('FAILED')
+      expect(executionDescription.errorCode).to.eql('MISSING_GOV_UK_NOTIFY_API_KEY')
+    }
   })
 
   const testFn = hasGovNotifyKey ? it : xit

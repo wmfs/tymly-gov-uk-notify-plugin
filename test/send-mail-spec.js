@@ -64,7 +64,7 @@ describe('Send Mail tests', function () {
     while (messageStatus === 'created' || messageStatus === 'sending') {
       await new Promise((resolve, reject) => {
         statebox.startExecution(
-          {notificationId},
+          { notificationId },
           GET_MESSAGE_STATUS_STATE_MACHINE_NAME,
           {
             sendResponse: 'COMPLETE'

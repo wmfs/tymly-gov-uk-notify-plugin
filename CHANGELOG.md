@@ -1,3 +1,21 @@
+# [1.3.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.2.0...v1.3.0) (2018-09-12)
+
+
+### 🛠 Builds
+
+* **deps:** update notifications-node-client requirement ([77d8684](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/77d8684))
+* **deps-dev:** update [@semantic-release](https://github.com/semantic-release)/git requirement ([15fcc90](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/15fcc90))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.21.0 to 1.22.0 ([64c8adf](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/64c8adf))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.22.0 to 1.23.0 ([8e78145](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/8e78145))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.23.0 to 1.24.0 ([fd39974](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/fd39974))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.24.0 to 1.25.0 ([518c5f7](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/518c5f7))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.25.0 to 1.26.0 ([5bd4b69](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/5bd4b69))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.26.0 to 1.26.1 ([c848712](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/c848712))
+* **deps-dev:** update nyc requirement from 12.0.2 to 13.0.1 ([d528e85](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/d528e85))
+* **deps-dev:** update semantic-release requirement ([bbaba9c](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/bbaba9c))
+* **deps-dev:** update semantic-release requirement ([a58d77e](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/a58d77e))
+* **dev-deps:** move to standard 12.0.1 ([b648b32](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/b648b32))
+
 # [1.2.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.1.2...v1.2.0) (2018-09-05)
 
 

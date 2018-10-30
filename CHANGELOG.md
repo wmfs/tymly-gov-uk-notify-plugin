@@ -1,3 +1,24 @@
+# [1.6.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin.git/compare/v1.5.0...v1.6.0) (2018-10-30)
+
+
+### ✨ Features
+
+* allow to send mail to multiple email addresses ([a53102e](https://github.com/wmfs/tymly-gov-uk-notify-plugin.git/commit/a53102e))
+
+
+### 🛠 Builds
+
+* **deps-dev:** update [@semantic-release](https://github.com/semantic-release)/changelog requirement ([6a90743](https://github.com/wmfs/tymly-gov-uk-notify-plugin.git/commit/6a90743))
+* **deps-dev:** update [@semantic-release](https://github.com/semantic-release)/git requirement ([f093276](https://github.com/wmfs/tymly-gov-uk-notify-plugin.git/commit/f093276))
+* **deps-dev:** update chai requirement from 4.1.2 to 4.2.0 ([26a3764](https://github.com/wmfs/tymly-gov-uk-notify-plugin.git/commit/26a3764))
+* **deps-dev:** update nyc requirement from 13.0.1 to 13.1.0 ([6ba05e4](https://github.com/wmfs/tymly-gov-uk-notify-plugin.git/commit/6ba05e4))
+* **deps-dev:** update semantic-release requirement ([ce078f9](https://github.com/wmfs/tymly-gov-uk-notify-plugin.git/commit/ce078f9))
+* **deps-dev:** update semantic-release requirement ([ca3a47a](https://github.com/wmfs/tymly-gov-uk-notify-plugin.git/commit/ca3a47a))
+* **deps-dev:** update semantic-release requirement ([204374b](https://github.com/wmfs/tymly-gov-uk-notify-plugin.git/commit/204374b))
+* **deps-dev:** update semantic-release requirement ([de45e5e](https://github.com/wmfs/tymly-gov-uk-notify-plugin.git/commit/de45e5e))
+* **deps-dev:** update semantic-release requirement ([c024263](https://github.com/wmfs/tymly-gov-uk-notify-plugin.git/commit/c024263))
+* **deps-dev:** update semantic-release requirement ([186b006](https://github.com/wmfs/tymly-gov-uk-notify-plugin.git/commit/186b006))
+
 # [1.5.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.4.0...v1.5.0) (2018-09-14)
 
 

@@ -49,7 +49,7 @@ describe('Send Mail tests', function () {
         if (hasGovNotifyKey) {
           expect(err).to.eql(null)
           expect(executionDescription.status).to.eql('SUCCEEDED')
-          notificationId = executionDescription.ctx.sentMail.id
+          notificationId = executionDescription.ctx.sentMail[0].id
         } else {
           expect(executionDescription.status).to.eql('FAILED')
           expect(executionDescription.errorCode).to.eql('MISSING_GOV_UK_NOTIFY_API_KEY')
@@ -96,6 +96,29 @@ describe('Send Mail tests', function () {
           expect(err).to.eql(null)
           expect(executionDescription.status).to.eql('FAILED')
           expect(executionDescription.errorCode).to.eql('NO_EMAIL_OR_PHONE_NUMBER')
+        } else {
+          expect(executionDescription.status).to.eql('FAILED')
+          expect(executionDescription.errorCode).to.eql('MISSING_GOV_UK_NOTIFY_API_KEY')
+        }
+        done()
+      }
+    )
+  })
+
+  it('should attempt to send mail to multiple numbers', done => {
+    statebox.startExecution(
+      {
+        emailAddress: ['perm-fail@simulator.notify', 'perm-fail@simulator.notify']
+      },
+      SEND_MAIL_STATE_MACHINE_NAME,
+      {
+        sendResponse: 'COMPLETE'
+      },
+      (err, executionDescription) => {
+        if (hasGovNotifyKey) {
+          expect(err).to.eql(null)
+          expect(executionDescription.status).to.eql('SUCCEEDED')
+          expect(executionDescription.ctx.sentMail.length).to.eql(2)
         } else {
           expect(executionDescription.status).to.eql('FAILED')
           expect(executionDescription.errorCode).to.eql('MISSING_GOV_UK_NOTIFY_API_KEY')

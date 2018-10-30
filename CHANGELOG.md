@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin.git/compare/v1.6.0...v1.7.0) (2018-10-30)
+
+
+### ✨ Features
+
+* allow to send sms to multiple phone numbers ([8b8191d](https://github.com/wmfs/tymly-gov-uk-notify-plugin.git/commit/8b8191d))
+
 # [1.6.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin.git/compare/v1.5.0...v1.6.0) (2018-10-30)
 
 

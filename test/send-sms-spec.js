@@ -60,6 +60,30 @@ describe('Send SMS tests', function () {
     )
   })
 
+  it('start state machine to send SMS with multiple phone numbers expected to succeed', done => {
+    statebox.startExecution(
+      {
+        phoneNumber: ['07700900003', '07700900111'],
+        firstName: 'Robert'
+      },
+      SEND_SMS_STATE_MACHINE_NAME,
+      {
+        sendResponse: 'COMPLETE'
+      },
+      (err, executionDescription) => {
+        if (hasGovNotifyKey) {
+          expect(err).to.eql(null)
+          expect(executionDescription.status).to.eql('SUCCEEDED')
+          expect(executionDescription.ctx.sentSms.length).to.eql(2)
+        } else {
+          expect(executionDescription.status).to.eql('FAILED')
+          expect(executionDescription.errorCode).to.eql('MISSING_GOV_UK_NOTIFY_API_KEY')
+        }
+        done()
+      }
+    )
+  })
+
   it('start state machine to send SMS with an invalid phone number', done => {
     statebox.startExecution(
       {
@@ -146,7 +170,7 @@ describe('Send SMS tests', function () {
     )
     if (hasGovNotifyKey) {
       expect(executionDescription.status).to.eql('SUCCEEDED')
-      notificationId = executionDescription.ctx.sentSms.id
+      notificationId = executionDescription.ctx.sentSms[0].id
     } else {
       expect(executionDescription.status).to.eql('FAILED')
       expect(executionDescription.errorCode).to.eql('MISSING_GOV_UK_NOTIFY_API_KEY')

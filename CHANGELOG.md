@@ -1,3 +1,11 @@
+# [1.8.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.7.0...v1.8.0) (2018-11-05)
+
+
+### 🛠 Builds
+
+* **deps:** update notifications-node-client requirement ([0f85bb2](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/0f85bb2))
+* **deps-dev:** update semantic-release requirement ([aaaaadd](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/aaaaadd))
+
 # [1.7.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin.git/compare/v1.6.0...v1.7.0) (2018-10-30)
 
 

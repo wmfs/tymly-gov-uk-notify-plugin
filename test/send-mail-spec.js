@@ -39,7 +39,8 @@ describe('Send Mail tests', function () {
   it('start state machine to send mail', done => {
     statebox.startExecution(
       {
-        emailAddress: 'perm-fail@simulator.notify'
+        emailAddress: 'perm-fail@simulator.notify',
+        name: 'John Doe'
       },
       SEND_MAIL_STATE_MACHINE_NAME,
       {
@@ -86,7 +87,9 @@ describe('Send Mail tests', function () {
 
   it('start state machine to send mail without an email', done => {
     statebox.startExecution(
-      {},
+      {
+        name: 'John Doe'
+      },
       SEND_MAIL_STATE_MACHINE_NAME,
       {
         sendResponse: 'COMPLETE'
@@ -107,9 +110,16 @@ describe('Send Mail tests', function () {
 
   it('should attempt to send mail to multiple numbers', done => {
     statebox.startExecution(
-      {
-        emailAddress: ['perm-fail@simulator.notify', 'perm-fail@simulator.notify']
-      },
+      [
+        {
+          emailAddress: 'perm-fail@simulator.notify',
+          name: 'John Doe'
+        },
+        {
+          emailAddress: 'perm-fail@simulator.notify',
+          name: 'Jane Doe'
+        }
+      ],
       SEND_MAIL_STATE_MACHINE_NAME,
       {
         sendResponse: 'COMPLETE'

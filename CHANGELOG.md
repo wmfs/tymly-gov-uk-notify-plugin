@@ -1,3 +1,19 @@
+# [1.9.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.8.0...v1.9.0) (2018-11-30)
+
+
+### ✨ Features
+
+* refactor sending message to take event as array ([2c496de](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/2c496de))
+
+
+### 🛠 Builds
+
+* **deps-dev:** update semantic-release requirement ([cb98b29](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/cb98b29))
+* **deps-dev:** update semantic-release requirement ([4f93c82](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/4f93c82))
+* **deps-dev:** update semantic-release requirement ([268969f](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/268969f))
+* **deps-dev:** update semantic-release requirement ([f2049df](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/f2049df))
+* **deps-dev:** update semantic-release requirement ([9743a35](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/9743a35))
+
 # [1.8.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.7.0...v1.8.0) (2018-11-05)
 
 

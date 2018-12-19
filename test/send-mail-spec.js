@@ -36,8 +36,8 @@ describe('Send Mail tests', function () {
     )
   })
 
-  it('start state machine to send mail', done => {
-    statebox.startExecution(
+  it('start state machine to send mail', async () => {
+    const executionDescription = await statebox.startExecution(
       {
         emailAddress: 'perm-fail@simulator.notify',
         name: 'John Doe'
@@ -45,19 +45,16 @@ describe('Send Mail tests', function () {
       SEND_MAIL_STATE_MACHINE_NAME,
       {
         sendResponse: 'COMPLETE'
-      },
-      (err, executionDescription) => {
-        if (hasGovNotifyKey) {
-          expect(err).to.eql(null)
-          expect(executionDescription.status).to.eql('SUCCEEDED')
-          notificationId = executionDescription.ctx.sentMail[0].id
-        } else {
-          expect(executionDescription.status).to.eql('FAILED')
-          expect(executionDescription.errorCode).to.eql('MISSING_GOV_UK_NOTIFY_API_KEY')
-        }
-        done()
       }
     )
+
+    if (hasGovNotifyKey) {
+      expect(executionDescription.status).to.eql('SUCCEEDED')
+      notificationId = executionDescription.ctx.sentMail[0].id
+    } else {
+      expect(executionDescription.status).to.eql('FAILED')
+      expect(executionDescription.errorCode).to.eql('GOV_UK_NOTIFY_FAIL')
+    }
   })
 
   const testFn = hasGovNotifyKey ? it : xit
@@ -85,31 +82,28 @@ describe('Send Mail tests', function () {
     expect(messageStatus).to.eql('permanent-failure')
   })
 
-  it('start state machine to send mail without an email', done => {
-    statebox.startExecution(
+  it('start state machine to send mail without an email', async () => {
+    const executionDescription = await statebox.startExecution(
       {
         name: 'John Doe'
       },
       SEND_MAIL_STATE_MACHINE_NAME,
       {
         sendResponse: 'COMPLETE'
-      },
-      (err, executionDescription) => {
-        if (hasGovNotifyKey) {
-          expect(err).to.eql(null)
-          expect(executionDescription.status).to.eql('FAILED')
-          expect(executionDescription.errorCode).to.eql('NO_EMAIL_OR_PHONE_NUMBER')
-        } else {
-          expect(executionDescription.status).to.eql('FAILED')
-          expect(executionDescription.errorCode).to.eql('MISSING_GOV_UK_NOTIFY_API_KEY')
-        }
-        done()
       }
     )
+
+    if (hasGovNotifyKey) {
+      expect(executionDescription.status).to.eql('FAILED')
+      expect(executionDescription.errorCode).to.eql('NO_EMAIL_OR_PHONE_NUMBER')
+    } else {
+      expect(executionDescription.status).to.eql('FAILED')
+      expect(executionDescription.errorCode).to.eql('GOV_UK_NOTIFY_FAIL')
+    }
   })
 
-  it('should attempt to send mail to multiple numbers', done => {
-    statebox.startExecution(
+  it('should attempt to send mail to multiple numbers', async () => {
+    const executionDescription = await statebox.startExecution(
       [
         {
           emailAddress: 'perm-fail@simulator.notify',
@@ -123,19 +117,16 @@ describe('Send Mail tests', function () {
       SEND_MAIL_STATE_MACHINE_NAME,
       {
         sendResponse: 'COMPLETE'
-      },
-      (err, executionDescription) => {
-        if (hasGovNotifyKey) {
-          expect(err).to.eql(null)
-          expect(executionDescription.status).to.eql('SUCCEEDED')
-          expect(executionDescription.ctx.sentMail.length).to.eql(2)
-        } else {
-          expect(executionDescription.status).to.eql('FAILED')
-          expect(executionDescription.errorCode).to.eql('MISSING_GOV_UK_NOTIFY_API_KEY')
-        }
-        done()
       }
     )
+
+    if (hasGovNotifyKey) {
+      expect(executionDescription.status).to.eql('SUCCEEDED')
+      expect(executionDescription.ctx.sentMail.length).to.eql(2)
+    } else {
+      expect(executionDescription.status).to.eql('FAILED')
+      expect(executionDescription.errorCode).to.eql('GOV_UK_NOTIFY_FAIL')
+    }
   })
 
   it('should shutdown Tymly', async () => {

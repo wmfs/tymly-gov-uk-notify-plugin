@@ -1,3 +1,52 @@
+## [1.9.1](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.9.0...v1.9.1) (2019-10-07)
+
+
+### 🐛 Bug Fixes
+
+* update tests and handle errors ([bf41e68](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/bf41e68))
+* use notify client on service ([816275d](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/816275d))
+
+
+### 🛠 Builds
+
+* **deps-dev:** Update [@semantic-release](https://github.com/semantic-release)/git requirement ([b1a0be9](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/b1a0be9))
+* **deps-dev:** Update [@semantic-release](https://github.com/semantic-release)/git requirement ([be2e64a](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/be2e64a))
+* **deps-dev:** update dev dependancies ([7c8825e](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/7c8825e))
+* **deps-dev:** Update mocha requirement from 5.2.0 to 6.1.4 ([f26a160](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/f26a160))
+* **deps-dev:** Update nyc requirement from 13.1.0 to 14.1.1 ([ce22de3](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/ce22de3))
+* **deps-dev:** Update semantic-release requirement ([#151](https://github.com/wmfs/tymly-gov-uk-notify-plugin/issues/151)) ([4ad9930](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/4ad9930))
+
+
+### 📦 Code Refactoring
+
+* error mesasge a bit more descriptive ([5bd5182](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/5bd5182))
+* templates via blueprint dir ([1fbb9e1](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/1fbb9e1))
+
+
+### 📚 Documentation
+
+* add circleci status [skip ci] ([9ec13b2](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/9ec13b2))
+* JSDocs for get-message-status-via-service/index ([b93eaab](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/b93eaab))
+* JSDocs for sending-message-via-service/index ([7fa54d7](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/7fa54d7))
+
+
+### 🚨 Tests
+
+* Correct tests - look for the changed error code ([282a941](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/282a941))
+
+
+### ⚙️ Continuous Integrations
+
+* **circle:** add circle ci config ([4e6ce6f](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/4e6ce6f))
+* **circle:** Update CircleCI config - Travis migration ([8c35329](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/8c35329))
+* **travis:** remove Travis config ([2ce4d5a](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/2ce4d5a))
+* **travis:** update travis config ([2ed7da5](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/2ed7da5))
+
+
+### 💎 Styles
+
+* Lint fix ([6c4958d](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/6c4958d))
+
 # [1.9.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.8.0...v1.9.0) (2018-11-30)
 
 

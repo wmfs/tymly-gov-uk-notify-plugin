@@ -5,6 +5,9 @@
     "GetMessageStatus": {
       "Type": "Task",
       "Resource": "module:getMessageStatusViaService",
+      "ResourceConfig": {
+        "registryLookupApiKey": "test_notifyApiKey"
+      },
       "End": true
     }
   },

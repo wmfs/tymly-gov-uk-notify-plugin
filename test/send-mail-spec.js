@@ -79,6 +79,7 @@ describe('Send Mail tests', function () {
         )
       })
     }
+
     expect(messageStatus).to.eql('permanent-failure')
   })
 

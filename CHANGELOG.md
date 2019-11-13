@@ -1,3 +1,21 @@
+# [1.10.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.9.1...v1.10.0) (2019-11-13)
+
+
+### ✨ Features
+
+* better error display getting from registry ([](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/1d61fd6))
+* Notify service to accept different api keys for each service ([](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/bf75416))
+
+
+### 🛠 Builds
+
+* **dev-deps:** update [@wmfs](https://github.com/wmfs)/tymly to 1.100.0 ([](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/f7028d6))
+
+
+### 💎 Styles
+
+* standard fix ([](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/a99ef5f))
+
 ## [1.9.1](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.9.0...v1.9.1) (2019-10-07)
 
 

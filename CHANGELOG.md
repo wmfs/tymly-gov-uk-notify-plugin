@@ -1,3 +1,10 @@
+## [1.10.1](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.10.0...v1.10.1) (2019-11-14)
+
+
+### 🐛 Bug Fixes
+
+* statelint warnings ([](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/b9385be))
+
 # [1.10.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.9.1...v1.10.0) (2019-11-13)
 
 

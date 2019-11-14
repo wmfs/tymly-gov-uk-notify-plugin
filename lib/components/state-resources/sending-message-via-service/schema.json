@@ -9,8 +9,7 @@
       "type": "string",
       "description": "The type of message to be sent (sms or mail)"
     }
-  },
-  "required": ["messageType", "templateId"]
+  }
 }
 
 

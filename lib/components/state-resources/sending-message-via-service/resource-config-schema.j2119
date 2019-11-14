@@ -1,0 +1,2 @@
+This document specifies a JSON object called a "SendConfig".
+A SendConfig MUST have a string field named "messageTemplateId".

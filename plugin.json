@@ -1,0 +1,12 @@
+{
+  "name": "notify",
+  "version": "1.10.1",
+  "label": "Gov UK Notify",
+  "author": "Meena Hoda",
+  "organisation": "West Midlands Fire Service",
+  "description": "Tymly plugin to support GOV.UK Notify service",
+  "categories": [
+    "notify",
+    "notifications"
+  ]
+}

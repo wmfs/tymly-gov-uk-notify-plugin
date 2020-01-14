@@ -97,9 +97,8 @@ describe('Send SMS tests', function () {
     )
 
     if (hasGovNotifyKey) {
-      expect(executionDescription.status).to.eql('FAILED')
-      expect(executionDescription.errorCode).to.eql('SEND_MESSAGE_FAIL')
-      expect(executionDescription.errorMessage).to.eql('400 - phone_number Not enough digits')
+      expect(executionDescription.ctx.sent[0].statusCode).to.eql(400)
+      expect(executionDescription.ctx.sent[0].error).to.eql('400 - phone_number Not enough digits')
     } else {
       expect(executionDescription.status).to.eql('FAILED')
       expect(executionDescription.errorCode).to.eql('GOV_UK_NOTIFY_FAIL')
@@ -160,7 +159,7 @@ describe('Send SMS tests', function () {
     )
     if (hasGovNotifyKey) {
       expect(executionDescription.status).to.eql('SUCCEEDED')
-      notificationId = executionDescription.ctx.sent[0].id
+      notificationId = executionDescription.ctx.sent[0].notifyId
     } else {
       expect(executionDescription.status).to.eql('FAILED')
       expect(executionDescription.errorCode).to.eql('GOV_UK_NOTIFY_FAIL')

@@ -62,7 +62,10 @@ describe('Send Mail tests', function () {
     while (messageStatus === 'created' || messageStatus === 'sending') {
       await new Promise((resolve, reject) => {
         statebox.startExecution(
-          { notificationId },
+          {
+            messageTemplateId: 'test_welcomeMail',
+            notificationId
+          },
           GET_MESSAGE_STATUS_STATE_MACHINE_NAME,
           {
             sendResponse: 'COMPLETE'
@@ -73,7 +76,8 @@ describe('Send Mail tests', function () {
             } else if (executionDescription.status === 'FAILED') {
               reject(new Error(executionDescription.errorCode))
             }
-            messageStatus = executionDescription.ctx.message.status
+
+            messageStatus = executionDescription.ctx.status
             resolve()
           }
         )

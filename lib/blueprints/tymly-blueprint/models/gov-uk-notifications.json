@@ -15,6 +15,9 @@
     "template": {
       "type": "string"
     },
+    "namespace": {
+      "type": "string"
+    },
     "blueprint": {
       "type": "string"
     },

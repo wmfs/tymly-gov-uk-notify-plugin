@@ -50,7 +50,7 @@ describe('Send Mail tests', function () {
 
     if (hasGovNotifyKey) {
       expect(executionDescription.status).to.eql('SUCCEEDED')
-      notificationId = executionDescription.ctx.sent[0].id
+      notificationId = executionDescription.ctx.sent[0].notifyId
     } else {
       expect(executionDescription.status).to.eql('FAILED')
       expect(executionDescription.errorCode).to.eql('GOV_UK_NOTIFY_FAIL')

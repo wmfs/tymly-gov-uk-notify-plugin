@@ -1,3 +1,27 @@
+# [1.12.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.11.0...v1.12.0) (2020-01-28)
+
+
+### 🛠 Builds
+
+* **deps:** Bump notifications-node-client from 4.5.2 to 4.7.0 ([9b579fb](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/9b579fbe9cba7f3590a16e7d16dd234b6bc1e73f))
+* **deps-dev:** Bump [@semantic-release](https://github.com/semantic-release)/changelog from 3.0.6 to 5.0.0 ([36ae63b](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/36ae63bb09d6c1b009d660a6de06da523ef64b1d))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.110.0 to 1.112.0 ([3598f5f](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/3598f5f0486c44ff25fae4996729f8981526d06b))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.112.0 to 1.112.1 ([3d14438](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/3d144388b833c1aa1153a2782af6d34943bc3682))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.112.1 to 1.113.0 ([a8eceb2](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/a8eceb20930da42a0bfe1a312a724f0c56e49b24))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.113.0 to 1.114.0 ([53e3a8d](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/53e3a8d7a341e4195113ec97afa4aa2487115455))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.114.0 to 1.115.0 ([2171c87](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/2171c870ba5e541ec12548f8b4794380c9507724))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.115.0 to 1.116.0 ([12b7a87](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/12b7a874644483fb6a0b5d9c40b3cae832a7c603))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.116.0 to 1.117.0 ([0264fe8](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/0264fe87ba4ecac647c93030ebf76c7da8844e15))
+* **deps-dev:** Bump codecov from 3.6.1 to 3.6.2 ([8f55e41](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/8f55e415a461702b93b1312ec9361ff82cd0ed12))
+* **deps-dev:** Bump conventional-changelog-metahub from 3.0.0 to 4.0.0 ([e53133f](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/e53133f58a5a68b4d3b4f14e5b71ff76f9d429af))
+* **deps-dev:** Bump mocha from 7.0.0 to 7.0.1 ([ea026d7](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/ea026d7e2b03e36d76fe70eb3bc3ba16240d9fe0))
+* **deps-dev:** Update standard requirement from 12.0.1 to 14.3.1 ([4d69daa](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/4d69daa1ea11855fc120e7b834151f513aa14570))
+
+
+### 💎 Styles
+
+* standard --fix ([6242e26](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/6242e267f275b058d94db1ec493fdfd43ed45669))
+
 # [1.11.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.10.1...v1.11.0) (2020-01-14)
 
 

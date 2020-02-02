@@ -1,3 +1,15 @@
+# [1.13.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.12.0...v1.13.0) (2020-02-02)
+
+
+### 🛠 Builds
+
+* **deps:** Bump notifications-node-client from 4.7.0 to 4.7.2 ([8ede88d](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/8ede88dc38729a218d05b198c2c0008b5546fc60))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.117.0 to 1.118.0 ([206f504](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/206f50445b2a35c513d470d2d416ab60aadc4579))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.118.0 to 1.119.0 ([1fa5469](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/1fa5469f0003eca34460b20b38e4345958a718c2))
+* **deps-dev:** Bump codecov from 3.6.2 to 3.6.3 ([6e93144](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/6e931447cdd3a9c16a17fd6519bd805851303ee0))
+* **deps-dev:** Bump codecov from 3.6.3 to 3.6.4 ([9157b68](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/9157b68d3e2e02f743502b0dbe198f1bad4b9909))
+* **deps-dev:** Bump cz-conventional-changelog from 3.0.2 to 3.1.0 ([ae3b111](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/ae3b1119ef2d2a0dbffc7bc62ba0589ee2850ee0))
+
 # [1.12.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.11.0...v1.12.0) (2020-01-28)
 
 

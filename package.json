@@ -23,7 +23,7 @@
   },
   "main": "./lib/index.js",
   "dependencies": {
-    "notifications-node-client": "4.7.2"
+    "notifications-node-client": "4.7.3"
   },
   "devDependencies": {
     "chai": "4.2.0",

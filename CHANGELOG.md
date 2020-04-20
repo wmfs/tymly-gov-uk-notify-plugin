@@ -1,3 +1,16 @@
+## [1.14.1](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.14.0...v1.14.1) (2020-04-20)
+
+
+### 🐛 Bug Fixes
+
+* **state-resource:** Removed callback parameter from init method. ([edc9ea6](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/edc9ea6e3176d26ec04034740b6f1449afdc4dc2))
+
+
+### 🛠 Builds
+
+* **deps-dev:** Bump semantic-release from 17.0.4 to 17.0.5 ([7cb03b1](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/7cb03b171a36573cf1e486cd4a96309d117d5062))
+* **deps-dev:** Bump semantic-release from 17.0.5 to 17.0.6 ([ff27142](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/ff27142f3e12210fd8ed9976f27593929f5d8ab3))
+
 # [1.14.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.13.0...v1.14.0) (2020-04-16)
 
 

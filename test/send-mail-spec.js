@@ -57,7 +57,7 @@ describe('Send Mail tests', function () {
   const testFn = hasGovNotifyKey ? it : xit
   testFn('should wait for the message to send and check it failed', async () => {
     while (messageStatus === 'created' || messageStatus === 'sending') {
-      const executionDescription = statebox.startExecution(
+      const executionDescription = await statebox.startExecution(
         {
           messageTemplateId: 'test_welcomeMail',
           notificationId

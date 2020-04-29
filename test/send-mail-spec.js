@@ -16,8 +16,8 @@ describe('Send Mail tests', function () {
   let tymlyService, statebox, notificationId
   let messageStatus = 'created'
 
-  it('boot tymly', done => {
-    tymly.boot(
+  it('boot tymly', async () => {
+    const tymlyServices = await tymly.boot(
       {
         pluginPaths: [
           path.resolve(__dirname, './../lib')
@@ -26,14 +26,11 @@ describe('Send Mail tests', function () {
           path.resolve(__dirname, './fixtures/blueprints/welcome-blueprint')
         ],
         config: {}
-      },
-      (err, tymlyServices) => {
-        expect(err).to.eql(null)
-        tymlyService = tymlyServices.tymly
-        statebox = tymlyServices.statebox
-        done()
       }
     )
+
+    tymlyService = tymlyServices.tymly
+    statebox = tymlyServices.statebox
   })
 
   it('start state machine to send mail', async () => {
@@ -60,28 +57,19 @@ describe('Send Mail tests', function () {
   const testFn = hasGovNotifyKey ? it : xit
   testFn('should wait for the message to send and check it failed', async () => {
     while (messageStatus === 'created' || messageStatus === 'sending') {
-      await new Promise((resolve, reject) => {
-        statebox.startExecution(
-          {
-            messageTemplateId: 'test_welcomeMail',
-            notificationId
-          },
-          GET_MESSAGE_STATUS_STATE_MACHINE_NAME,
-          {
-            sendResponse: 'COMPLETE'
-          },
-          (err, executionDescription) => {
-            if (err) {
-              reject(err)
-            } else if (executionDescription.status === 'FAILED') {
-              reject(new Error(executionDescription.errorCode))
-            }
+      const executionDescription = await statebox.startExecution(
+        {
+          messageTemplateId: 'test_welcomeMail',
+          notificationId
+        },
+        GET_MESSAGE_STATUS_STATE_MACHINE_NAME,
+        {
+          sendResponse: 'COMPLETE'
+        }
+      )
 
-            messageStatus = executionDescription.ctx.status
-            resolve()
-          }
-        )
-      })
+      expect(executionDescription.status).to.not.eql('FAILED')
+      messageStatus = executionDescription.ctx.status
     }
 
     expect(messageStatus).to.eql('permanent-failure')

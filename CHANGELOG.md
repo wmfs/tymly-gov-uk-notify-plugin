@@ -1,3 +1,26 @@
+## [1.14.2](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.14.1...v1.14.2) (2020-05-05)
+
+
+### 🐛 Bug Fixes
+
+* **notify-service:** Remove redundant boot service parameter ([5a87517](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/5a87517df7af6aa4246a265748ac15fd61c62e96))
+
+
+### 🛠 Builds
+
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.135.1 to 1.135.2 ([72f4efb](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/72f4efbecd877dd7c10e7851e30cb525049e3915))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.135.2 to 1.137.1 ([bb2f726](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/bb2f726f30f6997860f0cfe081b0189b654f9e99))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.137.1 to 1.137.2 ([422b5d2](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/422b5d273180dbfb2fa12657de68ab6cf7c342cf))
+* **deps-dev:** Bump cz-conventional-changelog from 3.1.0 to 3.2.0 ([dbdbba4](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/dbdbba4ec20037e1f18f67e0eae6e2362bbc048c))
+* **deps-dev:** Bump mocha from 7.1.1 to 7.1.2 ([f75212f](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/f75212f127eb73c94d63c7610b068db5b82f9c25))
+* **deps-dev:** Bump semantic-release from 17.0.6 to 17.0.7 ([d3698a4](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/d3698a42b2c27a7630b3e8e7e9c9186ba0df1b98))
+
+
+### 📦 Code Refactoring
+
+* **tests:** Flip tymly.boot and statebox.startExecution from callback style to async/await ([aa541df](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/aa541dff9c83eed17deb1756e708ea09992b5d23))
+* **tests:** Pop missing await in ([8c884a9](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/8c884a90bb25acc68bdc7add49183bd2ca2e887b))
+
 ## [1.14.1](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.14.0...v1.14.1) (2020-04-20)
 
 

@@ -1,3 +1,27 @@
+## [1.14.3](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.14.2...v1.14.3) (2020-06-25)
+
+
+### 🐛 Bug Fixes
+
+* check message templates is defined before iterating ([884ce35](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/884ce351140bf62a569650cc16e9f501baeac6a1))
+
+
+### 🛠 Builds
+
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.137.2 to 1.137.3 ([6b7dfca](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/6b7dfca95ed61325e705d9b5fdcb880e58be63ae))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.137.3 to 1.138.0 ([1458406](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/14584060e3d37889ef7dac57c14fba603302af8e))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.138.0 to 1.140.0 ([b120da3](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/b120da3bd27331787f28e54cf2f23589e8018875))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.140.0 to 1.141.0 ([299bcd1](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/299bcd1a2df50ef5ea7d8f8a975163c3130eb43e))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.141.0 to 1.142.0 ([28361df](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/28361dfef3eafcd3751207b34d019ffcde2565f2))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.142.0 to 1.143.0 ([ffe9ae6](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/ffe9ae6816d872233fdf9478c5cb44f27b3ca8e7))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.143.0 to 1.144.0 ([3266ab9](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/3266ab95bc146f8810eb417dbd86f07f7b05585b))
+* **deps-dev:** Bump codecov from 3.6.5 to 3.7.0 ([c30d921](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/c30d9211d58b38b4b64e1fb3d13e88f9406e07ec))
+* **deps-dev:** Bump mocha from 7.1.2 to 7.2.0 ([d5a6b0d](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/d5a6b0ddb7c15640e6e58cb3859cbf5baf6fc3d0))
+* **deps-dev:** Bump mocha from 7.2.0 to 8.0.1 ([1babafe](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/1babafeab389d9c4c2bc2ccd7c438194e1cf962d))
+* **deps-dev:** Bump nyc from 15.0.1 to 15.1.0 ([ac1a08f](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/ac1a08f0265ec31d2125b174d2a67d8afd0737b8))
+* **deps-dev:** Bump semantic-release from 17.0.7 to 17.0.8 ([763ba7b](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/763ba7b16210fd16f5fbdcadf857b0cf81dc32d3))
+* **deps-dev:** Bump standard from 14.3.3 to 14.3.4 ([da99a7b](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/da99a7bf2dc5a08f18db0b88bfc3ea0b31b63743))
+
 ## [1.14.2](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.14.1...v1.14.2) (2020-05-05)
 
 

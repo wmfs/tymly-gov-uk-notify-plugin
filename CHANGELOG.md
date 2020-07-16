@@ -1,3 +1,18 @@
+# [1.15.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.14.3...v1.15.0) (2020-07-16)
+
+
+### 🛠 Builds
+
+* **deps:** Bump notifications-node-client from 4.7.3 to 4.8.0 ([5f0f444](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/5f0f444dda9ee29191a3c779a81f66cc891b376a))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.144.0 to 1.145.0 ([392c463](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/392c4638c7c0379e2803888e8d0275ba415a8ad5))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.145.0 to 1.152.0 ([88d7030](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/88d703033cc7a9f2384d4892b81ec1276023a825))
+* **deps-dev:** Bump semantic-release from 17.0.8 to 17.1.1 ([ab5b570](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/ab5b5705687c074c89c7ab46ac0eebb7cb03a3fd))
+
+
+### ⚙️ Continuous Integrations
+
+* **circle:** use updated circle node image [skip ci] ([ccafdfd](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/ccafdfd9db0399e05a6a90ef9499e2d2ad5ec66a))
+
 ## [1.14.3](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.14.2...v1.14.3) (2020-06-25)
 
 

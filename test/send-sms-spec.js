@@ -186,7 +186,7 @@ describe('Send SMS tests', function () {
 
   const testFn = hasGovNotifyKey ? it : xit
   testFn('should wait for the message to send and check it failed', async () => {
-    while (messageStatus === 'created' || messageStatus === 'sending') {
+    while (messageStatus === 'created' || messageStatus === 'sending' || messageStatus === 'sent') {
       const executionDescription = await statebox.startExecution(
         {
           messageTemplateId: 'test_welcomeSms',

@@ -14,7 +14,7 @@
       "resultsPerPage": 10,
       "buttonText": "Search",
       "endpoint": {
-        "name": "system_getGovUkNotifications_1_0"
+        "name": "tymly_getGovUkNotifications_1_0"
       },
       "ctxPaths": {
         "results": "results",

@@ -34,7 +34,7 @@
       "Type": "Task",
       "Resource": "module:awaitingHumanInput",
       "ResourceConfig": {
-        "uiName": "system_govUkNotification",
+        "uiName": "tymly_govUkNotification",
         "dataPath": "$"
       },
       "End": true

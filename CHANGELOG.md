@@ -1,3 +1,126 @@
+# [1.18.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.17.0...v1.18.0) (2021-11-16)
+
+
+### ✨ Features
+
+* admin tools ([278a3db](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/278a3db763ccedccde85cb9da20c826bc6f98fd8))
+
+
+### 🐛 Bug Fixes
+
+* namespace from system to tymly ([685b9a3](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/685b9a3f5f55f4f22ff15e11b40ab2722e47c0f4))
+* revert circle config, we don't need pg plugin ([6e33c40](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/6e33c40941edead56344c879b6b5cbd48e8bc692))
+
+
+### 🛠 Builds
+
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.176.1 to 1.177.0 ([b36fd44](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/b36fd44c6dbbd691e25152c4e61c5e6b31a6f0c4))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.177.0 to 1.178.0 ([6093738](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/60937381a66716f5ecbe9695c70cfb4ef0d6d849))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.178.0 to 1.179.0 ([b0999d9](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/b0999d9f01fe4f4ec918f6399369980d82e50b93))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.179.0 to 1.180.0 ([9d584c4](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/9d584c4055f4e09c655e1756922b80fea1aaabb6))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.180.0 to 1.181.0 ([45d656c](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/45d656c536fd2d70dbf0c928c53f6ab8cf23bfab))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.181.0 to 1.182.0 ([e5b20a1](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/e5b20a1b94141f15a605caeb519a979e9b624e24))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.182.0 to 1.183.0 ([23f028d](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/23f028d0913d815a9b97c143d7c5b9f5250aebf8))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.183.0 to 1.184.0 ([4a36c91](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/4a36c915fa6b9046668cf35d5709030216a026ef))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.184.0 to 1.185.0 ([1cf1e18](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/1cf1e18db6f6ee95b93ef4a755121c63ed776610))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.185.0 to 1.186.0 ([81aeeff](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/81aeeff54233dc3bdca52c9493d80730b194bb78))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.186.0 to 1.187.0 ([fb2918b](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/fb2918beacc5711cca529d9b7a1777e3c36e7eb7))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.187.0 to 1.188.0 ([3bd204f](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/3bd204fb2f87c7e47d742a4beb5d13155d58a238))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.188.0 to 1.189.0 ([416261c](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/416261ccd66a99b28597d48ab6c0f8a992db93ce))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.189.0 to 1.190.0 ([6eacac1](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/6eacac1932662378d5e7c5c73974793f2055eb80))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.190.0 to 1.191.0 ([4a407e3](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/4a407e3206f5bba5a833bbb5b6a1030efd229590))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.191.0 to 1.192.0 ([88c4a8b](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/88c4a8b9cd4295bd3bedd172bfbbb87eae8e4ef3))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.192.0 to 1.193.0 ([d8e8e54](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/d8e8e54cc5fe7991a3f0d9c9b42957cdce6d7db0))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.193.0 to 1.194.0 ([37cf6b4](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/37cf6b461a32cdc7f008f226c0c8d9b49a388e19))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.194.0 to 1.195.0 ([752b554](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/752b55424dee30aca66f775e7714ec50c7217da8))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.195.0 to 1.195.1 ([9774866](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/9774866ab9afec16e6b329a8f29104f211e2f77f))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.195.1 to 1.196.0 ([f6bb35f](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/f6bb35f3ba83d6e5a7b4a798a15ce7fcb8e5788e))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.196.0 to 1.197.0 ([488cf5b](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/488cf5b0e6395dbdb493c4c8a90874f79581719b))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.197.0 to 1.198.0 ([fbc8063](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/fbc8063ac8ba494649961f6b6b9c1e44a20abb7b))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.198.0 to 1.199.0 ([e72663d](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/e72663d52e59e3119631604aee9397e1261c42c6))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.199.0 to 1.200.0 ([165e0ec](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/165e0ec1f6dce2fd43f5f0a7b71b52a804cf107e))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.200.0 to 1.201.0 ([bfaef14](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/bfaef141e467af66c5be35c0e67092539c4422dd))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.201.0 to 1.202.0 ([35050aa](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/35050aa789e8f602aa360f3ca2eaa4f1712c4a2f))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.202.0 to 1.203.0 ([a1a2fdb](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/a1a2fdb3662703aa1b1144a63922eee7ba7c000c))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.203.0 to 1.204.0 ([501a101](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/501a1010e15fac934ceba0a2d15e766454c0c361))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.204.0 to 1.205.0 ([868bb27](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/868bb27620e88e67a6126130f6981415711538bd))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.205.0 to 1.206.0 ([590d59b](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/590d59b35a642208ad6498f8aaa2a4044c88fac7))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.206.0 to 1.207.0 ([696847b](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/696847b0db082bffcd966c29bd4469a85b95f2ea))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.207.0 to 1.208.0 ([9b9f122](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/9b9f1225f9f9ad63be410c0a2b58d26f56dc7479))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.208.0 to 1.209.0 ([f568fa2](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/f568fa2d1c7a190591660c4f93f527b222d630a5))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.209.0 to 1.210.0 ([db6ffea](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/db6ffeab82f5eddd0302e1cee2982fc4f66eb040))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.210.0 to 1.211.0 ([9806fac](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/9806fac306caa3cfddc4eae9ae3c8dc6db737019))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.211.0 to 1.212.0 ([b48106f](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/b48106fe6a9746b9de42bea8bc537baae843c06b))
+* **deps-dev:** Bump chai from 4.2.0 to 4.3.0 ([2b66e9f](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/2b66e9f5342f0a07e40b0dd1573d15cb0ca60cda))
+* **deps-dev:** Bump chai from 4.3.0 to 4.3.1 ([2e6dd83](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/2e6dd83a889e35100feb878fcfd552566970b973))
+* **deps-dev:** Bump chai from 4.3.1 to 4.3.2 ([75a1ce7](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/75a1ce7f9532dfb975020cf33c9a4ec36e6e8cec))
+* **deps-dev:** Bump chai from 4.3.2 to 4.3.3 ([a4ae849](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/a4ae849ef39afe45b5099ca7fc5ccfeb8622682a))
+* **deps-dev:** Bump chai from 4.3.3 to 4.3.4 ([1690c8d](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/1690c8d718438c0bada616035f83e7bdfaddb477))
+* **deps-dev:** Bump codecov from 3.8.1 to 3.8.2 ([8c8ac5b](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/8c8ac5b60be28875be9a0e96d99626226d14d041))
+* **deps-dev:** Bump codecov from 3.8.2 to 3.8.3 ([3318692](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/3318692b41d471b884b73bdd2f8b598ace249870))
+* **deps-dev:** Bump mocha from 8.2.1 to 8.3.0 ([be81906](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/be81906481d02798343369be383b3ff46dccb150))
+* **deps-dev:** Bump mocha from 8.3.0 to 8.3.1 ([efbb574](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/efbb57424cd63fbe76dce35dfdd00b0f746f4eea))
+* **deps-dev:** Bump mocha from 8.3.1 to 8.3.2 ([8e0c9a0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/8e0c9a090fec94950d40eacdd432149f43c7a23d))
+* **deps-dev:** Bump mocha from 8.3.2 to 8.4.0 ([a457947](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/a4579473748a9eccb466f5b4786b3dbd7974463a))
+* **deps-dev:** Bump mocha from 8.4.0 to 9.0.0 ([bb5e7e8](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/bb5e7e80fec2a20099eb83dd91c837b3524c160b))
+* **deps-dev:** Bump mocha from 9.0.0 to 9.0.1 ([48cb330](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/48cb330e9588ea68de13ba5d55f586ece91e6c67))
+* **deps-dev:** Bump mocha from 9.0.1 to 9.0.2 ([c3e436a](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/c3e436a8712f9ac0ae339174f54a91a43e45c83e))
+* **deps-dev:** Bump mocha from 9.0.2 to 9.0.3 ([f87db5f](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/f87db5ff9222890727a7cb7f70733d9a1b3faed3))
+* **deps-dev:** Bump semantic-release from 17.3.1 to 17.3.2 ([3add760](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/3add760508361fc201454175a7a45ea46d26b957))
+* **deps-dev:** Bump semantic-release from 17.3.2 to 17.3.3 ([37cd773](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/37cd7737e5d3d4dcff9613bf985862d0ccc8a518))
+* **deps-dev:** Bump semantic-release from 17.3.3 to 17.3.4 ([aae479a](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/aae479ab5bc8f17ccd6813f6964c949cccd5d84c))
+* **deps-dev:** Bump semantic-release from 17.3.4 to 17.3.5 ([ecca77b](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/ecca77b28a47492483a1f8c0470199dcd88b5d09))
+* **deps-dev:** Bump semantic-release from 17.3.5 to 17.3.6 ([9b17073](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/9b170736fa970af5cbade86a973f68a99af2046b))
+* **deps-dev:** Bump semantic-release from 17.3.6 to 17.3.7 ([f3f0ef4](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/f3f0ef4458d00c27c55f02ce3e38638f35203e8f))
+* **deps-dev:** Bump semantic-release from 17.3.7 to 17.3.8 ([91d13f3](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/91d13f314736bf3f52b930589f8df86ba97a939f))
+* **deps-dev:** Bump semantic-release from 17.3.8 to 17.3.9 ([e0e37bb](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/e0e37bb339f9b7cb331aeab1285893872739c38b))
+* **deps-dev:** Bump semantic-release from 17.3.9 to 17.4.0 ([f27261e](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/f27261e2314b0e4b69ffc1dd76a9575739d60d73))
+* **deps-dev:** Bump semantic-release from 17.4.0 to 17.4.1 ([cd191f5](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/cd191f53377117ecbf1061bf4ab35f7fc1069038))
+* **deps-dev:** Bump semantic-release from 17.4.1 to 17.4.2 ([82a038d](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/82a038d15ddbc126eb60922aab8bc0a08ef7ea2b))
+* **deps-dev:** Bump semantic-release from 17.4.2 to 17.4.3 ([660cf30](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/660cf30c9cadad833b25f3b1364ccc163023acf5))
+* **deps-dev:** Bump semantic-release from 17.4.3 to 17.4.4 ([3fe3180](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/3fe318092063112182b8e140b3720c2dab2d53e5))
+* **deps-dev:** update dependency [@semantic-release](https://github.com/semantic-release)/changelog to v6 ([9197677](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/91976772dc631bf05bafcd163f2c3c32fd589b5a))
+* **deps-dev:** update dependency [@semantic-release](https://github.com/semantic-release)/exec to v6 ([055b58c](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/055b58c93ccc73a59d498d083e63fe9aa846b9ff))
+* **deps-dev:** update dependency [@semantic-release](https://github.com/semantic-release)/git to v10 ([bb8a9c7](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/bb8a9c78480d295b57e3c54565d82729a8cbc6cb))
+* **deps-dev:** update dependency [@semantic-release](https://github.com/semantic-release)/git to v9.0.1 ([82e7e14](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/82e7e14a1546858583faecc3654a5d6ab559eb45))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly to v1.212.2 ([a6d79a7](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/a6d79a7651d17883da36b6da9552ca6e9f045c4e))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly to v1.212.3 ([7c8d38a](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/7c8d38af446f8b83c30bd640383c2d1569077d7b))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly to v1.212.4 ([a731e00](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/a731e005c40ce39d842988c1165dee63588ab530))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly to v1.213.0 ([2e8c554](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/2e8c554a96c11888322c70691b8d2167794696f3))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly to v1.216.0 ([7911191](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/791119114346dd5b50fee9d952b3eb35ea4255b3))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly to v1.217.0 ([48a45b5](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/48a45b5f90f5a597d53a0c28cee125ccce0aabda))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly to v1.218.0 ([25dd4f9](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/25dd4f93cb77c2d68e2edfe40d9f8d7dc5b3d908))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly to v1.218.1 ([cfb6624](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/cfb6624eb08eb924fa8cfd68748005d4d3cd0beb))
+* **deps-dev:** update dependency mocha to v9.1.0 ([f0453f3](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/f0453f38fe4909c1327d507de7b818aadcda852f))
+* **deps-dev:** update dependency mocha to v9.1.1 ([5ea50b3](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/5ea50b373566bb295c8da33b2e3b13e94300cf87))
+* **deps-dev:** update dependency mocha to v9.1.2 ([16ef878](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/16ef87855a678190254e265ab7afcc190d44ce3b))
+* **deps-dev:** update dependency mocha to v9.1.3 ([a269f52](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/a269f52ec7a5f5ccd2117c9c701b8b88427d87e8))
+* **deps-dev:** update dependency semantic-release to v17.4.5 ([168ff9f](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/168ff9f5f5f898bdc6bfe78e369789a2e93392a3))
+* **deps-dev:** update dependency semantic-release to v17.4.6 ([ff9c583](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/ff9c5838bd115fd4303783a868493de2db7d3430))
+* **deps-dev:** update dependency semantic-release to v17.4.7 ([cd37f96](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/cd37f96574612feb34d2c80f7072fa3cb66a3617))
+* **deps-dev:** update dependency semantic-release to v18 ([73513c5](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/73513c5246de678c4833da239f808adc9a6516a5))
+* **deps-dev:** update dependency standard to v16.0.4 ([d16eb3d](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/d16eb3d19b9ad6069485d97eaa7fd656cf6464b8))
+* **deps-dev:** update semantic-release monorepo ([f29c537](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/f29c537211ec960b89bfb05d3e2274067e89f779))
+
+
+### 🚨 Tests
+
+* add extract plugin paths ([e3e0ab5](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/e3e0ab548d7af4a347f6c9923a1e18adcebfe2ba))
+* extract out plugin/blueprint paths ([c63acbf](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/c63acbf3aa2dfcd35bd28e22058e4a95ce9cc9a9))
+* try removing pg plugin ([26b72d7](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/26b72d74d3b1bd287882245783e6b97804ecf5a7))
+
+
+### ⚙️ Continuous Integrations
+
+* **circle:** add build-env-vars context [sc-11392] ([36ad870](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/36ad870efa2217edec5ff4eaae33031e6d1f4957))
+* **circle:** add postgres db ([794b501](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/794b501d562360377e6766dbfd1e2a74ab229784))
+* **circle:** update npm install command [sc-11392] ([d4d2d83](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/d4d2d83c7b3f9973ebe150f0e50f163511c20c3f))
+
+
+### ♻️ Chores
+
+* add renovate config [ch6600] ([f1deb97](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/f1deb97d7169e961aa786951ac502ac897ccab0b))
+
 # [1.17.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.16.0...v1.17.0) (2021-01-05)
 
 

@@ -9,10 +9,7 @@
   "States": {
     "GetData": {
       "Type": "Task",
-      "Resource": "module:runFunction",
-      "ResourceConfig": {
-        "functionName": "getGovUkNotifications"
-      },
+      "Resource": "function:tymly_getGovUkNotifications",
       "End": true
     }
   },

@@ -2,8 +2,8 @@
 
 const expect = require('chai').expect
 const tymly = require('@wmfs/tymly')
-const path = require('path')
 const process = require('process')
+const { pluginPaths, blueprintPaths } = require('./fixtures/tymly-paths')
 
 const SEND_SMS_STATE_MACHINE_NAME = 'test_sendWelcomeSms'
 // const SEND_INVALID_STATE_MACHINE_NAME = 'test_sendWelcomeInvalid'
@@ -20,12 +20,8 @@ describe('Send SMS tests', function () {
   it('boot tymly', async () => {
     const tymlyServices = await tymly.boot(
       {
-        pluginPaths: [
-          path.resolve(__dirname, './../lib')
-        ],
-        blueprintPaths: [
-          path.resolve(__dirname, './fixtures/blueprints/welcome-blueprint')
-        ],
+        pluginPaths,
+        blueprintPaths,
         config: {}
       }
     )

@@ -8,17 +8,7 @@ jobs:
           password: $DOCKERHUB_PASSWORD
         environment:
           TZ: "Europe/London"
-          PG_CONNECTION_STRING: postgres://postgres:postgres@localhost:5432/circle_test
-      - image: circleci/postgres:13.2-postgis-ram
-        auth:
-          username: $DOCKERHUB_USERNAME
-          password: $DOCKERHUB_PASSWORD
-        environment:
-          POSTGRES_USER: postgres
-          POSTGRES_HOST_AUTH_METHOD: trust
-          POSTGRES_DB: circle_test
     working_directory: ~/repo
-    parallelism: 3
     steps:
       - checkout
       - restore_cache:

@@ -12,17 +12,14 @@
       "InputPath": "$.id",
       "Resource": "module:findingById",
       "ResourceConfig": {
-        "modelId": "govUkNotifications"
+        "modelId": "tymly_govUkNotifications"
       },
       "ResultPath": "$",
       "Next": "SetInputPath"
     },
     "SetInputPath": {
       "Type": "Task",
-      "Resource": "module:runFunction",
-      "ResourceConfig": {
-        "functionName": "setGovUkNotificationInputPath"
-      },
+      "Resource": "function:tymly_setGovUkNotificationInputPath",
       "ResultPath": "$.messageStatusInput",
       "Next": "GetMessageStatus"
     },

@@ -1,0 +1,10 @@
+{
+  "namespace": "notify",
+  "name": "notify-blueprint",
+  "version": "1.0",
+  "label": "notify-blueprint",
+  "author": "WMFS",
+  "organisation": "West Midlands Fire Service",
+  "description": "Tymly blueprint to manage notifications",
+  "categories": []
+}

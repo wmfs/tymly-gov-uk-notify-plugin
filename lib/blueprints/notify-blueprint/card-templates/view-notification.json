@@ -5,7 +5,7 @@
   "body": [
     {
       "type": "Jumbotron",
-      "title": "GOV UK Notification"
+      "title": "View Notification"
     },
     {
       "type": "Container",
@@ -15,7 +15,7 @@
           "type": "FactSet",
           "facts": [
             {
-              "title": "GOV UK Notify Message Status",
+              "title": "Message Status",
               "value": "{{ data.messageStatus.status }}"
             }
           ]
@@ -85,8 +85,8 @@
     }
   ],
   "templateMeta": {
-    "name": "gov-uk-notifications",
-    "title": "GOV UK Notifications",
-    "category": "system"
+    "name": "view-notifications",
+    "title": "View Notifications",
+    "category": "notify"
   }
 }

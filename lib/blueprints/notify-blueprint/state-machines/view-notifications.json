@@ -1,9 +1,9 @@
 {
-  "Comment": "View notifications sent via GOV UK Notify Service",
-  "name": "View GOV UK Notify Notifications",
+  "Comment": "View notifications sent via Notify Service",
+  "name": "View Notifications",
   "version": "1.0",
   "categories": [
-    "system"
+    "notify"
   ],
   "instigators": [
     "user"
@@ -15,7 +15,7 @@
       "Type": "Task",
       "Resource": "module:awaitingHumanInput",
       "ResourceConfig": {
-        "uiName": "tymly_govUkNotifications",
+        "uiName": "notify_viewNotifications",
         "dataPath": "$"
       },
       "End": true
@@ -23,7 +23,7 @@
   },
   "restrictions": [
     {
-      "roleId": "tymly_govUkNotifyAdmin",
+      "roleId": "notify_admin",
       "allows": [
         "*"
       ]

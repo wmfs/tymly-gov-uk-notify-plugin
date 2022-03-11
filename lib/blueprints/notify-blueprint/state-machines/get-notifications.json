@@ -1,21 +1,21 @@
 {
-  "Comment": "Get GOV UK Notify Notifications",
-  "name": "Get GOV UK Notify Notifications",
+  "Comment": "Get Notifications",
+  "name": "Get Notifications",
   "version": "1.0",
   "categories": [
-    "system"
+    "notify"
   ],
   "StartAt": "GetData",
   "States": {
     "GetData": {
       "Type": "Task",
-      "Resource": "function:tymly_getGovUkNotifications",
+      "Resource": "function:notify_getNotifications",
       "End": true
     }
   },
   "restrictions": [
     {
-      "roleId": "tymly_govUkNotifyAdmin",
+      "roleId": "notify_admin",
       "allows": [
         "*"
       ]

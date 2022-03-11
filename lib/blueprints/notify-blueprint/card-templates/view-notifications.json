@@ -5,7 +5,7 @@
   "body": [
     {
       "type": "Jumbotron",
-      "title": "GOV UK Notifications"
+      "title": "View Notifications"
     },
     {
       "id": "notifyLookup",
@@ -14,7 +14,7 @@
       "resultsPerPage": 10,
       "buttonText": "Search",
       "endpoint": {
-        "name": "tymly_getGovUkNotifications_1_0"
+        "name": "notify_getNotifications_1_0"
       },
       "ctxPaths": {
         "results": "results",
@@ -84,9 +84,9 @@
     }
   ],
   "templateMeta": {
-    "name": "gov-uk-notifications",
-    "title": "GOV UK Notifications",
-    "category": "system"
+    "name": "notifications",
+    "title": "View Notifications",
+    "category": "notify"
   },
   "hooks": {
     "afterLeave": {

@@ -1,9 +1,9 @@
 {
-  "Comment": "View notification sent via GOV UK Notify Service",
-  "name": "View GOV UK Notify Notification",
+  "Comment": "View notification sent via Notify Service",
+  "name": "View Notification",
   "version": "1.0",
   "categories": [
-    "system"
+    "notify"
   ],
   "StartAt": "Finding",
   "States": {
@@ -12,14 +12,14 @@
       "InputPath": "$.id",
       "Resource": "module:findingById",
       "ResourceConfig": {
-        "modelId": "tymly_govUkNotifications"
+        "modelId": "notify_notifications"
       },
       "ResultPath": "$",
       "Next": "SetInputPath"
     },
     "SetInputPath": {
       "Type": "Task",
-      "Resource": "function:tymly_setGovUkNotificationInputPath",
+      "Resource": "function:notify_setNotificationInputPath",
       "ResultPath": "$.messageStatusInput",
       "Next": "GetMessageStatus"
     },
@@ -34,7 +34,7 @@
       "Type": "Task",
       "Resource": "module:awaitingHumanInput",
       "ResourceConfig": {
-        "uiName": "tymly_govUkNotification",
+        "uiName": "notify_viewNotification",
         "dataPath": "$"
       },
       "End": true
@@ -42,7 +42,7 @@
   },
   "restrictions": [
     {
-      "roleId": "tymly_govUkNotifyAdmin",
+      "roleId": "notify_admin",
       "allows": [
         "*"
       ]

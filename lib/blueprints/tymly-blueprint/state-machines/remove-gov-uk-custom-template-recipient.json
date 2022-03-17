@@ -1,6 +1,6 @@
 {
-  "Comment": "View custom template",
-  "name": "View custom template",
+  "Comment": "Remove Custom Notify Message Template Recipient",
+  "name": "Remove Custom Notify Message Template Recipient",
   "version": "1.0",
   "categories": [
     "govUkNotify"
@@ -15,32 +15,24 @@
         "modelId": "tymly_govUkCustomTemplates"
       },
       "ResultPath": "$",
-      "Next": "FindingRecipients"
-    },
-    "FindingRecipients": {
-      "Type": "Task",
-      "InputPath": "$.customTemplateId",
-      "Resource": "module:listCustomTemplateRecipients",
-      "ResultPath": "$.recipients",
       "Next": "AwaitingHumanInput"
     },
     "AwaitingHumanInput": {
       "Type": "Task",
       "Resource": "module:awaitingHumanInput",
       "ResourceConfig": {
-        "uiName": "tymly_govUkViewCustomTemplate",
+        "uiName": "tymly_govUkRemoveCustomTemplateRecipient",
         "dataPath": "$"
       },
-      "Next": "Send"
+      "Next": "RemoveRecipient"
     },
-    "Send": {
+    "RemoveRecipient": {
       "Type": "Task",
-      "Parameters": {
-        "recipients.$": "$.recipients",
-        "templateName.$": "$.templateName",
-        "customTemplateId.$": "$.id"
+      "InputPath": "$.recipientId",
+      "Resource": "module:deletingById",
+      "ResourceConfig": {
+        "modelId": "tymly_govUkCustomTemplateRecipients"
       },
-      "Resource": "module:sendingCustomMessageViaService",
       "End": true
     }
   },

@@ -1,0 +1,19 @@
+{
+  "title": "Custom templates",
+  "description": "Custom templates",
+  "type": "object",
+  "properties": {
+    "messageType": {
+      "type": "string"
+    },
+    "subject": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "templateName": {
+      "type": "string"
+    }
+  }
+}

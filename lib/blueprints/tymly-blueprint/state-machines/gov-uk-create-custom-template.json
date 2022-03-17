@@ -1,0 +1,32 @@
+{
+  "Comment": "Create Custom Message Template",
+  "name": "Create Custom Message Template",
+  "version": "1.0",
+  "categories": [
+    "govUkNotify"
+  ],
+  "instigators": [
+    "user"
+  ],
+  "instigatorGroup": "form",
+  "StartAt": "AwaitingHumanInput",
+  "States": {
+    "AwaitingHumanInput": {
+      "Type": "Task",
+      "Resource": "module:awaitingHumanInput",
+      "ResourceConfig": {
+        "uiName": "tymly_govUkCreateCustomMessageTemplate",
+        "dataPath": "$"
+      },
+      "End": true
+    }
+  },
+  "restrictions": [
+    {
+      "roleId": "tymly_govUkNotifyCustomTemplateAdmin",
+      "allows": [
+        "*"
+      ]
+    }
+  ]
+}

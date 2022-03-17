@@ -25,7 +25,7 @@
         "sublabel": "Created: {{ formatDate(item.created, 'DD/MM/YY') }} Created By: {{ item.createdBy }}",
         "badge": [
           {
-            "text": "{{ item.templateName === 'wmfs_customSafeAndWellMail' ? 'EMAIL' : 'SMS' }}",
+            "text": "{{ item.messageType }}",
             "colour": "accent"
           }
         ]

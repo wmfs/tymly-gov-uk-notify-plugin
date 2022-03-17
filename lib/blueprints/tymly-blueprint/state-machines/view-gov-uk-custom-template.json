@@ -5,8 +5,20 @@
   "categories": [
     "govUkNotify"
   ],
-  "StartAt": "FindingTemplate",
+  "StartAt": "GetSmsMessageRate",
   "States": {
+    "GetSmsMessageRate": {
+      "Type": "Task",
+      "Resource": "module:getConfiguredRegistryKey",
+      "ResourceConfig": {
+        "key": "tymly_govUkSmsMessageRate"
+      },
+      "Parameters": {
+        "defaultValue": 0
+      },
+      "ResultPath": "$.smsMessageRate",
+      "Next": "FindingTemplate"
+    },
     "FindingTemplate": {
       "Type": "Task",
       "InputPath": "$.customTemplateId",

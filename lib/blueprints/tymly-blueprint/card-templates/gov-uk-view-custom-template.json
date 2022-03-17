@@ -111,6 +111,34 @@
           }
         }
       ]
+    },
+    {
+      "type": "Container",
+      "spacing": "none",
+      "color": "warning",
+      "items": [
+        {
+          "type": "TextBlock",
+          "text": "{{ data.recipients.length }} messages to be sent",
+          "spacing": "none"
+        },
+        {
+          "showWhen": "data.messageType === 'sms'",
+          "type": "TextBlock",
+          "text": "TODO: how many pages of text message?",
+          "spacing": "none"
+        },
+        {
+          "type": "TextBlock",
+          "text": "Per message rate is £{{ data.smsMessageRate }} + VAT",
+          "spacing": "none"
+        },
+        {
+          "type": "TextBlock",
+          "text": "Total for all successful messages is £{{ Number(data.smsMessageRate) * data.recipients.length }} + VAT",
+          "spacing": "none"
+        }
+      ]
     }
   ],
   "actions": [

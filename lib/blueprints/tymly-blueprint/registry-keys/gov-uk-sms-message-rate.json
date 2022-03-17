@@ -1,0 +1,14 @@
+{
+  "label": "GOV UK SMS Message Rate",
+  "description": "GOV UK SMS Message Rate",
+  "schema": {
+    "properties": {
+      "environmentVariableName": "GOV_UK_SMS_MESSAGE_RATE",
+      "value": {
+        "type": "number",
+        "default": 0
+      }
+    },
+    "required": []
+  }
+}

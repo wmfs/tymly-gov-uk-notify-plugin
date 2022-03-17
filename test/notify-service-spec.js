@@ -10,7 +10,6 @@ describe('Notify service tests', function () {
 
   let tymlyService
   let notify
-  let customTemplateModel
 
   it('boot tymly', async () => {
     const tymlyServices = await tymly.boot(
@@ -23,7 +22,6 @@ describe('Notify service tests', function () {
 
     tymlyService = tymlyServices.tymly
     notify = tymlyServices.notify
-    customTemplateModel = tymlyServices.storage.models.tymly_govUkCustomTemplates
   })
 
   it('check service has loaded message templates', () => {
@@ -62,18 +60,6 @@ describe('Notify service tests', function () {
     expect(Array.isArray(templates)).to.eql(false)
     expect(typeof templates).to.eql('object')
     expect(Object.keys(templates).length).to.eql(2)
-  })
-
-  it('create custom message template as mail', async () => {
-    const templateName = 'wmfs_customSms'
-    const messageType = 'sms'
-    const subject = 'Hello world'
-    const message = 'Today will be sunny with some clouds'
-
-    await notify.createCustomMessageTemplate({ templateName, messageType, subject, message })
-
-    const customTemplates = await customTemplateModel.find({})
-    expect(customTemplates.length).to.eql(1)
   })
 
   it('should shutdown Tymly', async () => {

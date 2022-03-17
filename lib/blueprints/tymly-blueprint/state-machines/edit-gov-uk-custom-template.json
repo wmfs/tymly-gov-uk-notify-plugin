@@ -1,0 +1,44 @@
+{
+  "Comment": "Edit Custom Notify Message Template",
+  "name": "Edit Custom Notify Message Template",
+  "version": "1.0",
+  "categories": [
+    "govUkNotify"
+  ],
+  "StartAt": "Finding",
+  "States": {
+    "Finding": {
+      "Type": "Task",
+      "InputPath": "$.customTemplateId",
+      "Resource": "module:findingById",
+      "ResourceConfig": {
+        "modelId": "tymly_govUkCustomTemplates"
+      },
+      "ResultPath": "$",
+      "Next": "AwaitingHumanInput"
+    },
+    "AwaitingHumanInput": {
+      "Type": "Task",
+      "Resource": "module:awaitingHumanInput",
+      "ResourceConfig": {
+        "uiName": "tymly_govUkCreateCustomMessageTemplate",
+        "dataPath": "$"
+      },
+      "Next": "EditMessageTemplate"
+    },
+    "EditMessageTemplate": {
+      "Type": "Task",
+      "InputPath": "$",
+      "Resource": "module:editCustomMessageTemplate",
+      "End": true
+    }
+  },
+  "restrictions": [
+    {
+      "roleId": "tymly_govUkNotifyAdmin",
+      "allows": [
+        "*"
+      ]
+    }
+  ]
+}

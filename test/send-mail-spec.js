@@ -16,7 +16,6 @@ describe('Send Mail tests', function () {
   let tymlyService
   let statebox
   let notificationId
-  let notify
   let messageStatus = 'created'
 
   it('boot tymly', async () => {
@@ -30,44 +29,6 @@ describe('Send Mail tests', function () {
 
     tymlyService = tymlyServices.tymly
     statebox = tymlyServices.statebox
-
-    notify = tymlyServices.notify
-
-    expect(Object.keys(notify.templates).length).to.eql(4)
-    expect(notify.templates.test_customMail.isCustomTemplate).to.eql(true)
-    expect(notify.templates.test_customSms.isCustomTemplate).to.eql(true)
-    expect(notify.templates.test_welcomeMail.isCustomTemplate).to.eql(false)
-    expect(notify.templates.test_welcomeSms.isCustomTemplate).to.eql(false)
-  })
-
-  it('list all message templates as array', () => {
-    const templates = notify.listMessageTemplates({ format: 'array' })
-
-    expect(Array.isArray(templates)).to.eql(true)
-    expect(templates.length).to.eql(4)
-  })
-
-  it('list all message templates as array', () => {
-    const templates = notify.listMessageTemplates({ format: 'object' })
-
-    expect(Array.isArray(templates)).to.eql(false)
-    expect(typeof templates).to.eql('object')
-    expect(Object.keys(templates).length).to.eql(4)
-  })
-
-  it('list custom message templates as array', () => {
-    const templates = notify.listMessageTemplates({ format: 'array', customOnly: true })
-
-    expect(Array.isArray(templates)).to.eql(true)
-    expect(templates.length).to.eql(2)
-  })
-
-  it('list custom message templates as array', () => {
-    const templates = notify.listMessageTemplates({ format: 'object', customOnly: true })
-
-    expect(Array.isArray(templates)).to.eql(false)
-    expect(typeof templates).to.eql('object')
-    expect(Object.keys(templates).length).to.eql(2)
   })
 
   it('start state machine to send mail', async () => {

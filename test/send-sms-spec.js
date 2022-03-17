@@ -17,7 +17,6 @@ describe('Send SMS tests', function () {
   let tymlyService
   let statebox
   let notificationId
-  let notify
   let messageStatus = 'created'
 
   it('boot tymly', async () => {
@@ -31,14 +30,6 @@ describe('Send SMS tests', function () {
 
     tymlyService = tymlyServices.tymly
     statebox = tymlyServices.statebox
-
-    notify = tymlyServices.notify
-
-    expect(Object.keys(notify.templates).length).to.eql(4)
-    expect(notify.templates.test_customMail.isCustomTemplate).to.eql(true)
-    expect(notify.templates.test_customSms.isCustomTemplate).to.eql(true)
-    expect(notify.templates.test_welcomeMail.isCustomTemplate).to.eql(false)
-    expect(notify.templates.test_welcomeSms.isCustomTemplate).to.eql(false)
   })
 
   it('start state machine to send SMS with a phone number expected to succeed', async () => {

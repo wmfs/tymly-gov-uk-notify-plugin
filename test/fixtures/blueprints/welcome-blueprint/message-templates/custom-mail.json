@@ -9,7 +9,7 @@
   "custom": true,
   "restrictions": [
     {
-      "roleId": "tymly_govUkNotifyCustomTemplateAdmin",
+      "roleId": "tymly_govUkNotifyCustomTemplateAdmin"
     }
   ]
 }

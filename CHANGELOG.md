@@ -1,3 +1,19 @@
+# [1.20.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.19.0...v1.20.0) (2022-03-17)
+
+
+### ✨ Features
+
+* create custom template admin role ([698ef93](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/698ef9352b2386fd70a2a7a622979b852aa11fb7))
+
+
+### 🛠 Builds
+
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly-test-helpers to v1.14.0 ([ab43df0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/ab43df03c2ea0b95e533b0ba8362864cfcac7cab))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly-test-helpers to v1.15.0 ([5538d0c](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/5538d0cca18dec2bea3ec3b190f432942c8367c7))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly-test-helpers to v1.16.0 ([ad2074f](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/ad2074f948ac29ed8de52f60e8d9cfdbfcdf018a))
+* **deps-dev:** update dependency mocha to v9.2.1 ([901e7cd](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/901e7cd2744aefc6e9c64ac5e560ce9e84b46d3e))
+* **deps-dev:** update dependency mocha to v9.2.2 ([8c924f6](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/8c924f6943e3c977ad0f2ee7db651307f5aa43de))
+
 # [1.19.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.18.0...v1.19.0) (2022-01-28)
 
 

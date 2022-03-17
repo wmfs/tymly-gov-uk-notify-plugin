@@ -1,3 +1,12 @@
+# [1.22.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.21.1...v1.22.0) (2022-03-17)
+
+
+### ✨ Features
+
+* display sms and mail templates [sc-13867] ([0c2f549](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/0c2f54979f189bb30569934795ed3fb8f246bdbe))
+* initial commit for view custom templates [sc-13867] ([e5a2f0e](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/e5a2f0e448911eb03b9940e82f5f0969f7ae6e4f))
+* tidy up card template [sc-13867] ([ae35db5](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/ae35db5c81244f13348848253b9490392450157a))
+
 ## [1.21.1](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.21.0...v1.21.1) (2022-03-17)
 
 

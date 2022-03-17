@@ -1,0 +1,16 @@
+{
+  "title": "Custom template recipients",
+  "description": "Custom template recipients",
+  "type": "object",
+  "properties": {
+    "customTemplateId": {
+      "type": "uuid"
+    },
+    "emailAddress": {
+      "type": "string"
+    },
+    "phoneNumber": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0",
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "Container",
+      "color": "accent",
+      "items": [
+        {
+          "type": "TextBlock",
+          "size": "medium",
+          "weight": "bolder",
+          "text": "Custom Message Template"
+        }
+      ]
+    },
+    {
+      "type": "TextBlock",
+      "size": "medium",
+      "weight": "bolder",
+      "text": "Message Summary"
+    },
+    {
+      "type": "FactSet",
+      "facts": [
+        {
+          "title": "Status",
+          "value": "{{ data.status }}"
+        },
+        {
+          "title": "Message Type",
+          "value": "{{ data.messageType }}"
+        },
+        {
+          "showWhen": "data.messageType === 'mail'",
+          "title": "Subject",
+          "value": "{{ data.subject }}"
+        },
+        {
+          "title": "Message Content",
+          "value": "{{ data.message }}"
+        }
+      ]
+    },
+    {
+      "type": "ActionSet",
+      "actions": [
+        {
+          "title": "Edit message",
+          "showWhen": "data.status === 'DRAFT' || data.status === 'PENDING'",
+          "type": "Action.PushCard",
+          "stateMachineName": "tymly_editGovUkCustomTemplate_1_0",
+          "input": {
+            "customTemplateId": "$.id"
+          }
+        }
+      ]
+    },
+    {
+      "type": "TextBlock",
+      "size": "medium",
+      "weight": "bolder",
+      "text": "Recipients"
+    },
+    {
+      "showWhen": "data.messageType === 'mail'",
+      "type": "Table",
+      "arrayPath": "data.recipients",
+      "notFoundText": "There are no recipients",
+      "columns": [
+        {
+          "title": "Email address",
+          "field": "emailAddress"
+        }
+      ]
+    },
+    {
+      "showWhen": "data.messageType === 'sms'",
+      "type": "Table",
+      "arrayPath": "data.recipients",
+      "notFoundText": "There are no recipients",
+      "columns": [
+        {
+          "title": "Phone number",
+          "field": "phoneNumber"
+        }
+      ]
+    },
+    {
+      "type": "ActionSet",
+      "actions": [
+        {
+          "title": "Add recipient",
+          "showWhen": "data.status === 'DRAFT' || data.status === 'PENDING'",
+          "type": "Action.PushCard"
+        },
+        {
+          "title": "Import recipients",
+          "showWhen": "data.status === 'DRAFT' || data.status === 'PENDING'",
+          "type": "Action.PushCard"
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.Cancel",
+      "title": "Close"
+    },
+    {
+      "title": "Send",
+      "showWhen": "data.status === 'DRAFT' || data.status === 'PENDING'",
+      "type": "Action.Submit"
+    }
+  ],
+  "templateMeta": {
+    "name": "gov-uk-view-custom-template",
+    "title": "View Custom Message Template",
+    "category": "govUkNotify"
+  }
+}

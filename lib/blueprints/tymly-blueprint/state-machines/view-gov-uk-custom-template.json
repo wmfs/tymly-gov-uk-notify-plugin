@@ -1,0 +1,58 @@
+{
+  "Comment": "View custom template",
+  "name": "View custom template",
+  "version": "1.0",
+  "categories": [
+    "govUkNotify"
+  ],
+  "instigators": [
+    "user"
+  ],
+  "instigatorGroup": "app",
+  "StartAt": "FindingTemplate",
+  "States": {
+    "FindingTemplate": {
+      "Type": "Task",
+      "Resource": "module:findingOne",
+      "ResourceConfig": {
+        "modelId": "tymly_govUkCustomTemplates"
+      },
+      "ResultPath": "$",
+      "Next": "FindingRecipients"
+    },
+    "FindingRecipients": {
+      "Type": "Task",
+      "Resource": "module:finding",
+      "ResourceConfig": {
+        "modelId": "tymly_govUkCustomTemplateRecipients",
+        "filter": {
+          "where": {
+            "customTemplateId": {
+              "equals": "$.id"
+            }
+          },
+          "fields": ["emailAddress", "phoneNumber"]
+        }
+      },
+      "ResultPath": "$.recipients",
+      "Next": "AwaitingHumanInput"
+    },
+    "AwaitingHumanInput": {
+      "Type": "Task",
+      "Resource": "module:awaitingHumanInput",
+      "ResourceConfig": {
+        "uiName": "tymly_govUkViewCustomTemplate",
+        "dataPath": "$"
+      },
+      "End": true
+    }
+  },
+  "restrictions": [
+    {
+      "roleId": "tymly_govUkNotifyAdmin",
+      "allows": [
+        "*"
+      ]
+    }
+  ]
+}

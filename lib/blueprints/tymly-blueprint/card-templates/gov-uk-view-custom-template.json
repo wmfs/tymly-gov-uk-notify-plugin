@@ -110,7 +110,7 @@
     },
     {
       "title": "Send",
-      "showWhen": "data.status === 'DRAFT' || data.status === 'PENDING'",
+      "showWhen": "data.recipients.length > 0 && (data.status === 'DRAFT' || data.status === 'PENDING')",
       "type": "Action.Submit"
     }
   ],

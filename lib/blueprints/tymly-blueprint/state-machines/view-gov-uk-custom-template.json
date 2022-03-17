@@ -44,6 +44,16 @@
         "uiName": "tymly_govUkViewCustomTemplate",
         "dataPath": "$"
       },
+      "Next": "Send"
+    },
+    "Send": {
+      "Type": "Task",
+      "Parameters": {
+        "recipients.$": "$.recipients",
+        "templateName.$": "$.templateName",
+        "customTemplateId.$": "$.id"
+      },
+      "Resource": "module:sendingCustomMessageViaService",
       "End": true
     }
   },

@@ -51,13 +51,6 @@
       "validation": {
         "required": true
       }
-    },
-    {
-      "showWhen": "data.messageType === 'sms'",
-      "type": "TextBlock",
-      "weight": "lighter",
-      "size": "small",
-      "text": "x Characters Remaining"
     }
   ],
   "actions": [

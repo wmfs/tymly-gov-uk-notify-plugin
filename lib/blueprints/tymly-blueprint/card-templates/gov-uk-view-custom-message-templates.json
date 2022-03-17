@@ -21,13 +21,12 @@
       "arrayPath": "data.templates",
       "showLaunches": true,
       "templates": {
-        "label": "Message: {{ item.message }}",
-        "sublabel": "Created: {{ formatDate(item.created, 'DD/MM/YY') }} Created By: {{ item.createdBy }}",
-        "badge": [
-          {
-            "text": "{{ item.messageType }}",
-            "colour": "accent"
-          }
+        "label": "{{ item.messageType }}",
+        "sublabel": [
+          "{{ item.messageType === 'mail' ? (typeof item.subject === 'string' ? 'Subject: ' + (item.subject.length > 30 ? item.subject.substring(0, 30) + '...' : item.subject) : '') : '' }}",
+          "Message: {{ (typeof item.message === 'string' ? (item.message.length > 30 ? item.message.substring(0, 30) + '...' : item.message) : '') }}",
+          "Created: {{ formatDate(item.created, 'DD/MM/YY HH:mm') }}",
+          "Created By: {{ item.createdBy }}"
         ]
       },
       "notFoundText": "No Templates Found"

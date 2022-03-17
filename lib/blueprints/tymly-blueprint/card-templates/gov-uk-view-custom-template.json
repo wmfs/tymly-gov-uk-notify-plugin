@@ -64,6 +64,7 @@
       "text": "Recipients"
     },
     {
+      "showLaunches": true,
       "showWhen": "data.messageType === 'mail'",
       "type": "Table",
       "arrayPath": "data.recipients",
@@ -76,6 +77,7 @@
       ]
     },
     {
+      "showLaunches": true,
       "showWhen": "data.messageType === 'sms'",
       "type": "Table",
       "arrayPath": "data.recipients",

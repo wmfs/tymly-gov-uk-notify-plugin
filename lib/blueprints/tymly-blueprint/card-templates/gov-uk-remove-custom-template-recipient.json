@@ -1,0 +1,54 @@
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0",
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "Container",
+      "color": "accent",
+      "items": [
+        {
+          "type": "TextBlock",
+          "size": "medium",
+          "weight": "bolder",
+          "text": "Custom Message Template Recipient"
+        }
+      ]
+    },
+    {
+      "type": "TextBlock",
+      "weight": "bolder",
+      "text": "Are you sure you want to remove this recipient?"
+    },
+    {
+      "type": "FactSet",
+      "facts": [
+        {
+          "showWhen": "data.messageType === 'mail'",
+          "title": "Email Address",
+          "value": "{{ data.emailAddress }}"
+        },
+        {
+          "showWhen": "data.messageType === 'sms'",
+          "title": "Phone Number",
+          "value": "{{ data.phoneNumber }}"
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.Cancel",
+      "title": "No"
+    },
+    {
+      "title": "Yes, remove",
+      "type": "Action.Submit"
+    }
+  ],
+  "templateMeta": {
+    "name": "remove-gov-uk-view-custom-template-recipient",
+    "title": "Custom Message Template Recipient",
+    "category": "govUkNotify"
+  }
+}

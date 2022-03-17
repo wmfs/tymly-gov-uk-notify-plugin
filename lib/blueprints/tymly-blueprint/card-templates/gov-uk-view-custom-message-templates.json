@@ -1,0 +1,46 @@
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0",
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "Container",
+      "color": "accent",
+      "items": [
+        {
+          "type": "TextBlock",
+          "size": "medium",
+          "weight": "bolder",
+          "text": "View Custom Message Templates"
+        }
+      ]
+    },
+    {
+      "id": "templateList",
+      "type": "List",
+      "arrayPath": "data.templates",
+      "templates": {
+        "label": "Message: {{ item.message }}",
+        "sublabel": "Created: {{ formatDate(item.created, 'DD/MM/YY') }} Created By: {{ item.createdBy }}",
+        "badge": [
+          {
+            "text": "{{ item.templateName === 'wmfs_customSafeAndWellMail' ? 'EMAIL' : 'SMS' }}",
+            "colour": "accent"
+          }
+        ]
+      },
+      "notFoundText": "No Templates Found"
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.Cancel",
+      "title": "Close"
+    }
+  ],
+  "templateMeta": {
+    "name": "gov-uk-notifications",
+    "title": "View Custom Message Template",
+    "category": "govUkNotify"
+  }
+}

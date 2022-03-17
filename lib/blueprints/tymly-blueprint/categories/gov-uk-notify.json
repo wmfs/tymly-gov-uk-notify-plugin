@@ -1,0 +1,8 @@
+{
+  "label": "Notify",
+  "description": "GOV UK Notify",
+  "style": {
+    "icon": "govUkNotify",
+    "backgroundColor": "#008800"
+  }
+}

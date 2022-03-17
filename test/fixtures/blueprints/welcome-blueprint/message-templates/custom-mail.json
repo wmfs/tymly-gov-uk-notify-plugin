@@ -10,9 +10,6 @@
   "restrictions": [
     {
       "roleId": "tymly_govUkNotifyCustomTemplateAdmin",
-      "allows": [
-        "*"
-      ]
     }
   ]
 }

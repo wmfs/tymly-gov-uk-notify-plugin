@@ -1,0 +1,78 @@
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0",
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "Container",
+      "color": "accent",
+      "items": [
+        {
+          "type": "TextBlock",
+          "size": "medium",
+          "weight": "bolder",
+          "text": "Create Custom Message Template"
+        }
+      ]
+    },
+    {
+      "id": "messageType",
+      "title": "Message Type",
+      "type": "Input.ChoiceSet",
+      "style": "expanded",
+      "choices": [
+        {
+          "title": "SMS",
+          "value": "sms"
+        },
+        {
+          "title": "Email",
+          "value": "mail"
+        }
+      ],
+      "validation": {
+        "required": true
+      }
+    },
+    {
+      "showWhen": "data.messageType === 'sms'",
+      "id": "subject",
+      "title": "Subject",
+      "type": "Input.Text",
+      "validation": {
+        "requiredIf": "data.messageType === 'sms'"
+      }
+    },
+    {
+      "id": "message",
+      "title": "Message Content",
+      "type": "Input.Text",
+      "isMultiline": true,
+      "validation": {
+        "required": true
+      }
+    },
+    {
+      "showWhen": "data.messageType === 'sms'",
+      "type": "TextBlock",
+      "weight": "lighter",
+      "size": "small",
+      "text": "x Characters Remaining"
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.Cancel",
+      "title": "Close"
+    },
+    {
+      "type": "Action.Submit",
+      "title": "Submit"
+    }
+  ],
+  "templateMeta": {
+    "name": "gov-uk-notifications",
+    "title": "Create Custom Message Template",
+    "category": "govUkNotify"
+  }
+}

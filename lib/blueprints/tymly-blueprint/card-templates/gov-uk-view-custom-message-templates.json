@@ -19,6 +19,7 @@
       "id": "templateList",
       "type": "List",
       "arrayPath": "data.templates",
+      "showLaunches": true,
       "templates": {
         "label": "Message: {{ item.message }}",
         "sublabel": "Created: {{ formatDate(item.created, 'DD/MM/YY') }} Created By: {{ item.createdBy }}",

@@ -1,3 +1,30 @@
+# [1.23.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.22.0...v1.23.0) (2022-03-17)
+
+
+### ✨ Features
+
+* ability to send custom message ([b883778](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/b88377864a9d285dea20aafb263ca0331a0cc1c9))
+* add message rates ([0e7bbe5](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/0e7bbe5e3104f0ba62804c49484f084a4dc422e3))
+* add/remove recipients only ([b002cde](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/b002cdeb3c0363d0236466ce7a134158d63b3b4b))
+* adding recipients ([af5524a](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/af5524a16b2b4dba55b76a216d01b8f0b4382b45))
+* card template/state machines to view/edit custom template ([9f762bf](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/9f762bf02b2216381b62dcd8568b88a1e9aac57a))
+* set custom message status to sent ([99bb9a9](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/99bb9a981fa8b99f753d797a0de938312a97f6f3))
+* tidier labels for custom templates ([d8328c4](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/d8328c425149f85c7c58949637c32ece2d4b9558))
+
+
+### 🐛 Bug Fixes
+
+* actual id property ([866b9e7](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/866b9e7a6f6e468238d06ae7cf1ce41d4d7e0aed))
+* is this working? ([5f373fc](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/5f373fc234c5b375bdfa2fd9d216545cb72387e4))
+* model id for adding recipients ([49180cd](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/49180cd7f3d83bc7b0bc9d15e4a85dd0e1eb7e45))
+* no safe and well here ([603e0dc](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/603e0dcceb3be62a3036d1d6e12681ef8beaf210))
+* viewing custom template the proper way ([55d5901](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/55d59011d2fcf8224eef4490d082e5e017c89d09))
+
+
+### ♻️ Chores
+
+* **version:** plugin 1.23.0 [skip ci] ([54e0088](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/54e00885372ca45c3b0038e2fcfa6f350e2c7d97))
+
 # [1.22.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.21.1...v1.22.0) (2022-03-17)
 
 

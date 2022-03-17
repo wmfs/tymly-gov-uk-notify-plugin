@@ -1,0 +1,38 @@
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0",
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "Container",
+      "color": "accent",
+      "items": [
+        {
+          "type": "TextBlock",
+          "size": "medium",
+          "weight": "bolder",
+          "text": "Custom Message Template Recipient"
+        }
+      ]
+    },
+    {
+      "type": "TextBlock",
+      "text": "{{ data }}"
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.Cancel",
+      "title": "Cancel"
+    },
+    {
+      "title": "Submit",
+      "type": "Action.Submit"
+    }
+  ],
+  "templateMeta": {
+    "name": "import-gov-uk-view-custom-template-recipients",
+    "title": "Custom Message Template Recipient",
+    "category": "govUkNotify"
+  }
+}

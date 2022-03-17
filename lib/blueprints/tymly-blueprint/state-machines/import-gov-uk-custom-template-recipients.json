@@ -1,0 +1,38 @@
+{
+  "Comment": "Import Custom Notify Message Template Recipients",
+  "name": "Import Custom Notify Message Template Recipients",
+  "version": "1.0",
+  "categories": [
+    "govUkNotify"
+  ],
+  "StartAt": "FindingTemplate",
+  "States": {
+    "FindingTemplate": {
+      "Type": "Task",
+      "InputPath": "$.customTemplateId",
+      "Resource": "module:findingById",
+      "ResourceConfig": {
+        "modelId": "tymly_govUkCustomTemplates"
+      },
+      "ResultPath": "$",
+      "Next": "AwaitingHumanInput"
+    },
+    "AwaitingHumanInput": {
+      "Type": "Task",
+      "Resource": "module:awaitingHumanInput",
+      "ResourceConfig": {
+        "uiName": "tymly_govUkImportCustomTemplateRecipients",
+        "dataPath": "$"
+      },
+      "End": true
+    }
+  },
+  "restrictions": [
+    {
+      "roleId": "tymly_govUkNotifyAdmin",
+      "allows": [
+        "*"
+      ]
+    }
+  ]
+}

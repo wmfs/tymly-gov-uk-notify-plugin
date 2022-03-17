@@ -1,0 +1,52 @@
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0",
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "Container",
+      "color": "accent",
+      "items": [
+        {
+          "type": "TextBlock",
+          "size": "medium",
+          "weight": "bolder",
+          "text": "Custom Message Template Recipient"
+        }
+      ]
+    },
+    {
+      "showWhen": "data.messageType === 'mail'",
+      "id": "emailAddress",
+      "title": "Email Address",
+      "type": "Input.Email",
+      "validation": {
+        "requiredIf": "data.messageType === 'mail'"
+      }
+    },
+    {
+      "showWhen": "data.messageType === 'sms'",
+      "id": "phoneNumber",
+      "title": "Phone Number",
+      "type": "Input.TelephoneNumber",
+      "validation": {
+        "requiredIf": "data.messageType === 'sms'"
+      }
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.Cancel",
+      "title": "Cancel"
+    },
+    {
+      "title": "Submit",
+      "type": "Action.Submit"
+    }
+  ],
+  "templateMeta": {
+    "name": "add-gov-uk-view-custom-template-recipient",
+    "title": "Custom Message Template Recipient",
+    "category": "govUkNotify"
+  }
+}

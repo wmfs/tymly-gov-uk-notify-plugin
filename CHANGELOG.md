@@ -1,3 +1,36 @@
+# [1.21.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.20.0...v1.21.0) (2022-03-17)
+
+
+### ✨ Features
+
+* add some custom template examples and store info about them ([9e03429](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/9e03429a42e6f740929d8bba1e8d2769353dc315))
+* allow custom templates to be sent ([acff3ae](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/acff3aed89da5f302c66dea31cad7a16361c1f72))
+* allow templates to have label and description ([b25aa4a](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/b25aa4a62fba1f798131f78e70fdd77294d4ffe7))
+* change function to list all, pass in option to list custom only ([ab87eff](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/ab87eff6ca955622c990d9a86542281f9ae8475e))
+* simple state resource to list custom message templates ([ad5fa8e](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/ad5fa8ed1467a7f3dafe37a9c5509e6e3fa0192a))
+* state resource + service function to simply create custom templates ([ef94128](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/ef94128bab92f0b01fd81588bbe108c58a1253e7))
+* validate inputs when creating custom template message ([ce00a04](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/ce00a0404524dbc407358f9cd31f31fb3cbe3709))
+
+
+### 🐛 Bug Fixes
+
+* allow custom templates only for creating ([78fbfbf](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/78fbfbfebbfd731c3c92ecd1dc2143d7b49540dd))
+* restrictions not needed, enforce custom template required inputs ([93f98d1](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/93f98d1f05b3b0b420bd3dcc710dbd69c019c00b))
+* subject only for mail ([f55659d](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/f55659d8c44b29a076189503954726a2b3c696c0))
+* subject only for mail ([84c2d61](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/84c2d61dcae4a407c50e32b0b3d170c2ffdbf6f0))
+
+
+### 📦 Code Refactoring
+
+* set up card template for create custom template ([e63cf48](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/e63cf487e3670b22d938d96f0e69ee4c8078000c))
+
+
+### 🚨 Tests
+
+* more inserts tests ([dc3b041](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/dc3b0412c7fe52860958b6a6f96dcb76fba1622e))
+* organise test files better ([609564b](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/609564badee687635db3dbce561d69ebca3b44da))
+* send custom mail to multiple recipients ([0c14b0a](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/0c14b0ad2de02dcec73000932374c71ad305e080))
+
 # [1.20.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.19.0...v1.20.0) (2022-03-17)
 
 

@@ -1,3 +1,17 @@
+## [1.21.1](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.21.0...v1.21.1) (2022-03-17)
+
+
+### 🐛 Bug Fixes
+
+* message type check ([d4f41c4](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/d4f41c414568e76d401c240c0beff3fcd284bd19))
+
+
+### ♻️ Chores
+
+* add character remaining text ([f9caf54](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/f9caf54be540735993a6eaa8f5e203ccffb92761))
+* add status to custom template model ([f89c3ac](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/f89c3ac9a91a82e7cbb3e99efb1dec826138287d))
+* set draft status on custom template ([1e2f293](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/1e2f2935e34b410d10f1142578525d19e8080549))
+
 # [1.21.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.20.0...v1.21.0) (2022-03-17)
 
 

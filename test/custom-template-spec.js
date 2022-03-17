@@ -44,7 +44,7 @@ describe('Custom template tests', function () {
     expect(customTemplates.length).to.eql(1)
   })
 
-  it('send custom message', async () => {
+  it('send custom mail to one recipient', async () => {
     const notifications = await notify.templates[templateName].sendMessage(
       {
         emailAddress: 'perm-fail@simulator.notify'
@@ -53,6 +53,23 @@ describe('Custom template tests', function () {
     )
     expect(notifications.length).to.eql(1)
     expect(notifications[0].statusCode).to.eql(201)
+  })
+
+  it('send custom mail to multiple recipients', async () => {
+    const notifications = await notify.templates[templateName].sendMessage(
+      [
+        {
+          emailAddress: 'perm-fail@simulator.notify'
+        },
+        {
+          emailAddress: 'perm-fail@simulator.notify'
+        }
+      ],
+      customTemplateId
+    )
+    expect(notifications.length).to.eql(2)
+    expect(notifications[0].statusCode).to.eql(201)
+    expect(notifications[1].statusCode).to.eql(201)
   })
 
   it('should shutdown Tymly', async () => {

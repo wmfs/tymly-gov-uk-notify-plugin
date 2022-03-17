@@ -5,7 +5,7 @@ const tymly = require('@wmfs/tymly')
 const process = require('process')
 const { pluginPaths, blueprintPaths } = require('./fixtures/tymly-paths')
 
-describe('Send Mail tests', function () {
+describe('Notify service tests', function () {
   this.timeout(process.env.TIMEOUT || 15000)
 
   let tymlyService

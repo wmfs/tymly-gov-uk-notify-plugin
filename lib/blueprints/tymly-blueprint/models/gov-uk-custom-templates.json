@@ -3,6 +3,14 @@
   "description": "Custom templates",
   "type": "object",
   "properties": {
+    "status": {
+      "type": "string",
+      "enum": [
+        "DRAFT",
+        "PENDING",
+        "SENT"
+      ]
+    },
     "messageType": {
       "type": "string"
     },

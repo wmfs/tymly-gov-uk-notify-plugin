@@ -16,46 +16,20 @@
       ]
     },
     {
-      "id": "messageType",
-      "type": "TextBlock",
-      "text": "SMS Templates",
-      "size": "medium",
-      "weight": "bolder"
-    },
-    {
-      "type": "TextBlock",
-      "showWhen": "data.smsTemplates.length === 0",
-      "text": "No SMS Templates Found"
-    },
-    {
-      "id": "smsTemplateList",
+      "id": "templateList",
       "type": "List",
-      "arrayPath": "data.smsTemplates",
+      "arrayPath": "data.templates",
       "templates": {
         "label": "Message: {{ item.message }}",
-        "sublabel": "Created: {{ item.created.split('T')[0] }} -- Created By: {{ item.createdBy }}"
-      }
-    },
-    {
-      "id": "messageType",
-      "type": "TextBlock",
-      "text": "Email Templates",
-      "size": "medium",
-      "weight": "bolder"
-    },
-    {
-      "type": "TextBlock",
-      "showWhen": "data.mailTemplates.length === 0",
-      "text": "No Mail Templates Found"
-    },
-    {
-      "id": "mailTemplateList",
-      "type": "List",
-      "arrayPath": "data.mailTemplates",
-      "templates": {
-        "label": "Message: {{ item.message }} Subject: {{ item.subject }}",
-        "sublabel": "Created: {{ item.created.split('T')[0] }} Created By: {{ item.createdBy }}"
-      }
+        "sublabel": "Created: {{ formatDate(item.created, 'DD/MM/YY') }} Created By: {{ item.createdBy }}",
+        "badge": [
+          {
+            "text": "{{ item.templateName === 'wmfs_customSafeAndWellMail' ? 'EMAIL' : 'SMS' }}",
+            "colour": "accent"
+          }
+        ]
+      },
+      "notFoundText": "No Templates Found"
     }
   ],
   "actions": [

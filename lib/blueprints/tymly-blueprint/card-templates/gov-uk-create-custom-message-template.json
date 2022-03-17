@@ -35,12 +35,12 @@
       }
     },
     {
-      "showWhen": "data.messageType === 'sms'",
+      "showWhen": "data.messageType === 'mail'",
       "id": "subject",
       "title": "Subject",
       "type": "Input.Text",
       "validation": {
-        "requiredIf": "data.messageType === 'sms'"
+        "requiredIf": "data.messageType === 'mail'"
       }
     },
     {

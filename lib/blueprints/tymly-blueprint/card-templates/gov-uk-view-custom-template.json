@@ -93,12 +93,20 @@
         {
           "title": "Add recipient",
           "showWhen": "data.status === 'DRAFT' || data.status === 'PENDING'",
-          "type": "Action.PushCard"
+          "type": "Action.PushCard",
+          "stateMachineName": "tymly_addGovUkCustomTemplateRecipient_1_0",
+          "input": {
+            "customTemplateId": "$.id"
+          }
         },
         {
           "title": "Import recipients",
           "showWhen": "data.status === 'DRAFT' || data.status === 'PENDING'",
-          "type": "Action.PushCard"
+          "type": "Action.PushCard",
+          "stateMachineName": "tymly_importGovUkCustomTemplateRecipients_1_0",
+          "input": {
+            "customTemplateId": "$.id"
+          }
         }
       ]
     }

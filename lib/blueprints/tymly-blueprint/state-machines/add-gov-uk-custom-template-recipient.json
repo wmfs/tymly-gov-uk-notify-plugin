@@ -35,7 +35,7 @@
       },
       "Resource": "module:upserting",
       "ResourceConfig": {
-        "modelId": "tymly_govUkCustomTemplates",
+        "modelId": "tymly_govUkCustomTemplateRecipients",
         "setMissingPropertiesToNull": false
       },
       "End": true

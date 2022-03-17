@@ -2,14 +2,5 @@
   "registryLookupApiKey": "test_notifyApiKey",
   "templateId": "ac8a39f0-8e2e-4543-b968-a513c29468cf",
   "messageType": "mail",
-  "required": [
-    "subject",
-    "message"
-  ],
-  "custom": true,
-  "restrictions": [
-    {
-      "roleId": "tymly_govUkNotifyCustomTemplateAdmin"
-    }
-  ]
+  "custom": true
 }

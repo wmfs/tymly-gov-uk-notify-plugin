@@ -16,17 +16,25 @@
       ]
     },
     {
+      "id": "name",
+      "title": "Name",
+      "type": "Input.Text",
+      "validation": {
+        "required": true
+      }
+    },
+    {
       "id": "messageType",
       "title": "Message Type",
       "type": "Input.ChoiceSet",
       "style": "expanded",
       "choices": [
         {
-          "title": "SMS",
+          "title": "Text message template",
           "value": "sms"
         },
         {
-          "title": "Email",
+          "title": "Email template",
           "value": "mail"
         }
       ],

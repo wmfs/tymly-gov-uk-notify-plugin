@@ -13,12 +13,15 @@ const path = require('path')
 describe('Custom template tests', function () {
   this.timeout(process.env.TIMEOUT || 15000)
 
-  const templateName = 'test_customMail'
-  const messageTypeMail = 'mail'
-  const messageTypeSms = 'sms'
-  const subject = 'Hello world'
-  const message = 'Today will be sunny with some clouds'
-  const emailFileName = 'email-inputs-test.csv'
+  const mailTemplateName = 'test_customMail'
+  const mailMessageType = 'mail'
+  const mailSubject = 'Hello world'
+  const mailMessage = 'Today will be sunny with some clouds'
+  const mailFileName = 'email-inputs-test.csv'
+
+  const smsTemplateName = 'test_customSms'
+  const smsMessageType = 'sms'
+  const smsMessage = 'Hello world!! Will it be sunny today?'
   const smsFileName = 'sms-inputs-test.csv'
 
   let tymlyService
@@ -45,10 +48,10 @@ describe('Custom template tests', function () {
 
   it('create custom message template as mail', async () => {
     customTemplateId = await notify.createCustomMessageTemplate({
-      templateName,
-      messageType: messageTypeMail,
-      subject,
-      message
+      templateName: mailTemplateName,
+      messageType: mailMessageType,
+      subject: mailSubject,
+      message: mailMessage
     })
 
     const customTemplates = await customTemplateModel.find({})
@@ -59,10 +62,10 @@ describe('Custom template tests', function () {
   it('Select recipient file (mail)', async () => {
     event.body = {
       upload: {
-        serverFilename: path.join(__dirname, 'fixtures', emailFileName),
-        clientFilename: path.join(__dirname, 'fixtures', emailFileName)
+        serverFilename: path.join(__dirname, 'fixtures', mailFileName),
+        clientFilename: path.join(__dirname, 'fixtures', mailFileName)
       },
-      messageType: messageTypeMail
+      messageType: mailMessageType
     }
     event.importDirectory = path.join(__dirname, 'fixtures', 'output')
     event.importLogId = {
@@ -102,7 +105,7 @@ describe('Custom template tests', function () {
         serverFilename: path.join(__dirname, 'fixtures', smsFileName),
         clientFilename: path.join(__dirname, 'fixtures', smsFileName)
       },
-      messageType: messageTypeSms
+      messageType: smsMessageType
     }
     event.importDirectory = path.join(__dirname, 'fixtures', 'output')
     event.importLogId = {
@@ -132,7 +135,7 @@ describe('Custom template tests', function () {
   })
 
   it('send custom mail to one recipient', async () => {
-    const notifications = await notify.templates[templateName].sendMessage(
+    const notifications = await notify.templates[mailTemplateName].sendMessage(
       {
         emailAddress: 'perm-fail@simulator.notify'
       },
@@ -144,7 +147,7 @@ describe('Custom template tests', function () {
   })
 
   it('send custom mail to multiple recipients', async () => {
-    const notifications = await notify.templates[templateName].sendMessage(
+    const notifications = await notify.templates[mailTemplateName].sendMessage(
       [
         {
           emailAddress: 'perm-fail@simulator.notify'
@@ -158,6 +161,17 @@ describe('Custom template tests', function () {
     expect(notifications.length).to.eql(2)
     expect(notifications[0].statusCode).to.eql(201)
     expect(notifications[1].statusCode).to.eql(201)
+  })
+
+  it('create custom message template as sms', async () => {
+    customTemplateId = await notify.createCustomMessageTemplate({
+      templateName: smsTemplateName,
+      messageType: smsMessageType,
+      message: smsMessage
+    })
+
+    const customTemplates = await customTemplateModel.find({})
+    expect(customTemplates.length).to.eql(2)
   })
 
   it('should shutdown Tymly', async () => {

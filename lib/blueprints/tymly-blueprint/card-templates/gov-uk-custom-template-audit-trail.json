@@ -1,0 +1,58 @@
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0",
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "Container",
+      "color": "accent",
+      "items": [
+        {
+          "type": "TextBlock",
+          "size": "medium",
+          "weight": "bolder",
+          "text": "{{ data.name || 'This template has no name' }} - Previous versions"
+        }
+      ]
+    },
+    {
+      "type": "TextBlock",
+      "text": "{{ data.auditTrail.length }} change{{ data.auditTrail.length === 1 ? '' : 's' }}",
+      "weight": "bolder"
+    },
+    {
+      "id": "auditLog",
+      "type": "AdaptiveCard",
+      "arrayPath": "data.auditTrail",
+      "body": [
+        {
+          "type": "Separator"
+        },
+        {
+          "type": "TextBlock",
+          "showWhen": "auditLogItem.change !== 'Insert'",
+          "text": "{{ auditLogItem.change }}",
+          "spacing": "none"
+        },
+        {
+          "type": "TextBlock",
+          "text": "{{ auditLogItem.change === 'Insert' ? 'Created' : 'Modified' }} at {{ auditLogItem.modified }}{{ auditLogItem.modifiedBy ? ` by ${auditLogItem.modifiedBy}` : '' }}",
+          "weight": "lighter",
+          "size": "small",
+          "spacing": "none"
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.Cancel",
+      "title": "Close"
+    }
+  ],
+  "templateMeta": {
+    "name": "gov-uk-view-custom-template",
+    "title": "Previous versions",
+    "category": "govUkNotify"
+  }
+}

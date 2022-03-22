@@ -1,6 +1,6 @@
 {
-  "label": "GOV UK SMS Message Rate",
-  "description": "GOV UK SMS Message Rate",
+  "label": "GOV UK SMS Message Rate (pence)",
+  "description": "GOV UK SMS Message Rate (pence)",
   "schema": {
     "properties": {
       "environmentVariableName": "GOV_UK_SMS_MESSAGE_RATE",

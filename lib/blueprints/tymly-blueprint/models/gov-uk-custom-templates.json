@@ -3,7 +3,12 @@
   "description": "Custom templates",
   "type": "object",
   "properties": {
+    "name": {
+      "title": "Name",
+      "type": "string"
+    },
     "status": {
+      "title": "Status",
       "type": "string",
       "enum": [
         "DRAFT",
@@ -12,15 +17,19 @@
       ]
     },
     "messageType": {
+      "title": "Message type",
       "type": "string"
     },
     "subject": {
+      "title": "Subject",
       "type": "string"
     },
     "message": {
+      "title": "Message",
       "type": "string"
     },
     "templateName": {
+      "title": "Template name",
       "type": "string"
     }
   }

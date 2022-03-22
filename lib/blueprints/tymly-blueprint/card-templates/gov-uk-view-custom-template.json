@@ -16,113 +16,130 @@
       ]
     },
     {
-      "type": "TextBlock",
-      "size": "medium",
-      "weight": "bolder",
-      "text": "Message Summary"
-    },
-    {
-      "type": "FactSet",
-      "facts": [
+      "type": "Container",
+      "bordered": true,
+      "shadowed": true,
+      "spacing": "none",
+      "items": [
         {
-          "title": "Status",
-          "value": "{{ data.status }}"
+          "type": "TextBlock",
+          "size": "medium",
+          "weight": "bolder",
+          "text": "Message Summary"
         },
         {
-          "title": "Message Type",
-          "value": "{{ data.messageType }}"
+          "type": "FactSet",
+          "facts": [
+            {
+              "title": "Status",
+              "value": "{{ data.status }}"
+            },
+            {
+              "title": "Message Type",
+              "value": "{{ data.messageType }}"
+            },
+            {
+              "showWhen": "data.messageType === 'mail'",
+              "title": "Subject",
+              "value": "{{ data.subject }}"
+            },
+            {
+              "title": "Message Content",
+              "value": "{{ data.message }}"
+            }
+          ]
         },
         {
-          "showWhen": "data.messageType === 'mail'",
-          "title": "Subject",
-          "value": "{{ data.subject }}"
+          "showWhen": "data.messageType === 'sms'",
+          "type": "TextBlock",
+          "size": "small",
+          "weight": "lighter",
+          "text": "{{ data.message.length }} characters"
         },
         {
-          "title": "Message Content",
-          "value": "{{ data.message }}"
-        }
-      ]
-    },
-    {
-      "showWhen": "data.messageType === 'sms'",
-      "type": "TextBlock",
-      "size": "small",
-      "weight": "lighter",
-      "text": "{{ data.message.length }} characters"
-    },
-    {
-      "type": "ActionSet",
-      "actions": [
-        {
-          "title": "Edit message",
-          "showWhen": "data.status === 'DRAFT' || data.status === 'PENDING'",
-          "type": "Action.PushCard",
-          "stateMachineName": "tymly_editGovUkCustomTemplate_1_0",
-          "input": {
-            "customTemplateId": "$.id"
-          }
-        }
-      ]
-    },
-    {
-      "type": "TextBlock",
-      "size": "medium",
-      "weight": "bolder",
-      "text": "Recipients"
-    },
-    {
-      "showLaunches": true,
-      "showWhen": "data.messageType === 'mail'",
-      "type": "Table",
-      "arrayPath": "data.recipients",
-      "notFoundText": "There are no recipients",
-      "columns": [
-        {
-          "title": "Email address",
-          "field": "emailAddress"
-        }
-      ]
-    },
-    {
-      "showLaunches": true,
-      "showWhen": "data.messageType === 'sms'",
-      "type": "Table",
-      "arrayPath": "data.recipients",
-      "notFoundText": "There are no recipients",
-      "columns": [
-        {
-          "title": "Phone number",
-          "field": "phoneNumber"
-        }
-      ]
-    },
-    {
-      "type": "ActionSet",
-      "actions": [
-        {
-          "title": "Add recipient",
-          "showWhen": "data.status === 'DRAFT' || data.status === 'PENDING'",
-          "type": "Action.PushCard",
-          "stateMachineName": "tymly_addGovUkCustomTemplateRecipient_1_0",
-          "input": {
-            "customTemplateId": "$.id"
-          }
-        },
-        {
-          "title": "Import recipients",
-          "showWhen": "data.status === 'DRAFT' || data.status === 'PENDING'",
-          "type": "Action.PushCard",
-          "stateMachineName": "tymly_importGovUkCustomTemplateRecipients_1_0",
-          "input": {
-            "customTemplateId": "$.id"
-          }
+          "type": "ActionSet",
+          "actions": [
+            {
+              "title": "Edit message",
+              "showWhen": "data.status === 'DRAFT' || data.status === 'PENDING'",
+              "type": "Action.PushCard",
+              "stateMachineName": "tymly_editGovUkCustomTemplate_1_0",
+              "input": {
+                "customTemplateId": "$.id"
+              }
+            }
+          ]
         }
       ]
     },
     {
       "type": "Container",
+      "bordered": true,
+      "shadowed": true,
       "spacing": "none",
-      "color": "warning",
+      "items": [
+        {
+          "type": "TextBlock",
+          "size": "medium",
+          "weight": "bolder",
+          "text": "Recipients"
+        },
+        {
+          "showLaunches": true,
+          "showWhen": "data.messageType === 'mail'",
+          "type": "Table",
+          "arrayPath": "data.recipients",
+          "notFoundText": "There are no recipients",
+          "columns": [
+            {
+              "title": "Email address",
+              "field": "emailAddress"
+            }
+          ]
+        },
+        {
+          "showLaunches": true,
+          "showWhen": "data.messageType === 'sms'",
+          "type": "Table",
+          "arrayPath": "data.recipients",
+          "notFoundText": "There are no recipients",
+          "columns": [
+            {
+              "title": "Phone number",
+              "field": "phoneNumber"
+            }
+          ]
+        },
+        {
+          "type": "ActionSet",
+          "actions": [
+            {
+              "title": "Add recipient",
+              "showWhen": "data.status === 'DRAFT' || data.status === 'PENDING'",
+              "type": "Action.PushCard",
+              "stateMachineName": "tymly_addGovUkCustomTemplateRecipient_1_0",
+              "input": {
+                "customTemplateId": "$.id"
+              }
+            },
+            {
+              "title": "Import recipients",
+              "showWhen": "data.status === 'DRAFT' || data.status === 'PENDING'",
+              "type": "Action.PushCard",
+              "stateMachineName": "tymly_importGovUkCustomTemplateRecipients_1_0",
+              "input": {
+                "customTemplateId": "$.id"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Container",
+      "bordered": true,
+      "shadowed": true,
+      "spacing": "none",
       "items": [
         {
           "type": "TextBlock",
@@ -133,7 +150,7 @@
         {
           "showWhen": "data.messageType === 'sms'",
           "type": "TextBlock",
-          "text": "Each message is {{ data.messageRates.numPages }} pages",
+          "text": "Each message is {{ data.messageRates.numPages }} page{{ data.messageRates.numPages === 1 ? '' : 's' }}",
           "spacing": "none"
         },
         {

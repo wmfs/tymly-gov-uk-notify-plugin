@@ -1,3 +1,28 @@
+# [1.24.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.23.0...v1.24.0) (2022-03-22)
+
+
+### ✨ Features
+
+* add info on sms/mail pricing ([5ab21fc](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/5ab21fce85c56b1184c1bd7b998065056635c36b))
+* adjust formatting of custom template view ([5b6a6fc](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/5b6a6fc79d2b5017761270f2708450c70146c647))
+* allow for naming custom templates ([4645ac8](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/4645ac8916bb828d6ff0d7d789fd0cf78f7a0120))
+* extend button title to send messages ([b7c1f6a](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/b7c1f6a3232f057a4762dff9987ffd712a1a4af9))
+* improve formatting of message type ([ee1e1f1](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/ee1e1f1686fbcebbcbfdf6b0ad929d18536aa11c))
+* see previous versions ([b62b147](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/b62b14788c02087b4955735e83333ed1932aa432))
+* show count of characters in message ([286e354](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/286e354b2de0860e3535bff6b787f1465444daa1))
+
+
+### 🐛 Bug Fixes
+
+* calculate sms pages with extended gsm characters and certain accented characters ([f257c3c](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/f257c3cd14d95447c357bc5c52178a697f9635d3))
+* show if template has no name ([ef3c57c](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/ef3c57c4284754bc39bd5b35da80f9794858f374))
+* sms message rate as pence ([7b1a85f](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/7b1a85f89aad11fbc411617d4525a077751269c5))
+
+
+### 🚨 Tests
+
+* include audit trail state resource ([241b11b](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/241b11bd00028bfa5d28027ca2f21b2ccf5cd4cb))
+
 # [1.23.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.22.0...v1.23.0) (2022-03-17)
 
 

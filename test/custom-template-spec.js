@@ -44,6 +44,14 @@ describe('Custom template tests', function () {
     expect(customTemplates.length).to.eql(1)
   })
 
+  it('should test recipient import with emails', async () => {
+    console.log('Test Email')
+  })
+
+  it('should test recipient import with phone numbers', async () => {
+    console.log('Test SMS')
+  })
+
   it('send custom mail to one recipient', async () => {
     const notifications = await notify.templates[templateName].sendMessage(
       {

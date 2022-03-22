@@ -16,6 +16,14 @@
       ]
     },
     {
+      "id": "name",
+      "title": "Name",
+      "type": "Input.Text",
+      "validation": {
+        "required": true
+      }
+    },
+    {
       "id": "messageType",
       "title": "Message Type",
       "type": "Input.ChoiceSet",

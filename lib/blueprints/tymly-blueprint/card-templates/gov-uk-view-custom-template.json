@@ -11,7 +11,7 @@
           "type": "TextBlock",
           "size": "medium",
           "weight": "bolder",
-          "text": "Custom Message Template"
+          "text": "{{ data.name }} - {{ { mail: 'Email template', sms: 'Text message template' }[data.messageType] }}"
         }
       ]
     },
@@ -33,10 +33,6 @@
             {
               "title": "Status",
               "value": "{{ data.status }}"
-            },
-            {
-              "title": "Message Type",
-              "value": "{{ { mail: 'Email template', sms: 'Text message template' }[data.messageType] }}"
             },
             {
               "showWhen": "data.messageType === 'mail'",

@@ -19,14 +19,12 @@
       "id": "templateList",
       "type": "List",
       "arrayPath": "data.templates",
-      "showLaunches": true,
+      "clickToLaunch": true,
       "templates": {
-        "label": "{{ { mail: 'Email template', sms: 'Text message template' }[item.messageType] }}",
+        "label": "{{ item.name || 'This template has no name' }}",
         "sublabel": [
-          "{{ item.messageType === 'mail' ? (typeof item.subject === 'string' ? 'Subject: ' + (item.subject.length > 30 ? item.subject.substring(0, 30) + '...' : item.subject) : '') : '' }}",
-          "Message: {{ (typeof item.message === 'string' ? (item.message.length > 30 ? item.message.substring(0, 30) + '...' : item.message) : '') }}",
-          "Created: {{ formatDate(item.created, 'DD/MM/YY HH:mm') }}",
-          "Created By: {{ item.createdBy }}"
+          "{{ { mail: 'Email template', sms: 'Text message template' }[item.messageType] }}",
+          "Last modified: {{ formatDate(item.modified, 'DD/MM/YY HH:mm') }}"
         ]
       },
       "notFoundText": "No Templates Found"

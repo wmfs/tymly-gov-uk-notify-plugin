@@ -9,7 +9,7 @@ const { v1: uuid } = require('uuid')
 const { pluginPaths, blueprintPaths } = require('./fixtures/tymly-paths')
 
 const recipientsSelect = require('../lib/blueprints/tymly-blueprint/functions/process-gov-uk-recipients')()
-const recipientsUpload = require('../lib/blueprints/tymly-blueprint/functions/upload-gov-uk-recipients')()
+const recipientsUpsert = require('../lib/blueprints/tymly-blueprint/functions/upsert-gov-uk-recipients')()
 const path = require('path')
 
 describe('Custom template tests', function () {
@@ -26,8 +26,10 @@ describe('Custom template tests', function () {
   let statebox
   let notify
   let customTemplateModel
+  let recipientModel
   let customTemplateId
   let event = {}
+  let importLogId
 
   it('boot tymly', async () => {
     const tymlyServices = await tymly.boot(
@@ -42,6 +44,7 @@ describe('Custom template tests', function () {
     statebox = tymlyServices.statebox
     notify = tymlyServices.notify
     customTemplateModel = tymlyServices.storage.models.tymly_govUkCustomTemplates
+    recipientModel = tymlyServices.storage.models.tymly_govUkCustomTemplateRecipients
   })
 
   it('create custom message template as mail', async () => {
@@ -54,33 +57,47 @@ describe('Custom template tests', function () {
 
     const customTemplates = await customTemplateModel.find({})
     expect(customTemplates.length).to.eql(1)
+    event.customTemplateId = customTemplateId
   })
 
   it('Select recipient file', async () => {
-    event = {
-      body: {
+      event.body = {
         upload: {
           serverFilename: path.join(__dirname, 'fixtures', emailFileName),
           clientFilename: path.join(__dirname, 'fixtures', emailFileName)
         },
         messageType
-      },
-      importDirectory: path.join(__dirname, 'fixtures', 'output'),
-      importLogId: {
+      }
+      event.importDirectory = path.join(__dirname, 'fixtures', 'output'),
+      event.importLogId = {
         id: uuid()
       }
-    }
 
     const result = await recipientsSelect(event)
 
-    console.log('Results: ', result)
     expect(result.totalRows).to.eql(3)
     expect(result.rows).to.eql([ 'tymly@wmfs.net', 'test@test.com', 'test2@test.com' ])
     expect(result.totalRejected).to.eql(2)
     expect(result.rejected).to.eql([ 'not an email', 'also not an email?' ])
 
-    event.totalRows = result.totalRows
-    event.fileName = emailFileName
+    event.result = result
+  })
+
+  it('Upsert recipient file', async () => {
+    const result = await recipientsUpsert(event, tymlyService)
+    importLogId = result.importLogId
+  })
+
+  it('Check contacts imported properly', async () => {
+    const recipients = await recipientModel.find({
+      where: {
+        customTemplateId: {
+          equals: event.customTemplateId
+        }
+      },
+    })
+
+    expect(recipients.length).to.eql(3)
   })
 
   it('send custom mail to one recipient', async () => {
@@ -90,6 +107,8 @@ describe('Custom template tests', function () {
       },
       customTemplateId
     )
+
+    console.log('>>> ', notifications)
     expect(notifications.length).to.eql(1)
     expect(notifications[0].statusCode).to.eql(201)
   })

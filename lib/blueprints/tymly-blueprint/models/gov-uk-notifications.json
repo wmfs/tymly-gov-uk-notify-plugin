@@ -29,6 +29,10 @@
     },
     "statusCode": {
       "type": "string"
+    },
+    "customTemplateId": {
+      "title": "Custom template ID",
+      "type": "uuid"
     }
   }
 }

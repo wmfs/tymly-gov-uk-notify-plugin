@@ -138,13 +138,13 @@
         {
           "showWhen": "data.messageType === 'sms'",
           "type": "TextBlock",
-          "text": "Per message rate is £{{ data.messageRates.smsMessageRate }} + VAT",
+          "text": "Per message rate is {{ data.messageRates.smsMessageRatePence }} pence (plus VAT)",
           "spacing": "none"
         },
         {
           "showWhen": "data.messageType === 'sms'",
           "type": "TextBlock",
-          "text": "Total cost will be £{{ data.messageRates.totalCost }} + VAT",
+          "text": "Total cost will be £{{ data.messageRates.totalCostPounds }} (plus VAT)",
           "spacing": "none"
         },
         {

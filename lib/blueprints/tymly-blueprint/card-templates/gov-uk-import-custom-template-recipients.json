@@ -47,6 +47,40 @@
       "accept": [
         ".csv"
       ]
+    },
+    {
+      "type": "Container",
+      "spacing": "none",
+      "color": "warning",
+      "showWhen": "data.importLog && data.importLog.rejected.length > 0",
+      "items": [
+        {
+          "type": "TextBlock",
+          "text": "The recipients list you uploaded contains some invalid entries",
+          "spacing": "none"
+        },
+        {
+          "id": "rejectedList",
+          "type": "List",
+          "arrayPath": "data.importLog.rejected",
+          "templates": {
+            "label": "{{ item }}"
+          }
+        }
+      ]
+    },
+    {
+      "type": "Container",
+      "spacing": "none",
+      "color": "good",
+      "showWhen": "data.importLog && data.importLog.rejected.length === 0",
+      "items": [
+        {
+          "type": "TextBlock",
+          "text": "All recipients successfully loaded",
+          "spacing": "none"
+        }
+      ]
     }
   ],
   "actions": [

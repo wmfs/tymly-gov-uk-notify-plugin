@@ -119,23 +119,52 @@
       "items": [
         {
           "type": "TextBlock",
-          "text": "{{ data.recipients.length }} messages to be sent",
+          "size": "medium",
+          "weight": "bolder",
+          "text": "Pricing"
+        },
+        {
+          "showWhen": "data.messageType === 'sms'",
+          "type": "TextBlock",
+          "text": "Each message is {{ data.messageRates.numPages }} pages",
           "spacing": "none"
         },
         {
           "showWhen": "data.messageType === 'sms'",
           "type": "TextBlock",
-          "text": "TODO: how many pages of text message?",
+          "text": "{{ data.messageRates.totalMessages }} message{{ data.messageRates.totalMessages === 1 ? '' : 's' }} to be sent",
           "spacing": "none"
         },
         {
+          "showWhen": "data.messageType === 'sms'",
           "type": "TextBlock",
-          "text": "Per message rate is £{{ data.smsMessageRate }} + VAT",
+          "text": "Per message rate is £{{ data.messageRates.smsMessageRate }} + VAT",
           "spacing": "none"
         },
         {
+          "showWhen": "data.messageType === 'sms'",
           "type": "TextBlock",
-          "text": "Total for all successful messages is £{{ Number(data.smsMessageRate) * data.recipients.length }} + VAT",
+          "text": "Total cost will be £{{ data.messageRates.totalCost }} + VAT",
+          "spacing": "none"
+        },
+        {
+          "showWhen": "data.messageType === 'mail'",
+          "type": "TextBlock",
+          "text": "{{ data.recipients.length }} email{{ data.recipients.length === 1 ? '' : 's' }} to be sent",
+          "spacing": "none"
+        },
+        {
+          "showWhen": "data.messageType === 'mail'",
+          "type": "TextBlock",
+          "text": "It's free to send emails",
+          "spacing": "none"
+        },
+        {
+          "type": "Separator"
+        },
+        {
+          "type": "TextBlock",
+          "text": "To see more information on pricing, <a href='https://www.notifications.service.gov.uk/pricing' target='_blank'>click here</a>.",
           "spacing": "none"
         }
       ]

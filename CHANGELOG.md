@@ -1,3 +1,10 @@
+## [1.24.1](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.24.0...v1.24.1) (2022-03-22)
+
+
+### 🐛 Bug Fixes
+
+* save custom template id to notification model ([83c344e](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/83c344eeb48a38df3f8c68a803c2b34e57f20d68))
+
 # [1.24.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.23.0...v1.24.0) (2022-03-22)
 
 

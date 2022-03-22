@@ -63,6 +63,14 @@
               "input": {
                 "customTemplateId": "$.id"
               }
+            },
+            {
+              "title": "See previous versions",
+              "type": "Action.PushCard",
+              "stateMachineName": "tymly_govUkCustomTemplateAuditTrail_1_0",
+              "input": {
+                "customTemplateId": "$.id"
+              }
             }
           ]
         }
@@ -203,7 +211,7 @@
   ],
   "templateMeta": {
     "name": "gov-uk-view-custom-template",
-    "title": "View Custom Message Template",
+    "title": "${name}",
     "category": "govUkNotify"
   }
 }

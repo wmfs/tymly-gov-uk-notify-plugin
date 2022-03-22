@@ -1,0 +1,40 @@
+{
+  "Comment": "View custom template audit trail",
+  "name": "View custom template audit trail",
+  "version": "1.0",
+  "categories": [
+    "govUkNotify"
+  ],
+  "StartAt": "GrabAuditTrail",
+  "States": {
+    "GrabAuditTrail": {
+      "Type": "Task",
+      "Resource": "module:auditTrail",
+      "Parameters": {
+        "model": "tymly.govUkCustomTemplates",
+        "keys": {
+          "id.$": "$.customTemplateId"
+        }
+      },
+      "ResultPath": "$.auditTrail",
+      "Next": "AwaitingHumanInput"
+    },
+    "AwaitingHumanInput": {
+      "Type": "Task",
+      "Resource": "module:awaitingHumanInput",
+      "ResourceConfig": {
+        "uiName": "tymly_govUkCustomTemplateAuditTrail",
+        "dataPath": "$"
+      },
+      "End": true
+    }
+  },
+  "restrictions": [
+    {
+      "roleId": "tymly_govUkNotifyAdmin",
+      "allows": [
+        "*"
+      ]
+    }
+  ]
+}

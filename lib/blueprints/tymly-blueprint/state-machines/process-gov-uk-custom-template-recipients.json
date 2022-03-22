@@ -1,6 +1,6 @@
 {
-  "Comment": "Process and Upsert Custom Notify Message Template Recipients",
-  "name": "Upsert Recipients",
+  "Comment": "Process Custom Notify Message Template Recipients",
+  "name": "Process Recipients",
   "version": "1.0",
   "categories": [
     "govUkNotify"
@@ -9,7 +9,7 @@
   "States": {
     "ProcessRecipients": {
       "Type": "Task",
-      "Resource": "function:tymly_processUploadGovUkRecipients",
+      "Resource": "function:tymly_processGovUkRecipients",
       "End": true
     }
   },

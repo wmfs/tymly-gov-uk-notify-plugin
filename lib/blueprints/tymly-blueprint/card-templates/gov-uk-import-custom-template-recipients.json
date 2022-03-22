@@ -16,13 +16,34 @@
       ]
     },
     {
-      "id": "upload",
+      "id": "mailUpload",
       "type": "Input.FileUpload",
       "title": "Select a file",
+      "showWhen": "data.messageType === 'mail'",
       "onUploadEndpoint": {
-        "name": "govUkNotify_processGovUkCustomTemplateRecipients"
+        "name": "tymly_processGovUkCustomTemplateRecipients_1_0"
+      },
+      "additionalFields": {
+        "upload": true,
+        "messageType": "mail"
+      },
+      "accept": [
+        ".csv"
+      ]
+    },
+    {
+      "id": "smsUpload",
+      "type": "Input.FileUpload",
+      "title": "Select a file",
+      "showWhen": "data.messageType === 'sms'",
+      "onUploadEndpoint": {
+        "name": "tymly_processGovUkCustomTemplateRecipients_1_0"
       },
       "autoUpload": true,
+      "additionalFields": {
+        "upload": true,
+        "messageType": "sms"
+      },
       "accept": [
         ".csv"
       ]

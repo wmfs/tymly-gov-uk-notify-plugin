@@ -58,12 +58,12 @@ describe('Custom template tests', function () {
 
   it('Select recipient file', async () => {
     event = {
-      messageType,
       body: {
         upload: {
           serverFilename: path.join(__dirname, 'fixtures', emailFileName),
           clientFilename: path.join(__dirname, 'fixtures', emailFileName)
-        }
+        },
+        messageType
       },
       importDirectory: path.join(__dirname, 'fixtures', 'output'),
       importLogId: {

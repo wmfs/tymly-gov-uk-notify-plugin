@@ -22,11 +22,11 @@
       "style": "expanded",
       "choices": [
         {
-          "title": "SMS",
+          "title": "Text message template",
           "value": "sms"
         },
         {
-          "title": "Email",
+          "title": "Email template",
           "value": "mail"
         }
       ],

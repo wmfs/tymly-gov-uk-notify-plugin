@@ -21,7 +21,7 @@
       "arrayPath": "data.templates",
       "showLaunches": true,
       "templates": {
-        "label": "{{ item.messageType }}",
+        "label": "{{ { mail: 'Email template', sms: 'Text message template' }[item.messageType] }}",
         "sublabel": [
           "{{ item.messageType === 'mail' ? (typeof item.subject === 'string' ? 'Subject: ' + (item.subject.length > 30 ? item.subject.substring(0, 30) + '...' : item.subject) : '') : '' }}",
           "Message: {{ (typeof item.message === 'string' ? (item.message.length > 30 ? item.message.substring(0, 30) + '...' : item.message) : '') }}",

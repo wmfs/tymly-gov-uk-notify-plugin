@@ -8,10 +8,14 @@ const { pluginPaths, blueprintPaths } = require('./fixtures/tymly-paths')
 describe('Custom template tests', function () {
   this.timeout(process.env.TIMEOUT || 15000)
 
-  const templateName = 'test_customMail'
-  const messageType = 'mail'
-  const subject = 'Hello world'
-  const message = 'Today will be sunny with some clouds'
+  const mailTemplateName = 'test_customMail'
+  const mailMessageType = 'mail'
+  const mailSubject = 'Hello world'
+  const mailMessage = 'Today will be sunny with some clouds'
+
+  const smsTemplateName = 'test_customSms'
+  const smsMessageType = 'sms'
+  const smsMessage = 'Hello world!! Will it be sunny today?'
 
   let tymlyService
   let notify
@@ -34,10 +38,10 @@ describe('Custom template tests', function () {
 
   it('create custom message template as mail', async () => {
     customTemplateId = await notify.createCustomMessageTemplate({
-      templateName,
-      messageType,
-      subject,
-      message
+      templateName: mailTemplateName,
+      messageType: mailMessageType,
+      subject: mailSubject,
+      message: mailMessage
     })
 
     const customTemplates = await customTemplateModel.find({})
@@ -45,7 +49,7 @@ describe('Custom template tests', function () {
   })
 
   it('send custom mail to one recipient', async () => {
-    const notifications = await notify.templates[templateName].sendMessage(
+    const notifications = await notify.templates[mailTemplateName].sendMessage(
       {
         emailAddress: 'perm-fail@simulator.notify'
       },
@@ -56,7 +60,7 @@ describe('Custom template tests', function () {
   })
 
   it('send custom mail to multiple recipients', async () => {
-    const notifications = await notify.templates[templateName].sendMessage(
+    const notifications = await notify.templates[mailTemplateName].sendMessage(
       [
         {
           emailAddress: 'perm-fail@simulator.notify'
@@ -70,6 +74,17 @@ describe('Custom template tests', function () {
     expect(notifications.length).to.eql(2)
     expect(notifications[0].statusCode).to.eql(201)
     expect(notifications[1].statusCode).to.eql(201)
+  })
+
+  it('create custom message template as sms', async () => {
+    customTemplateId = await notify.createCustomMessageTemplate({
+      templateName: smsTemplateName,
+      messageType: smsMessageType,
+      message: smsMessage
+    })
+
+    const customTemplates = await customTemplateModel.find({})
+    expect(customTemplates.length).to.eql(2)
   })
 
   it('should shutdown Tymly', async () => {

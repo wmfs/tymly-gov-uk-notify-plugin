@@ -16,8 +16,16 @@
       ]
     },
     {
-      "type": "TextBlock",
-      "text": "{{ data }}"
+      "id": "upload",
+      "type": "Input.FileUpload",
+      "title": "Select a file",
+      "onUploadEndpoint": {
+        "name": "govUkNotify_processGovUkCustomTemplateRecipients"
+      },
+      "autoUpload": true,
+      "accept": [
+        ".csv"
+      ]
     }
   ],
   "actions": [

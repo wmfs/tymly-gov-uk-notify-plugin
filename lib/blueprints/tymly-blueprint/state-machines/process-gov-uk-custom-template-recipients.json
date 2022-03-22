@@ -1,0 +1,24 @@
+{
+  "Comment": "Process and Upsert Custom Notify Message Template Recipients",
+  "name": "Upsert Recipients",
+  "version": "1.0",
+  "categories": [
+    "govUkNotify"
+  ],
+  "StartAt": "ProcessRecipients",
+  "States": {
+    "ProcessRecipients": {
+      "Type": "Task",
+      "Resource": "function:tymly_processUploadGovUkRecipients",
+      "End": true
+    }
+  },
+  "restrictions": [
+    {
+      "roleId": "tymly_govUkNotifyAdmin",
+      "allows": [
+        "*"
+      ]
+    }
+  ]
+}

@@ -3,7 +3,14 @@
 const expect = require('chai').expect
 const tymly = require('@wmfs/tymly')
 const process = require('process')
+const csvparse = require('csv-parse')
+const fs = require('fs')
+const { v1: uuid } = require('uuid')
 const { pluginPaths, blueprintPaths } = require('./fixtures/tymly-paths')
+
+const recipientsSelect = require('../lib/blueprints/tymly-blueprint/functions/process-gov-uk-recipients')()
+const recipientsUpload = require('../lib/blueprints/tymly-blueprint/functions/upload-gov-uk-recipients')()
+const path = require('path')
 
 describe('Custom template tests', function () {
   this.timeout(process.env.TIMEOUT || 15000)
@@ -12,11 +19,15 @@ describe('Custom template tests', function () {
   const messageType = 'mail'
   const subject = 'Hello world'
   const message = 'Today will be sunny with some clouds'
+  const emailFileName = 'email-inputs-test.csv'
+  const smsFileName = 'sms-inputs-test.csv'
 
   let tymlyService
+  let statebox
   let notify
   let customTemplateModel
   let customTemplateId
+  let event = {}
 
   it('boot tymly', async () => {
     const tymlyServices = await tymly.boot(
@@ -28,6 +39,7 @@ describe('Custom template tests', function () {
     )
 
     tymlyService = tymlyServices.tymly
+    statebox = tymlyServices.statebox
     notify = tymlyServices.notify
     customTemplateModel = tymlyServices.storage.models.tymly_govUkCustomTemplates
   })
@@ -44,12 +56,31 @@ describe('Custom template tests', function () {
     expect(customTemplates.length).to.eql(1)
   })
 
-  it('should test recipient import with emails', async () => {
-    console.log('Test Email')
-  })
+  it('Select recipient file', async () => {
+    event = {
+      messageType,
+      body: {
+        upload: {
+          serverFilename: path.join(__dirname, 'fixtures', emailFileName),
+          clientFilename: path.join(__dirname, 'fixtures', emailFileName)
+        }
+      },
+      importDirectory: path.join(__dirname, 'fixtures', 'output'),
+      importLogId: {
+        id: uuid()
+      }
+    }
 
-  it('should test recipient import with phone numbers', async () => {
-    console.log('Test SMS')
+    const result = await recipientsSelect(event)
+
+    console.log('Results: ', result)
+    expect(result.totalRows).to.eql(3)
+    expect(result.rows).to.eql([ 'tymly@wmfs.net', 'test@test.com', 'test2@test.com' ])
+    expect(result.totalRejected).to.eql(2)
+    expect(result.rejected).to.eql([ 'not an email', 'also not an email?' ])
+
+    event.totalRows = result.totalRows
+    event.fileName = emailFileName
   })
 
   it('send custom mail to one recipient', async () => {

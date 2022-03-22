@@ -70,13 +70,14 @@ describe('Custom template tests', function () {
     }
 
     const result = await recipientsSelect(event)
+    event.importLog = result
 
     expect(result.totalRows).to.eql(3)
     expect(result.rows).to.eql(['tymly@wmfs.net', 'test@test.com', 'test2@test.com'])
     expect(result.totalRejected).to.eql(2)
     expect(result.rejected).to.eql(['not an email', 'also not an email?'])
 
-    event.result = result
+    // event.result = result
   })
 
   it('Upsert recipient file (mail)', async () => {
@@ -109,11 +110,6 @@ describe('Custom template tests', function () {
     }
 
     const result = await recipientsSelect(event)
-
-    // expect(result.totalRows).to.eql(3)
-    // expect(result.rows).to.eql(['tymly@wmfs.net', 'test@test.com', 'test2@test.com'])
-    // expect(result.totalRejected).to.eql(2)
-    // expect(result.rejected).to.eql(['not an email', 'also not an email?'])
 
     event.result = result
   })

@@ -10,6 +10,7 @@
     "ProcessRecipients": {
       "Type": "Task",
       "Resource": "function:tymly_processGovUkRecipients",
+      "ResultPath": "$.importLog",
       "End": true
     }
   },

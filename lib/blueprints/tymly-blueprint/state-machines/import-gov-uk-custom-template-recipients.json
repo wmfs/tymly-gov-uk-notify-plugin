@@ -24,6 +24,11 @@
         "uiName": "tymly_govUkImportCustomTemplateRecipients",
         "dataPath": "$"
       },
+      "Next": "UpsertRecipients"
+    },
+    "UpsertRecipients": {
+      "Type": "Task",
+      "Resource": "function:tymly_upsertGovUkRecipients",
       "End": true
     }
   },

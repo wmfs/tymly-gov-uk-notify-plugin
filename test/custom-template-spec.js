@@ -14,11 +14,12 @@ describe('Custom template tests', function () {
   this.timeout(process.env.TIMEOUT || 15000)
 
   const templateName = 'test_customMail'
-  const messageType = 'mail'
+  const messageTypeMail = 'mail'
+  const messageTypeSms = 'sms'
   const subject = 'Hello world'
   const message = 'Today will be sunny with some clouds'
   const emailFileName = 'email-inputs-test.csv'
-  // const smsFileName = 'sms-inputs-test.csv'
+  const smsFileName = 'sms-inputs-test.csv'
 
   let tymlyService
   let notify
@@ -45,7 +46,7 @@ describe('Custom template tests', function () {
   it('create custom message template as mail', async () => {
     customTemplateId = await notify.createCustomMessageTemplate({
       templateName,
-      messageType,
+      messageType: messageTypeMail,
       subject,
       message
     })
@@ -55,13 +56,13 @@ describe('Custom template tests', function () {
     event.customTemplateId = customTemplateId
   })
 
-  it('Select recipient file', async () => {
+  it('Select recipient file (mail)', async () => {
     event.body = {
       upload: {
         serverFilename: path.join(__dirname, 'fixtures', emailFileName),
         clientFilename: path.join(__dirname, 'fixtures', emailFileName)
       },
-      messageType
+      messageType: messageTypeMail
     }
     event.importDirectory = path.join(__dirname, 'fixtures', 'output')
     event.importLogId = {
@@ -78,7 +79,7 @@ describe('Custom template tests', function () {
     event.result = result
   })
 
-  it('Upsert recipient file', async () => {
+  it('Upsert recipient file (mail)', async () => {
     await recipientsUpsert(event, tymlyService)
   })
 
@@ -94,6 +95,45 @@ describe('Custom template tests', function () {
     expect(recipients.length).to.eql(3)
   })
 
+  it('Select recipient file (sms)', async () => {
+    event.body = {
+      upload: {
+        serverFilename: path.join(__dirname, 'fixtures', smsFileName),
+        clientFilename: path.join(__dirname, 'fixtures', smsFileName)
+      },
+      messageType: messageTypeSms
+    }
+    event.importDirectory = path.join(__dirname, 'fixtures', 'output')
+    event.importLogId = {
+      id: uuid()
+    }
+
+    const result = await recipientsSelect(event)
+
+    // expect(result.totalRows).to.eql(3)
+    // expect(result.rows).to.eql(['tymly@wmfs.net', 'test@test.com', 'test2@test.com'])
+    // expect(result.totalRejected).to.eql(2)
+    // expect(result.rejected).to.eql(['not an email', 'also not an email?'])
+
+    event.result = result
+  })
+
+  it('Upsert recipient file (sms)', async () => {
+    await recipientsUpsert(event, tymlyService)
+  })
+
+  it('Check contacts imported properly', async () => {
+    const recipients = await recipientModel.find({
+      where: {
+        customTemplateId: {
+          equals: event.customTemplateId
+        }
+      }
+    })
+
+    expect(recipients.length).to.eql(5)
+  })
+
   it('send custom mail to one recipient', async () => {
     const notifications = await notify.templates[templateName].sendMessage(
       {
@@ -102,7 +142,6 @@ describe('Custom template tests', function () {
       customTemplateId
     )
 
-    console.log('>>> ', notifications)
     expect(notifications.length).to.eql(1)
     expect(notifications[0].statusCode).to.eql(201)
   })

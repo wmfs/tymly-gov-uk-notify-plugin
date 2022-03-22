@@ -24,6 +24,7 @@
   "main": "./lib/index.js",
   "dependencies": {
     "csv-parse": "5.0.4",
+    "google-libphonenumber": "^3.2.27",
     "notifications-node-client": "5.1.1"
   },
   "devDependencies": {

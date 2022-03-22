@@ -4,12 +4,15 @@
   "type": "object",
   "properties": {
     "customTemplateId": {
+      "title": "Custom template ID",
       "type": "uuid"
     },
     "emailAddress": {
+      "title": "Email address",
       "type": "string"
     },
     "phoneNumber": {
+      "title": "Phone number",
       "type": "string"
     }
   }

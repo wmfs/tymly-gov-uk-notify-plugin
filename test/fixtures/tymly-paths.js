@@ -6,6 +6,7 @@ module.exports = {
     require.resolve('@wmfs/tymly-test-helpers/plugins/mock-solr-plugin'),
     require.resolve('@wmfs/tymly-test-helpers/plugins/mock-os-places-plugin'),
     require.resolve('@wmfs/tymly-test-helpers/plugins/allow-everything-rbac-plugin'),
+    require.resolve('@wmfs/tymly-test-helpers/plugins/mock-pg-plugin'),
     require.resolve('@wmfs/tymly-cardscript-plugin')
   ],
   blueprintPaths: [

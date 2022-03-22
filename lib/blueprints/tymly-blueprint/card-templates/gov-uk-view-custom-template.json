@@ -183,7 +183,7 @@
       "title": "Close"
     },
     {
-      "title": "Send",
+      "title": "Send Messages",
       "showWhen": "data.recipients.length > 0 && (data.status === 'DRAFT' || data.status === 'PENDING')",
       "type": "Action.Submit"
     }

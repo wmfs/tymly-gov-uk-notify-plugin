@@ -44,6 +44,13 @@
       ]
     },
     {
+      "showWhen": "data.messageType === 'sms'",
+      "type": "TextBlock",
+      "size": "small",
+      "weight": "lighter",
+      "text": "{{ data.message.length }} characters"
+    },
+    {
       "type": "ActionSet",
       "actions": [
         {

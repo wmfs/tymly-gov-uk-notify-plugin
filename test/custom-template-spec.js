@@ -3,8 +3,6 @@
 const expect = require('chai').expect
 const tymly = require('@wmfs/tymly')
 const process = require('process')
-const csvparse = require('csv-parse')
-const fs = require('fs')
 const { v1: uuid } = require('uuid')
 const { pluginPaths, blueprintPaths } = require('./fixtures/tymly-paths')
 
@@ -20,16 +18,14 @@ describe('Custom template tests', function () {
   const subject = 'Hello world'
   const message = 'Today will be sunny with some clouds'
   const emailFileName = 'email-inputs-test.csv'
-  const smsFileName = 'sms-inputs-test.csv'
+  // const smsFileName = 'sms-inputs-test.csv'
 
   let tymlyService
-  let statebox
   let notify
   let customTemplateModel
   let recipientModel
   let customTemplateId
-  let event = {}
-  let importLogId
+  const event = {}
 
   it('boot tymly', async () => {
     const tymlyServices = await tymly.boot(
@@ -41,7 +37,6 @@ describe('Custom template tests', function () {
     )
 
     tymlyService = tymlyServices.tymly
-    statebox = tymlyServices.statebox
     notify = tymlyServices.notify
     customTemplateModel = tymlyServices.storage.models.tymly_govUkCustomTemplates
     recipientModel = tymlyServices.storage.models.tymly_govUkCustomTemplateRecipients
@@ -61,31 +56,30 @@ describe('Custom template tests', function () {
   })
 
   it('Select recipient file', async () => {
-      event.body = {
-        upload: {
-          serverFilename: path.join(__dirname, 'fixtures', emailFileName),
-          clientFilename: path.join(__dirname, 'fixtures', emailFileName)
-        },
-        messageType
-      }
-      event.importDirectory = path.join(__dirname, 'fixtures', 'output'),
-      event.importLogId = {
-        id: uuid()
-      }
+    event.body = {
+      upload: {
+        serverFilename: path.join(__dirname, 'fixtures', emailFileName),
+        clientFilename: path.join(__dirname, 'fixtures', emailFileName)
+      },
+      messageType
+    }
+    event.importDirectory = path.join(__dirname, 'fixtures', 'output')
+    event.importLogId = {
+      id: uuid()
+    }
 
     const result = await recipientsSelect(event)
 
     expect(result.totalRows).to.eql(3)
-    expect(result.rows).to.eql([ 'tymly@wmfs.net', 'test@test.com', 'test2@test.com' ])
+    expect(result.rows).to.eql(['tymly@wmfs.net', 'test@test.com', 'test2@test.com'])
     expect(result.totalRejected).to.eql(2)
-    expect(result.rejected).to.eql([ 'not an email', 'also not an email?' ])
+    expect(result.rejected).to.eql(['not an email', 'also not an email?'])
 
     event.result = result
   })
 
   it('Upsert recipient file', async () => {
-    const result = await recipientsUpsert(event, tymlyService)
-    importLogId = result.importLogId
+    await recipientsUpsert(event, tymlyService)
   })
 
   it('Check contacts imported properly', async () => {
@@ -94,7 +88,7 @@ describe('Custom template tests', function () {
         customTemplateId: {
           equals: event.customTemplateId
         }
-      },
+      }
     })
 
     expect(recipients.length).to.eql(3)

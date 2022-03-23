@@ -34,6 +34,28 @@
       },
       "Resource": "module:calculateMessageRates",
       "ResultPath": "$.messageRates",
+      "Next": "GrabSendReceipts"
+    },
+    "GrabSendReceipts": {
+      "Type": "Task",
+      "Resource": "module:finding",
+      "ResourceConfig": {
+        "modelId": "tymly_govUkNotifications",
+        "filter": {
+          "where": {
+            "customTemplateId": {
+              "equals": "$.customTemplateId"
+            }
+          },
+          "fields": [
+            "error",
+            "recipient",
+            "statusCode",
+            "modified"
+          ]
+        }
+      },
+      "ResultPath": "$.sendReceipts",
       "Next": "AwaitingHumanInput"
     },
     "AwaitingHumanInput": {

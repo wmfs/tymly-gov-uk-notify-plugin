@@ -196,6 +196,41 @@
           "spacing": "none"
         }
       ]
+    },
+    {
+      "showWhen": "data.status === 'SENT' && data.sendReceipts.length > 0",
+      "type": "Container",
+      "bordered": true,
+      "shadowed": true,
+      "spacing": "none",
+      "items": [
+        {
+          "type": "TextBlock",
+          "size": "medium",
+          "weight": "bolder",
+          "text": "Send Receipts"
+        },
+        {
+          "type": "Table",
+          "arrayPath": "data.sendReceipts",
+          "columns": [
+            {
+              "title": "Recipient",
+              "field": "recipient"
+            },
+            {
+              "title": "Date/time",
+              "field": "modified",
+              "format": "formatDate(item.modified, 'DD MMM YYYY HH:mm')"
+            },
+            {
+              "title": "Status",
+              "field": "statusCode",
+              "format": "item.statusCode !== '201' ? `Error: ${item.error}` : 'Sent'"
+            }
+          ]
+        }
+      ]
     }
   ],
   "actions": [

@@ -65,7 +65,7 @@
               }
             },
             {
-              "title": "See previous versions",
+              "title": "See change history",
               "type": "Action.PushCard",
               "stateMachineName": "tymly_govUkCustomTemplateAuditTrail_1_0",
               "input": {

@@ -11,7 +11,7 @@
           "type": "TextBlock",
           "size": "medium",
           "weight": "bolder",
-          "text": "{{ data.name || 'This template has no name' }} - Previous versions"
+          "text": "{{ data.name || 'This template has no name' }} - change history"
         }
       ]
     },
@@ -52,7 +52,7 @@
   ],
   "templateMeta": {
     "name": "gov-uk-view-custom-template",
-    "title": "Previous versions",
+    "title": "Change history",
     "category": "govUkNotify"
   }
 }

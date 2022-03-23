@@ -204,7 +204,7 @@
       "title": "Close"
     },
     {
-      "title": "Send Messages",
+      "title": "Send {{ data.messageType === 'sms' ? data.messageRates.totalMessages : data.recipients.length }} Message(s)",
       "showWhen": "data.recipients.length > 0 && (data.status === 'DRAFT' || data.status === 'PENDING')",
       "type": "Action.Submit"
     }

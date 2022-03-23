@@ -1,3 +1,16 @@
+# [1.25.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.24.1...v1.25.0) (2022-03-23)
+
+
+### ✨ Features
+
+* display send receipts ([0a71d82](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/0a71d8266487532ddebb430be40d79758b454007))
+
+
+### 📦 Code Refactoring
+
+* modify text on send message button ([c5c2af5](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/c5c2af5c873e4d1c35d1ce8d3f23fd9d7066d70a))
+* reword previous versions label ([6d5e262](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/6d5e2623837c1c75e33d1dda6e6b0126b2369080))
+
 ## [1.24.1](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.24.0...v1.24.1) (2022-03-22)
 
 

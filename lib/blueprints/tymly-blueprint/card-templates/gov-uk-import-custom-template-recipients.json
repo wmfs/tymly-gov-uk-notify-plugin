@@ -16,10 +16,46 @@
       ]
     },
     {
+      "type": "TextBlock",
+      "text": "Your file should look like this:",
+      "spacing": "none",
+      "weight": "bolder",
+      "size": "medium"
+    },
+    {
+      "type": "MarkupTable",
+      "arrayPath": "data.exampleMailData",
+      "showWhen": "data.messageType === 'mail'",
+      "columns": [
+        {
+          "title": "Email Address",
+          "value": "{{ item.emailAddress }}"
+        }
+      ]
+    },
+    {
+      "type": "MarkupTable",
+      "arrayPath": "data.exampleSmsData",
+      "showWhen": "data.messageType === 'sms'",
+      "columns": [
+        {
+          "title": "Phone Number",
+          "value": "{{ item.phoneNumber }}"
+        }
+      ]
+    },
+    {
+      "type": "TextBlock",
+      "text": "Select a file:",
+      "spacing": "none",
+      "weight": "bolder",
+      "size": "medium"
+    },
+    {
       "id": "mailUpload",
       "type": "Input.FileUpload",
-      "title": "Select a file",
       "showWhen": "data.messageType === 'mail'",
+      "autoUpload": true,
       "onUploadEndpoint": {
         "name": "tymly_processGovUkCustomTemplateRecipients_1_0"
       },
@@ -56,16 +92,35 @@
       "items": [
         {
           "type": "TextBlock",
-          "text": "The recipients list you uploaded contains some invalid entries",
-          "spacing": "none"
+          "text": "There is a problem with your file",
+          "spacing": "none",
+          "weight": "bolder",
+          "size": "medium"
         },
         {
-          "id": "rejectedList",
-          "type": "List",
-          "arrayPath": "data.importLog.rejected",
-          "templates": {
-            "label": "{{ item }}"
-          }
+          "type": "TextBlock",
+          "text": "Please note: if you continue without fixing these records, we will not attempt to send to them. Validated records will still  be contacted.",
+          "spacing": "none",
+          "size": "small"
+        }
+      ]
+    },
+    {
+      "type": "TextBlock",
+      "showWhen": "data.importLog && data.importLog.rejected.length > 0",
+      "text": "The following contacts will not be stored:",
+      "spacing": "none",
+      "weight": "bolder",
+      "size": "medium"
+    },
+    {
+      "type": "Table",
+      "arrayPath": "data.importLog.rejected",
+      "showWhen": "data.importLog && data.importLog.rejected.length > 0",
+      "columns": [
+        {
+          "title": "",
+          "field": "row"
         }
       ]
     },
@@ -73,12 +128,24 @@
       "type": "Container",
       "spacing": "none",
       "color": "good",
-      "showWhen": "data.importLog && data.importLog.rejected.length === 0",
+      "showWhen": "data.importLog && data.importLog.totalRows > 0",
       "items": [
         {
           "type": "TextBlock",
-          "text": "All recipients successfully loaded",
+          "text": "{{ data.importLog.totalRows }} recipients successfully loaded",
           "spacing": "none"
+        }
+      ]
+    },
+    {
+      "type": "Table",
+      "arrayPath": "data.importLog.rows",
+      "showWhen": "data.importLog && data.importLog.rows.length > 0",
+      "columns": [
+        {
+          "title": "",
+          "format": "item",
+          "field": ""
         }
       ]
     }
@@ -90,7 +157,8 @@
     },
     {
       "title": "Submit",
-      "type": "Action.Submit"
+      "type": "Action.Submit",
+      "showWhen": "data.importLog && data.importLog.totalRows > 0"
     }
   ],
   "templateMeta": {

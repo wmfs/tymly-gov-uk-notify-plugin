@@ -15,6 +15,32 @@
         "modelId": "tymly_govUkCustomTemplates"
       },
       "ResultPath": "$",
+      "Next": "ExampleCsvMailData"
+    },
+    "ExampleCsvMailData": {
+      "Type": "Pass",
+      "Result": [
+        {
+          "emailAddress": "test1@test.com"
+        },
+        {
+          "emailAddress": "test2@test.com"
+        }
+      ],
+      "ResultPath": "$.exampleMailData",
+      "Next": "ExampleCsvSmsData"
+    },
+    "ExampleCsvSmsData": {
+      "Type": "Pass",
+      "Result": [
+        {
+          "phoneNumber": "+44987654321"
+        },
+        {
+          "phoneNumber": "07123456789"
+        }
+      ],
+      "ResultPath": "$.exampleSmsData",
       "Next": "AwaitingHumanInput"
     },
     "AwaitingHumanInput": {

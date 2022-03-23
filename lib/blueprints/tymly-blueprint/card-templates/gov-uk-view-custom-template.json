@@ -65,7 +65,7 @@
               }
             },
             {
-              "title": "See previous versions",
+              "title": "See change history",
               "type": "Action.PushCard",
               "stateMachineName": "tymly_govUkCustomTemplateAuditTrail_1_0",
               "input": {
@@ -196,6 +196,41 @@
           "spacing": "none"
         }
       ]
+    },
+    {
+      "showWhen": "data.status === 'SENT' && data.sendReceipts.length > 0",
+      "type": "Container",
+      "bordered": true,
+      "shadowed": true,
+      "spacing": "none",
+      "items": [
+        {
+          "type": "TextBlock",
+          "size": "medium",
+          "weight": "bolder",
+          "text": "Send Receipts"
+        },
+        {
+          "type": "Table",
+          "arrayPath": "data.sendReceipts",
+          "columns": [
+            {
+              "title": "Recipient",
+              "field": "recipient"
+            },
+            {
+              "title": "Date/time",
+              "field": "modified",
+              "format": "formatDate(item.modified, 'DD MMM YYYY HH:mm')"
+            },
+            {
+              "title": "Status",
+              "field": "statusCode",
+              "format": "item.statusCode !== '201' ? `Error: ${item.error}` : 'Sent'"
+            }
+          ]
+        }
+      ]
     }
   ],
   "actions": [
@@ -204,7 +239,7 @@
       "title": "Close"
     },
     {
-      "title": "Send Messages",
+      "title": "Send {{ data.messageType === 'sms' ? data.messageRates.totalMessages : data.recipients.length }} Message(s)",
       "showWhen": "data.recipients.length > 0 && (data.status === 'DRAFT' || data.status === 'PENDING')",
       "type": "Action.Submit"
     }

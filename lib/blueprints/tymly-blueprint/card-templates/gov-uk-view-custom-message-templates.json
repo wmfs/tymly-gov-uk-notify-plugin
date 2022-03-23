@@ -21,6 +21,18 @@
       "arrayPath": "data.templates",
       "clickToLaunch": true,
       "templates": {
+        "badge": [
+          {
+            "showWhen": "item.status === 'DRAFT'",
+            "text": "Draft",
+            "colour": "warning"
+          },
+          {
+            "showWhen": "item.status === 'SENT'",
+            "text": "Sent",
+            "colour": "good"
+          }
+        ],
         "label": "{{ item.name || 'This template has no name' }}",
         "sublabel": [
           "{{ { mail: 'Email template', sms: 'Text message template' }[item.messageType] }}",

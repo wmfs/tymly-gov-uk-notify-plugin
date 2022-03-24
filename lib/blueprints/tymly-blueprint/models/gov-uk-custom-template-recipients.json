@@ -2,17 +2,17 @@
   "title": "Custom template recipients",
   "description": "Custom template recipients",
   "type": "object",
+  "primaryKey": [
+    "customTemplateId",
+    "recipient"
+  ],
   "properties": {
     "customTemplateId": {
       "title": "Custom template ID",
       "type": "uuid"
     },
-    "emailAddress": {
-      "title": "Email address",
-      "type": "string"
-    },
-    "phoneNumber": {
-      "title": "Phone number",
+    "recipient": {
+      "title": "Email address or phone number, depending on message type",
       "type": "string"
     }
   }

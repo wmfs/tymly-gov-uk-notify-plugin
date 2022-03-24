@@ -97,7 +97,7 @@
           "columns": [
             {
               "title": "Email address",
-              "field": "emailAddress"
+              "field": "recipient"
             }
           ]
         },
@@ -110,7 +110,7 @@
           "columns": [
             {
               "title": "Phone number",
-              "field": "phoneNumber"
+              "field": "recipient"
             }
           ]
         },

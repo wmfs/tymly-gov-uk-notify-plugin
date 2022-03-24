@@ -1,3 +1,10 @@
+# [1.27.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.26.0...v1.27.0) (2022-03-24)
+
+
+### ✨ Features
+
+* update primary key of custom template recipient model to avoid duplicates ([7df8dd7](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/7df8dd7796f4c4cb71f778809552ade3dc5c3e66))
+
 # [1.26.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.25.0...v1.26.0) (2022-03-24)
 
 

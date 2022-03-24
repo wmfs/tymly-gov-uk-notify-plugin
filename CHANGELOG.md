@@ -1,3 +1,39 @@
+# [1.26.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.25.0...v1.26.0) (2022-03-24)
+
+
+### ✨ Features
+
+* add feedback to upload form [sc-13870] ([3a274f4](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/3a274f48fad4b44d546a127685feb1fa5666647d))
+* add passing csv input [sc-13870] ([9339d66](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/9339d669764398931f378abf2457e230a2672817))
+* add support for phone num validation [sc-13870] ([1ed6971](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/1ed697115911d96bef5746b1ee315a3e10237513))
+* implementation for processing mail csv input [sc-13870] ([9fc1c77](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/9fc1c7769ca496de27f9c1b90bbf0fbc89cf076b))
+* include csv-parse module [sc-13870] ([da97597](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/da97597a927be8113159ce9ddf58ce7e7637edf9))
+* initial stub tests and dummy csv files [sc-13870] ([335953e](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/335953e9d22fffd73e249862a9dcbafc3b19e3c2))
+* merge master ([cccee56](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/cccee5673eabfb6f5c1a407798cbdafaede6b486))
+* Merge pull request [#515](https://github.com/wmfs/tymly-gov-uk-notify-plugin/issues/515) from wmfs/sc-13870 ([fcda149](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/fcda1492d3a0d4b5e7433f8a3ce0d9166b22f8d5))
+* record idx of failed rows [sc-13870] ([fa8cc19](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/fa8cc19d17c620f26a56046924d077cf91c08270))
+* update processing of recipients [sc-13870] ([e53aae7](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/e53aae7bcda3d76b08a50a03953ef8e19343faf0))
+* update recipient import to expose more data [sc-13870] ([0d20a8f](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/0d20a8ff12dfcdaabf961a659804926f159473ef))
+* update styling on import recipients [sc-13870] ([8b5a422](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/8b5a422c763551a24853c82cb24ab56f0fc2db20))
+* upsert recipients to recipient model [sc-13870] ([0bcf7de](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/0bcf7de6898c20b69740d9dea4adcc34f4fcfb27))
+
+
+### 🐛 Bug Fixes
+
+* align functions with state-machine expectations [sc-13870] ([8d148f7](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/8d148f7d765e871528b8b946b24b8d9a08c6beeb))
+* update tests ([a1834ad](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/a1834ad100032e33f817dfa450819de7fa26c080))
+
+
+### 📦 Code Refactoring
+
+* add status badge for custom message templates ([3cb8ede](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/3cb8ede7b438fe41dacfef6362ff4bbcf1223461))
+* previous version title change ([3b73758](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/3b737588ae303430b5a4d4ac607a23851dd89398))
+
+
+### ♻️ Chores
+
+* standard ([c65a24c](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/c65a24c7f3c2ad06c7532fa32ab59dc6a981ccb2))
+
 # [1.25.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.24.1...v1.25.0) (2022-03-23)
 
 

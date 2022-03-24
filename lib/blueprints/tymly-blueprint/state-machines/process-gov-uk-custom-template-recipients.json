@@ -1,0 +1,25 @@
+{
+  "Comment": "Process Custom Notify Message Template Recipients",
+  "name": "Process Recipients",
+  "version": "1.0",
+  "categories": [
+    "govUkNotify"
+  ],
+  "StartAt": "ProcessRecipients",
+  "States": {
+    "ProcessRecipients": {
+      "Type": "Task",
+      "Resource": "function:tymly_processGovUkRecipients",
+      "ResultPath": "$.importLog",
+      "End": true
+    }
+  },
+  "restrictions": [
+    {
+      "roleId": "tymly_govUkNotifyAdmin",
+      "allows": [
+        "*"
+      ]
+    }
+  ]
+}

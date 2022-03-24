@@ -22,29 +22,35 @@
       "items": [
         {
           "type": "TextBlock",
-          "text": "Your file should look like this:",
+          "text": "Your CSV file should look like this:",
           "spacing": "none",
           "weight": "bolder",
           "size": "medium"
         },
         {
           "type": "MarkupTable",
+          "bordered": true,
+          "hideHeader": true,
+          "disableRowHover": true,
           "arrayPath": "data.exampleMailData",
           "showWhen": "data.messageType === 'mail'",
           "columns": [
             {
-              "title": "Email Address",
+              "title": "",
               "value": "{{ item.emailAddress }}"
             }
           ]
         },
         {
           "type": "MarkupTable",
+          "bordered": true,
+          "hideHeader": true,
+          "disableRowHover": true,
           "arrayPath": "data.exampleSmsData",
           "showWhen": "data.messageType === 'sms'",
           "columns": [
             {
-              "title": "Phone Number",
+              "title": "",
               "value": "{{ item.phoneNumber }}"
             }
           ]
@@ -82,7 +88,6 @@
         {
           "id": "smsUpload",
           "type": "Input.FileUpload",
-          "title": "Select a file",
           "showWhen": "data.messageType === 'sms'",
           "onUploadEndpoint": {
             "name": "tymly_processGovUkCustomTemplateRecipients_1_0"

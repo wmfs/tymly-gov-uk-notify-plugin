@@ -1,3 +1,10 @@
+# [1.28.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.27.0...v1.28.0) (2022-03-24)
+
+
+### ✨ Features
+
+* tidy up import card template ([9053447](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/9053447007adce6a264ae066f46b5d0e72b0a4d4))
+
 # [1.27.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.26.0...v1.27.0) (2022-03-24)
 
 

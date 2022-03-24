@@ -28,7 +28,10 @@
     },
     "RemoveRecipient": {
       "Type": "Task",
-      "InputPath": "$.recipientId",
+      "Parameters": {
+        "recipient.$": "$.recipient",
+        "customTemplateId.$": "$.customTemplateId"
+      },
       "Resource": "module:deletingById",
       "ResourceConfig": {
         "modelId": "tymly_govUkCustomTemplateRecipients"

@@ -24,14 +24,44 @@
         "uiName": "tymly_govUkAddCustomTemplateRecipient",
         "dataPath": "$"
       },
+      "Next": "CheckRecipient"
+    },
+    "CheckRecipient": {
+      "Type": "Choice",
+      "Choices": [
+        {
+          "Variable": "$.messageType",
+          "StringEquals": "sms",
+          "Next": "RecipientIsPhoneNumber"
+        },
+        {
+          "Variable": "$.messageType",
+          "StringEquals": "mail",
+          "Next": "RecipientIsEmailAddress"
+        }
+      ]
+    },
+    "RecipientIsPhoneNumber": {
+      "Type": "Pass",
+      "Parameters": {
+        "recipient.$": "$.phoneNumber"
+      },
+      "ResultPath": "$",
+      "Next": "AddRecipient"
+    },
+    "RecipientIsEmailAddress": {
+      "Type": "Pass",
+      "Parameters": {
+        "recipient.$": "$.emailAddress"
+      },
+      "ResultPath": "$",
       "Next": "AddRecipient"
     },
     "AddRecipient": {
       "Type": "Task",
       "Parameters": {
         "customTemplateId.$": "$.customTemplateId",
-        "emailAddress.$": "$.emailAddress",
-        "phoneNumber.$": "$.phoneNumber"
+        "recipient.$": "$.recipient"
       },
       "Resource": "module:upserting",
       "ResourceConfig": {

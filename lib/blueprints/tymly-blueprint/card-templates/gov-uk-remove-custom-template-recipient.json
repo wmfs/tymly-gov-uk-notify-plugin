@@ -26,12 +26,12 @@
         {
           "showWhen": "data.messageType === 'mail'",
           "title": "Email Address",
-          "value": "{{ data.emailAddress }}"
+          "value": "{{ data.recipient }}"
         },
         {
           "showWhen": "data.messageType === 'sms'",
           "title": "Phone Number",
-          "value": "{{ data.phoneNumber }}"
+          "value": "{{ data.recipient }}"
         }
       ]
     }

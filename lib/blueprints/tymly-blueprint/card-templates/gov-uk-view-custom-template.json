@@ -69,7 +69,8 @@
               "type": "Action.PushCard",
               "stateMachineName": "tymly_govUkCustomTemplateAuditTrail_1_0",
               "input": {
-                "customTemplateId": "$.id"
+                "customTemplateId": "$.id",
+                "name": "$.name"
               }
             }
           ]

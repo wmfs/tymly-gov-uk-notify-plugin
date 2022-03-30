@@ -1,3 +1,16 @@
+## [1.28.1](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.28.0...v1.28.1) (2022-03-30)
+
+
+### 🐛 Bug Fixes
+
+* issue with recipients when sending custom message ([360447e](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/360447edfe8fd3f03ff90b33d71378574c86f129))
+* issue with recipients when sending custom message ([1935d94](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/1935d94dd6c2f6999e7e358282992ba282b44a59))
+
+
+### 📦 Code Refactoring
+
+* pass template name to custom template change history view ([291348d](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/291348d0722288a59d2ebd7119d860c17225e75a))
+
 # [1.28.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.27.0...v1.28.0) (2022-03-24)
 
 

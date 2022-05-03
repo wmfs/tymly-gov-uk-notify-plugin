@@ -31,6 +31,13 @@
     "templateName": {
       "title": "Template name",
       "type": "string"
+    },
+    "sendOnEvents": {
+      "title": "Send on events",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     }
   }
 }

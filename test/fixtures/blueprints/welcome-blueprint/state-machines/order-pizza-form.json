@@ -1,0 +1,24 @@
+{
+  "Comment": "State machine to order a pizza",
+  "StartAt": "EmitNotifyEvent",
+  "States": {
+    "EmitNotifyEvent": {
+      "Type": "Task",
+      "Resource": "module:emitNotifyEvents",
+      "ResourceConfig": {
+        "eventNames": [
+          "test_formSubmitted"
+        ]
+      },
+      "End": true
+    }
+  },
+  "restrictions": [
+    {
+      "roleId": "$everyone",
+      "allows": [
+        "*"
+      ]
+    }
+  ]
+}

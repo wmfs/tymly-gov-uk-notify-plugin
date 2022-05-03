@@ -1,0 +1,13 @@
+{
+  "type": "object",
+  "properties": {
+    "eventNames": {
+      "type": "array",
+      "description": "The names of the events to emit"
+    }
+  }
+}
+
+
+
+

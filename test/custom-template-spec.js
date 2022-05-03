@@ -19,12 +19,14 @@ describe('Custom template tests', function () {
   const mailMessage = 'Today will be sunny with some clouds'
   const mailFileName = 'email-inputs-test.csv'
 
+  const formSubmitEventName = 'test_formSubmitted'
   const smsTemplateName = 'test_customSms'
   const smsMessageType = 'sms'
   const smsMessage = 'Hello world!! Will it be sunny today?'
   const smsFileName = 'sms-inputs-test.csv'
 
   let tymlyService
+  let statebox
   let notify
   let customTemplateModel
   let recipientModel
@@ -42,6 +44,7 @@ describe('Custom template tests', function () {
 
     tymlyService = tymlyServices.tymly
     notify = tymlyServices.notify
+    statebox = tymlyServices.statebox
     customTemplateModel = tymlyServices.storage.models.tymly_govUkCustomTemplates
     recipientModel = tymlyServices.storage.models.tymly_govUkCustomTemplateRecipients
   })
@@ -178,11 +181,36 @@ describe('Custom template tests', function () {
     customTemplateId = await notify.createCustomMessageTemplate({
       templateName: smsTemplateName,
       messageType: smsMessageType,
-      message: smsMessage
+      message: smsMessage,
+      sendOnEvents: [formSubmitEventName]
     })
 
     const customTemplates = await customTemplateModel.find({})
     expect(customTemplates.length).to.eql(2)
+  })
+
+  it('add recipient to custom sms', async () => {
+    await recipientModel.create({
+      customTemplateId,
+      recipient: '07700900003'
+    })
+  })
+
+  it('run state machine to submit a form and fire a notify event', async () => {
+    const execDesc = await statebox.startExecution(
+      {
+        phoneNumber: '07700900003',
+        name: 'Robert'
+      },
+      'test_orderPizzaForm',
+      {
+        sendResponse: 'COMPLETE'
+      }
+    )
+
+    console.log({ execDesc })
+
+    expect(execDesc.status).to.eql('SUCCEEDED')
   })
 
   it('should shutdown Tymly', async () => {

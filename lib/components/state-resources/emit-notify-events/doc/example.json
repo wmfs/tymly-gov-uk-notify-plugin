@@ -1,0 +1,11 @@
+{
+  "EmitNotifyEvent": {
+    "Type": "Task",
+    "Resource": "module:emitNotifyEvents",
+    "ResourceConfig": {
+      "eventNames": [
+        "test_formSubmitted"
+      ]
+    }
+  }
+}

@@ -1,0 +1,2 @@
+This document specifies a JSON object called an "EventConfig".
+An EventConfig MUST have a string-array field named "eventNames".

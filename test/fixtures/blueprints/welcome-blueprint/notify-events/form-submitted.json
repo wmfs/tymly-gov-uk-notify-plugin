@@ -1,0 +1,8 @@
+{
+  "title": "Form Submitted",
+  "description": "Pizza order form has been submitted",
+  "customTemplates": [
+    "test_customSms",
+    "test_welcomeMail"
+  ]
+}

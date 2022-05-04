@@ -32,7 +32,25 @@
           "facts": [
             {
               "title": "Status",
-              "value": "{{ data.status }}"
+              "value": "{{ data.status }}",
+              "choices": [
+                {
+                  "title": "Sent",
+                  "value": "SENT"
+                },
+                {
+                  "title": "Sending on event",
+                  "value": "SEND_ON_EVENT"
+                },
+                {
+                  "title": "Draft",
+                  "value": "DRAFT"
+                },
+                {
+                  "title": "Pending",
+                  "value": "PENDING"
+                }
+              ]
             },
             {
               "showWhen": "data.messageType === 'mail'",
@@ -57,7 +75,6 @@
           "actions": [
             {
               "title": "Edit message",
-              "showWhen": "data.status === 'DRAFT' || data.status === 'PENDING'",
               "type": "Action.PushCard",
               "stateMachineName": "tymly_editGovUkCustomTemplate_1_0",
               "input": {
@@ -120,7 +137,6 @@
           "actions": [
             {
               "title": "Add recipient",
-              "showWhen": "data.status === 'DRAFT' || data.status === 'PENDING'",
               "type": "Action.PushCard",
               "stateMachineName": "tymly_addGovUkCustomTemplateRecipient_1_0",
               "input": {
@@ -129,7 +145,6 @@
             },
             {
               "title": "Import recipients",
-              "showWhen": "data.status === 'DRAFT' || data.status === 'PENDING'",
               "type": "Action.PushCard",
               "stateMachineName": "tymly_importGovUkCustomTemplateRecipients_1_0",
               "input": {
@@ -232,17 +247,75 @@
           ]
         }
       ]
+    },
+    {
+      "type": "Container",
+      "bordered": true,
+      "shadowed": true,
+      "spacing": "none",
+      "showWhen": "data.recipients.length > 0 && (data.status === 'DRAFT' || data.status === 'PENDING')",
+      "items": [
+        {
+          "type": "TextBlock",
+          "size": "medium",
+          "weight": "bolder",
+          "text": "Send now"
+        },
+        {
+          "title": "Send {{ data.messageType === 'sms' ? data.messageRates.totalMessages : data.recipients.length }} message(s) now",
+          "type": "Action.ReplaceCard",
+          "stateMachineName": "tymly_sendGovUkCustomTemplate_1_0",
+          "input": {
+            "when": "NOW",
+            "customTemplateId": "$.id"
+          }
+        }
+      ]
+    },
+    {
+      "type": "Container",
+      "bordered": true,
+      "shadowed": true,
+      "spacing": "none",
+      "showWhen": "data.recipients.length > 0 && data.status !== 'SENT' && data.availableEvents.length > 0",
+      "items": [
+        {
+          "type": "TextBlock",
+          "size": "medium",
+          "weight": "bolder",
+          "text": "Send on event"
+        },
+        {
+          "id": "sendOnEventsNew",
+          "type": "List",
+          "arrayPath": "data.availableEvents",
+          "selectionType": "multi",
+          "rowKey": "key",
+          "templates": {
+            "label": "{{ item.title }}",
+            "sublabel": [
+              "{{ item.description }}"
+            ]
+          }
+        },
+        {
+          "title": "Send on selected events",
+          "showWhen": "data.sendOnEventsNew.length > 0",
+          "type": "Action.ReplaceCard",
+          "stateMachineName": "tymly_sendGovUkCustomTemplate_1_0",
+          "input": {
+            "when": "ON_EVENTS",
+            "sendOnEventsNew": "$.sendOnEventsNew",
+            "customTemplateId": "$.id"
+          }
+        }
+      ]
     }
   ],
   "actions": [
     {
       "type": "Action.Cancel",
       "title": "Close"
-    },
-    {
-      "title": "Send {{ data.messageType === 'sms' ? data.messageRates.totalMessages : data.recipients.length }} Message(s)",
-      "showWhen": "data.recipients.length > 0 && (data.status === 'DRAFT' || data.status === 'PENDING')",
-      "type": "Action.Submit"
     }
   ],
   "templateMeta": {

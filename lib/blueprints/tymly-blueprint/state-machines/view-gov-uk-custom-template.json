@@ -10,10 +10,7 @@
     "FindingTemplate": {
       "Type": "Task",
       "InputPath": "$.customTemplateId",
-      "Resource": "module:findingById",
-      "ResourceConfig": {
-        "modelId": "tymly_govUkCustomTemplates"
-      },
+      "Resource": "module:findCustomMessageTemplate",
       "ResultPath": "$",
       "Next": "FindingRecipients"
     },
@@ -56,6 +53,14 @@
         }
       },
       "ResultPath": "$.sendReceipts",
+      "Next": "CopySendOnEvents"
+    },
+    "CopySendOnEvents": {
+      "Type": "Pass",
+      "Parameters": {
+        "sendOnEventsNew.$": "$.sendOnEvents"
+      },
+      "ResultPath": "$",
       "Next": "AwaitingHumanInput"
     },
     "AwaitingHumanInput": {
@@ -65,16 +70,6 @@
         "uiName": "tymly_govUkViewCustomTemplate",
         "dataPath": "$"
       },
-      "Next": "Send"
-    },
-    "Send": {
-      "Type": "Task",
-      "Parameters": {
-        "recipients.$": "$.recipients",
-        "templateName.$": "$.templateName",
-        "customTemplateId.$": "$.id"
-      },
-      "Resource": "module:sendingCustomMessageViaService",
       "End": true
     }
   },

@@ -25,11 +25,21 @@
           {
             "showWhen": "item.status === 'DRAFT'",
             "text": "Draft",
+            "colour": "standard"
+          },
+          {
+            "showWhen": "item.status === 'PENDING'",
+            "text": "Pending",
             "colour": "warning"
           },
           {
             "showWhen": "item.status === 'SENT'",
             "text": "Sent",
+            "colour": "good"
+          },
+          {
+            "showWhen": "item.status === 'SEND_ON_EVENT'",
+            "text": "Sending on event",
             "colour": "good"
           }
         ],

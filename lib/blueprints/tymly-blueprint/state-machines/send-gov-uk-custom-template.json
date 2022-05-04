@@ -1,0 +1,83 @@
+{
+  "Comment": "Send custom template",
+  "name": "Send custom template",
+  "version": "1.0",
+  "categories": [
+    "govUkNotify"
+  ],
+  "StartAt": "FindingTemplate",
+  "States": {
+    "FindingTemplate": {
+      "Type": "Task",
+      "InputPath": "$.customTemplateId",
+      "Resource": "module:findCustomMessageTemplate",
+      "ResultPath": "$",
+      "Next": "FindingRecipients"
+    },
+    "FindingRecipients": {
+      "Type": "Task",
+      "InputPath": "$.customTemplateId",
+      "Resource": "module:listCustomTemplateRecipients",
+      "ResultPath": "$.recipients",
+      "Next": "CheckWhen"
+    },
+    "CheckWhen": {
+      "Type": "Choice",
+      "Choices": [
+        {
+          "Variable": "$.when",
+          "StringEquals": "NOW",
+          "Next": "SendNow"
+        },
+        {
+          "Variable": "$.when",
+          "StringEquals": "ON_EVENTS",
+          "Next": "SendOnEvents"
+        }
+      ]
+    },
+    "SendNow": {
+      "Type": "Task",
+      "Parameters": {
+        "recipients.$": "$.recipients",
+        "templateName.$": "$.templateName",
+        "customTemplateId.$": "$.customTemplateId"
+      },
+      "Resource": "module:sendingCustomMessageViaService",
+      "Next": "ViewTemplate"
+    },
+    "SendOnEvents": {
+      "Type": "Task",
+      "Resource": "module:upserting",
+      "Parameters": {
+        "id.$": "$.customTemplateId",
+        "sendOnEvents.$": "$.sendOnEventsNew",
+        "status": "SEND_ON_EVENT"
+      },
+      "ResourceConfig": {
+        "modelId": "tymly_govUkCustomTemplates",
+        "setMissingPropertiesToNull": false
+      },
+      "Next": "ViewTemplate"
+    },
+    "ViewTemplate": {
+      "Type": "Task",
+      "Parameters": {
+        "customTemplateId.$": "$.customTemplateId"
+      },
+      "Resource": "module:runStateMachine",
+      "ResourceConfig": {
+        "stateMachine": "tymly_viewGovUkCustomTemplate_1_0"
+      },
+      "End": true
+    }
+  },
+  "restrictions": [
+    {
+      "roleId": "tymly_govUkNotifyAdmin",
+      "allows": [
+        "*"
+      ]
+    }
+  ]
+}

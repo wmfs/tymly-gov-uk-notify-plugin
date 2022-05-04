@@ -25,7 +25,8 @@
   "dependencies": {
     "csv-parse": "5.0.4",
     "google-libphonenumber": "^3.2.27",
-    "notifications-node-client": "5.1.1"
+    "notifications-node-client": "5.1.1",
+    "@wmfs/json-path-input-resolver": "1.1.0"
   },
   "devDependencies": {
     "@semantic-release/changelog": "6.0.1",

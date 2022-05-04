@@ -13,7 +13,8 @@
       "enum": [
         "DRAFT",
         "PENDING",
-        "SENT"
+        "SENT",
+        "SEND_ON_EVENT"
       ]
     },
     "messageType": {

@@ -1,3 +1,12 @@
+# [1.30.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.29.0...v1.30.0) (2022-05-10)
+
+
+### ✨ Features
+
+* allow for custom message parameters ([2fac1c5](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/2fac1c527726d0e4f7efacf2d94fa757d85720a0))
+* allow for custom message parameters ([dfcbd6d](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/dfcbd6dc11e3a342b8998b39776d9aef9e95ddd7))
+* allow for custom message parameters ([3c1476b](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/3c1476bbe8a6cb4b83ac17503b3827221f968a7e))
+
 # [1.29.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.28.1...v1.29.0) (2022-05-10)
 
 

@@ -1,3 +1,23 @@
+# [1.29.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.28.1...v1.29.0) (2022-05-10)
+
+
+### ✨ Features
+
+* ability to set up messages to send on event ([ea74f07](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/ea74f07de335afe2ae1a2d898e6a479b54f12db6))
+* sending custom templates on specified events ([268c14a](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/268c14a4a7ca7a91fa143a85fb455deaf4e43c88))
+
+
+### 🐛 Bug Fixes
+
+* state machine responsible for updating status to sent ([88c2fdb](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/88c2fdb0c566c2685dbcd6ba2d1fbe65c8cc15d9))
+
+
+### 🛠 Builds
+
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly-test-helpers to v1.17.1 ([f214694](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/f214694d683e7239f37e493c6a34499d2e4b4bfd))
+* **deps-dev:** update dependency mocha to v10 ([2524fa1](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/2524fa187a3ae757a1339f0ee2f06cf6536f13e5))
+* **deps-dev:** update dependency standard to v17 ([5164bda](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/5164bda3724fd6ebf6adf9d608bf035b101775c8))
+
 ## [1.28.1](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.28.0...v1.28.1) (2022-03-30)
 
 

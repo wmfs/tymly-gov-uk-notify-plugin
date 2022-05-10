@@ -44,6 +44,19 @@
         "customTemplateId.$": "$.customTemplateId"
       },
       "Resource": "module:sendingCustomMessageViaService",
+      "Next": "UpdateStatus"
+    },
+    "UpdateStatus": {
+      "Type": "Task",
+      "Resource": "module:upserting",
+      "Parameters": {
+        "id.$": "$.customTemplateId",
+        "status": "SENT"
+      },
+      "ResourceConfig": {
+        "modelId": "tymly_govUkCustomTemplates",
+        "setMissingPropertiesToNull": false
+      },
       "Next": "ViewTemplate"
     },
     "SendOnEvents": {

@@ -1,3 +1,16 @@
+# [1.31.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.30.0...v1.31.0) (2022-05-12)
+
+
+### ✨ Features
+
+* allow sending to custom recipients on event ([63f82be](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/63f82be8233bad712661a163e3fc90fd04e06e7f))
+
+
+### 🐛 Bug Fixes
+
+* issue with parameters when sending message ([ba96f81](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/ba96f8167eb8fb17e97def5c3447bf2da4ca06ec))
+* recipients to be same structure ([cfb9211](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/cfb92113942d052a969955b6b49dbe7385a3db8d))
+
 # [1.30.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.29.0...v1.30.0) (2022-05-10)
 
 

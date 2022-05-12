@@ -277,7 +277,7 @@
       "bordered": true,
       "shadowed": true,
       "spacing": "none",
-      "showWhen": "data.recipients.length > 0 && data.status !== 'SENT' && data.availableEvents.length > 0",
+      "showWhen": "data.status !== 'SENT' && data.availableEvents.length > 0",
       "items": [
         {
           "type": "TextBlock",

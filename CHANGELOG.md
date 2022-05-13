@@ -1,3 +1,10 @@
+## [1.31.2](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.31.1...v1.31.2) (2022-05-13)
+
+
+### 🐛 Bug Fixes
+
+* add test to check notifications sent for custom templates ([ce5799f](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/ce5799fe7027f36eb9edf465af04984ebe82ab8f))
+
 ## [1.31.1](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.31.0...v1.31.1) (2022-05-13)
 
 

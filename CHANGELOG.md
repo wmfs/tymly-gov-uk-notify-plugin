@@ -1,3 +1,10 @@
+## [1.31.1](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.31.0...v1.31.1) (2022-05-13)
+
+
+### 🐛 Bug Fixes
+
+* show receipts for messages send on events too ([812dee6](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/812dee6193bae201e4f857c1e1afb13081295d3a))
+
 # [1.31.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.30.0...v1.31.0) (2022-05-12)
 
 

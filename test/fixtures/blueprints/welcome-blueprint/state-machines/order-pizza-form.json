@@ -8,7 +8,10 @@
       "ResourceConfig": {
         "eventNames": [
           "test_formSubmitted"
-        ]
+        ],
+        "parameters": {
+          "customerName": "$.name"
+        }
       },
       "End": true
     }

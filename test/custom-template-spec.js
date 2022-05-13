@@ -22,7 +22,7 @@ describe('Custom template tests', function () {
   const formSubmitEventName = 'test_formSubmitted'
   const smsTemplateName = 'test_customSms'
   const smsMessageType = 'sms'
-  const smsMessage = 'Hello world!! Will it be sunny today?'
+  const smsMessage = 'Hello ((customerName))!! Will it be sunny today?'
   const smsFileName = 'sms-inputs-test.csv'
 
   let tymlyService
@@ -30,6 +30,7 @@ describe('Custom template tests', function () {
   let notify
   let customTemplateModel
   let recipientModel
+  let notificationModel
   let customTemplateId
   const event = {}
 
@@ -45,6 +46,7 @@ describe('Custom template tests', function () {
     tymlyService = tymlyServices.tymly
     notify = tymlyServices.notify
     statebox = tymlyServices.statebox
+    notificationModel = tymlyServices.storage.models.tymly_govUkNotifications
     customTemplateModel = tymlyServices.storage.models.tymly_govUkCustomTemplates
     recipientModel = tymlyServices.storage.models.tymly_govUkCustomTemplateRecipients
   })
@@ -196,10 +198,20 @@ describe('Custom template tests', function () {
     })
   })
 
+  it('check sms notifications sent before event trigger', async () => {
+    const receipts = await notificationModel.find({
+      where: {
+        templateName: {
+          equals: 'customSms'
+        }
+      }
+    })
+    expect(receipts.length).to.eql(0)
+  })
+
   it('run state machine to submit a form and fire a notify event', async () => {
     const execDesc = await statebox.startExecution(
       {
-        phoneNumber: '07700900003',
         name: 'Robert'
       },
       'test_orderPizzaForm',
@@ -208,9 +220,21 @@ describe('Custom template tests', function () {
       }
     )
 
-    console.log({ execDesc })
-
     expect(execDesc.status).to.eql('SUCCEEDED')
+  })
+
+  it('check sms notifications sent after event trigger', async () => {
+    const receipts = await notificationModel.find({
+      where: {
+        templateName: {
+          equals: 'customSms'
+        }
+      }
+    })
+    expect(receipts.length).to.eql(1)
+
+    const [receipt] = receipts
+    expect(receipt.input.message).to.eql('Hello Robert!! Will it be sunny today?')
   })
 
   it('should shutdown Tymly', async () => {

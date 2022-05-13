@@ -214,7 +214,7 @@
       ]
     },
     {
-      "showWhen": "data.status === 'SENT' && data.sendReceipts.length > 0",
+      "showWhen": "(data.status === 'SENT' || data.status === 'SEND_ON_EVENT') && data.sendReceipts.length > 0",
       "type": "Container",
       "bordered": true,
       "shadowed": true,

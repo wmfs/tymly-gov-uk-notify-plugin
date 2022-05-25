@@ -1,3 +1,10 @@
+## [1.31.3](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.31.2...v1.31.3) (2022-05-25)
+
+
+### 🐛 Bug Fixes
+
+* gather recipients for emitting notify events ([4604e96](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/4604e966dff8cd2d8517e7a46b471e903b380146))
+
 ## [1.31.2](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.31.1...v1.31.2) (2022-05-13)
 
 

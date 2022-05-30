@@ -1,0 +1,139 @@
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0",
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "Container",
+      "color": "accent",
+      "items": [
+        {
+          "type": "TextBlock",
+          "size": "medium",
+          "weight": "bolder",
+          "text": "Get ready to send Your message"
+        }
+      ]
+    },
+    {
+      "type": "Container",
+      "bordered": true,
+      "shadowed": true,
+      "spacing": "none",
+      "items": [
+        {
+          "id": "sendType",
+          "title": "When would you like to send the message?",
+          "type": "Input.ChoiceSet",
+          "style": "expanded",
+          "choices": [
+            {
+              "title": "Immediately",
+              "value": "NOW"
+            },
+            {
+              "title": "On Event",
+              "value": "EVENT"
+            }
+          ],
+          "validation": {
+            "required": true
+          }
+        }
+      ]
+    },
+    {
+      "type": "Container",
+      "bordered": true,
+      "shadowed": true,
+      "spacing": "none",
+      "showWhen": "data.sendType === 'EVENT'",
+      "items": [
+        {
+          "type": "TextBlock",
+          "size": "medium",
+          "weight": "bolder",
+          "text": "Send on event"
+        },
+        {
+          "id": "sendOnEventsNew",
+          "type": "List",
+          "arrayPath": "data.availableEvents",
+          "selectionType": "multi",
+          "rowKey": "key",
+          "templates": {
+            "label": "{{ item.title }}",
+            "sublabel": [
+              "{{ item.description }}"
+            ]
+          }
+        },
+        {
+          "id": "offset",
+          "title": "Would you like to delay sending the message? (e.g. send 7 days after the event)",
+          "type": "Input.ChoiceSet",
+          "showWhen": "data.sendType === 'EVENT'",
+          "style": "expanded",
+          "choices": [
+            {
+              "title": "Yes",
+              "value": true
+            },
+            {
+              "title": "No",
+              "value": false
+            }
+          ],
+          "validation": {
+            "requiredIf": "data.sendType === 'EVENT'"
+          }
+        },
+        {
+          "id": "offsetType",
+          "title": "Would you like to delay the sending of your message by hours or days?",
+          "type": "Input.ChoiceSet",
+          "showWhen": "data.offset === true",
+          "style": "expanded",
+          "choices": [
+            {
+              "title": "Hours",
+              "value": "HRS"
+            },
+            {
+              "title": "Days",
+              "value": "DAYS"
+            }
+          ],
+          "validation": {
+            "requiredIf": "data.offset === true"
+          }
+        },
+        {
+          "id": "offsetLength",
+          "type": "Input.Number",
+          "title": "Please specify the length of the delay",
+          "min": 0,
+          "showWhen": "data.offset === true",
+          "validation": {
+            "requiredIf": "data.offsetType === true"
+          }
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.Cancel",
+      "title": "Close"
+    },
+    {
+      "title": "Submit",
+      "type": "Action.Submit"
+    }
+  ],
+  "templateMeta": {
+    "name": "gov-uk-get-ready-to-send-custom-template",
+    "title": "Get Ready to Send Custom Template",
+    "category": "govUkNotify"
+  }
+}

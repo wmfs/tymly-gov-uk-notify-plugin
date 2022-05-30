@@ -1,0 +1,28 @@
+{
+  "Comment": "Get Ready to Send Custom Notify Message Template",
+  "name": "Get Ready to Send Custom Notify Message Template",
+  "version": "1.0",
+  "categories": [
+    "govUkNotify"
+  ],
+  "StartAt": "AwaitingHumanInput",
+  "States": {
+    "AwaitingHumanInput": {
+      "Type": "Task",
+      "Resource": "module:awaitingHumanInput",
+      "ResourceConfig": {
+        "uiName": "tymly_govUkReadyToSendCustomTemplate",
+        "dataPath": "$"
+      },
+      "End": true
+    }
+  },
+  "restrictions": [
+    {
+      "roleId": "tymly_govUkNotifyAdmin",
+      "allows": [
+        "*"
+      ]
+    }
+  ]
+}

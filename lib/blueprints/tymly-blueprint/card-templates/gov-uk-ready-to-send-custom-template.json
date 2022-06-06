@@ -127,7 +127,7 @@
       "title": "Close"
     },
     {
-      "title": "Submit",
+      "title": "Continue",
       "type": "Action.Submit"
     }
   ],
@@ -135,5 +135,18 @@
     "name": "gov-uk-get-ready-to-send-custom-template",
     "title": "Get Ready to Send Custom Template",
     "category": "govUkNotify"
+  },
+  "hooks": {
+    "afterSubmit": {
+      "actions": [
+        {
+          "type": "Action.PushCard",
+          "stateMachineName": "wmfs_viewGovUkCustomTemplate_1_0",
+          "input": {
+            "customTemplateId": "$.id"
+          }
+        }
+      ]
+    }
   }
 }

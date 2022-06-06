@@ -214,6 +214,32 @@
       ]
     },
     {
+      "type": "Container",
+      "bordered": true,
+      "shadowed": true,
+      "spacing": "none",
+      "showWhen": "data.sendConfigs",
+      "items": [
+        {
+          "type": "TextBlock",
+          "size": "medium",
+          "weight": "bolder",
+          "text": "Send Details"
+        },
+        {
+          "id": "sendConfigList",
+          "type": "List",
+          "arrayPath": "data.sendConfigs",
+          "templates": {
+            "label": "{{ data.availableEvents.find(e => e.key === item.event).description }}",
+            "sublabel": [
+              "{{ item.offsetLength }} {{ item.offsetType.toLowerCase() }} delay"
+            ]
+          }
+        }
+      ]
+    },
+    {
       "showWhen": "(data.status === 'SENT' || data.status === 'SEND_ON_EVENT') && data.sendReceipts.length > 0",
       "type": "Container",
       "bordered": true,

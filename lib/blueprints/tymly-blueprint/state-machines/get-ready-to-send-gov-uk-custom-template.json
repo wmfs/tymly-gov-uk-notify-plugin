@@ -14,6 +14,11 @@
         "uiName": "tymly_govUkReadyToSendCustomTemplate",
         "dataPath": "$"
       },
+      "Next": "UpsertConfig"
+    },
+    "UpsertConfig": {
+      "Type": "Task",
+      "Resource": "function:tymly_upsertGovUkSendConfig",
       "End": true
     }
   },

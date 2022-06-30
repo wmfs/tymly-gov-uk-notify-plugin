@@ -19,6 +19,20 @@
     "UpsertConfig": {
       "Type": "Task",
       "Resource": "function:tymly_upsertGovUkSendConfig",
+      "Next": "UpdateTemplate"
+    },
+    "UpdateTemplate": {
+      "Type": "Task",
+      "Resource": "module:upserting",
+      "Parameters": {
+        "id.$": "$.id",
+        "sendOnEvents.$": "$.sendOnEventsNew",
+        "status": "SEND_ON_EVENT"
+      },
+      "ResourceConfig": {
+        "modelId": "tymly_govUkCustomTemplates",
+        "setMissingPropertiesToNull": false
+      },
       "End": true
     }
   },

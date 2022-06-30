@@ -5,13 +5,28 @@
   "categories": [
     "govUkNotify"
   ],
-  "StartAt": "Logging",
+  "StartAt": "SendNow",
   "States": {
-    "Logging": {
+    "SendNow": {
       "Type": "Task",
-      "Resource": "module:logging",
+      "Parameters": {
+        "recipients.$": "$.recipients",
+        "templateName.$": "$.templateName",
+        "customTemplateId.$": "$.customTemplateId"
+      },
+      "Resource": "module:sendingCustomMessageViaService",
+      "Next": "UpdateStatus"
+    },
+    "UpdateStatus": {
+      "Type": "Task",
+      "Resource": "module:upserting",
+      "Parameters": {
+        "id.$": "$.customTemplateId",
+        "status": "SENT"
+      },
       "ResourceConfig": {
-        "template": "Sending on schedule!"
+        "modelId": "tymly_govUkCustomTemplates",
+        "setMissingPropertiesToNull": false
       },
       "End": true
     }

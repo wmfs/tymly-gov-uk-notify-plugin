@@ -39,16 +39,6 @@
           "validation": {
             "required": true
           }
-        },
-        {
-          "title": "Send message(s) now",
-          "type": "Action.ReplaceCard",
-          "stateMachineName": "tymly_sendGovUkCustomTemplate_1_0",
-          "showWhen": "data.sendType === 'NOW'",
-          "input": {
-            "when": "NOW",
-            "customTemplateId": "$.id"
-          }
         }
       ]
     },
@@ -138,6 +128,7 @@
     },
     {
       "title": "Continue",
+      "showWhen": "!data.sendType || data.sendType === 'NOW'",
       "type": "Action.Submit"
     }
   ],

@@ -277,7 +277,7 @@
     {
       "title": "Get Ready to Send",
       "type": "Action.ReplaceCard",
-      "showWhen": "data.recipients.length > 0",
+      "showWhen": "data.status !== 'SENT'",
       "stateMachineName": "tymly_getReadyToSendGovUkCustomTemplate_1_0",
       "input": {
         "id": "$.id",

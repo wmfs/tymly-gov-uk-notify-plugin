@@ -128,8 +128,18 @@
     },
     {
       "title": "Continue",
-      "showWhen": "!data.sendType || data.sendType === 'NOW'",
+      "showWhen": "data.sendType === 'ON_EVENT'",
       "type": "Action.Submit"
+    },
+    {
+      "title": "Send message(s) now",
+      "type": "Action.ReplaceCard",
+      "stateMachineName": "tymly_sendGovUkCustomTemplate_1_0",
+      "showWhen": "data.sendType === 'NOW'",
+      "input": {
+        "when": "NOW",
+        "customTemplateId": "$.id"
+      }
     }
   ],
   "templateMeta": {

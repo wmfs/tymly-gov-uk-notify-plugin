@@ -128,7 +128,7 @@
     },
     {
       "title": "Continue",
-      "showWhen": "data.sendType === 'ON_EVENT'",
+      "showWhen": "data.sendType === 'EVENT'",
       "type": "Action.Submit"
     },
     {

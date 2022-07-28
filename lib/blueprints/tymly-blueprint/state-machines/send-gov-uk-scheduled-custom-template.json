@@ -1,0 +1,42 @@
+{
+  "Comment": "Send scheduled custom template",
+  "name": "Send scheduled custom template",
+  "version": "1.0",
+  "categories": [
+    "govUkNotify"
+  ],
+  "StartAt": "SendNow",
+  "States": {
+    "SendNow": {
+      "Type": "Task",
+      "Parameters": {
+        "recipients.$": "$.recipients",
+        "templateName.$": "$.templateName",
+        "customTemplateId.$": "$.customTemplateId"
+      },
+      "Resource": "module:sendingCustomMessageViaService",
+      "Next": "UpdateStatus"
+    },
+    "UpdateStatus": {
+      "Type": "Task",
+      "Resource": "module:upserting",
+      "Parameters": {
+        "id.$": "$.customTemplateId",
+        "status": "SENT"
+      },
+      "ResourceConfig": {
+        "modelId": "tymly_govUkCustomTemplates",
+        "setMissingPropertiesToNull": false
+      },
+      "End": true
+    }
+  },
+  "restrictions": [
+    {
+      "roleId": "$everyone",
+      "allows": [
+        "*"
+      ]
+    }
+  ]
+}

@@ -19,6 +19,22 @@
       "InputPath": "$.customTemplateId",
       "Resource": "module:listCustomTemplateRecipients",
       "ResultPath": "$.recipients",
+      "Next": "GrabSendConfig"
+    },
+    "GrabSendConfig": {
+      "Type": "Task",
+      "Resource": "module:finding",
+      "ResourceConfig": {
+        "modelId": "tymly_customTemplateSendConfig",
+        "filter": {
+          "where": {
+            "customTemplateId": {
+              "equals": "$.customTemplateId"
+            }
+          }
+        }
+      },
+      "ResultPath": "$.sendConfigs",
       "Next": "CalculateMessageRates"
     },
     "CalculateMessageRates": {

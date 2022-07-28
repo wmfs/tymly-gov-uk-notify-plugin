@@ -1,0 +1,31 @@
+{
+  "title": "Custom template send configurations",
+  "description": "Custom template send config",
+  "type": "object",
+  "primaryKey": [
+    "customTemplateId",
+    "event"
+  ],
+  "properties": {
+    "customTemplateId": {
+      "title": "Custom Template ID",
+      "type": "uuid"
+    },
+    "event": {
+      "title": "Event",
+      "type": "string"
+    },
+    "offsetType": {
+      "title": "Offset type (hours or mins)",
+      "type": "string",
+      "enum": [
+        "HRS",
+        "DAYS"
+      ]
+    },
+    "offsetLength": {
+      "title": "Offset length",
+      "type": "number"
+    }
+  }
+}

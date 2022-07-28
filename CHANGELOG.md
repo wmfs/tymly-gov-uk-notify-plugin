@@ -1,3 +1,37 @@
+# [1.32.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.31.3...v1.32.0) (2022-07-28)
+
+
+### ✨ Features
+
+* config and timings for delayed event sending [sc-14535] ([61292f1](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/61292f16737d36890c695d19a21696e3fe700e96))
+* Merge pull request [#530](https://github.com/wmfs/tymly-gov-uk-notify-plugin/issues/530) from wmfs/sc-14535 ([23e1a19](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/23e1a190a83bc0638e1a8662a4755e81b50714fd))
+* model and upserts for send config [sc-14535] ([8d94b1e](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/8d94b1edd29b2aa4b8296eb424e0aa65629acd00))
+* new getReadyToSend view [sc-14535] ([17fc1f6](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/17fc1f6d4a339ee8c7fc22bc291a5e656fdd9d5f))
+* update state-machine scheduled sending [sc-14535] ([72bf31c](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/72bf31cb9e824063a6a0822bd89b5587470e2c66))
+
+
+### 🐛 Bug Fixes
+
+* reinstate send now button on send config page [sc-14535] ([98934e2](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/98934e222bcf794a47e108864722e59d31677ebb))
+* typo on button showWhen [sc-14535] ([296d8df](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/296d8df8033e7b8dbca424e759608d2f9b5f6397))
+* update button behaviour for send [sc-14535] ([6ef833a](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/6ef833a3e384ca147f14cb890f3721ca957d3b93))
+* update conditions for button showWhens [sc-14535] ([28752fe](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/28752fe16b4608a4173f9197ced9237bf800959d))
+* update showWhen on get ready to send button [sc-14535] ([a5f9793](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/a5f97933193c51ae271088dde1195b486b39b111))
+* use input rather than hard coded delay [sc-14535] ([d83b9da](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/d83b9dad6b08276910689c94cc7fa4286b873801))
+
+
+### 🛠 Builds
+
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly-test-helpers to v1.18.0 ([577cecd](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/577cecd922bf746026c0e1abb50ce553ba6d4852))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly-test-helpers to v1.19.0 ([ba42654](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/ba42654a372810997e840690fa3ab922b78190a9))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly-test-helpers to v1.21.0 ([3a56e3d](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/3a56e3d371c88257165ca8b92ed7e1b4fbce1958))
+* **deps-dev:** update dependency semantic-release to v19.0.3 ([b9ffeca](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/b9ffecaa6c7d35396edb22b496d58120faf4dbdc))
+
+
+### ♻️ Chores
+
+* typo ([ad63ef2](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/ad63ef2b36bdf901c4e5897efaabfff10a5fc387))
+
 ## [1.31.3](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.31.2...v1.31.3) (2022-05-25)
 
 

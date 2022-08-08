@@ -218,7 +218,7 @@
       "bordered": true,
       "shadowed": true,
       "spacing": "none",
-      "showWhen": "data.sendConfigs",
+      "showWhen": "data.sendConfigs.length > 0",
       "items": [
         {
           "type": "TextBlock",
@@ -273,6 +273,12 @@
           ]
         }
       ]
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.Cancel",
+      "title": "Close"
     },
     {
       "title": "Get Ready to Send",
@@ -283,12 +289,6 @@
         "id": "$.id",
         "availableEvents": "$.availableEvents"
       }
-    }
-  ],
-  "actions": [
-    {
-      "type": "Action.Cancel",
-      "title": "Close"
     }
   ],
   "templateMeta": {

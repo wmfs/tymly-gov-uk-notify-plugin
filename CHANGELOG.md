@@ -1,3 +1,10 @@
+## [1.32.1](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.32.0...v1.32.1) (2022-08-08)
+
+
+### 🐛 Bug Fixes
+
+* update conditions and visuals for send dashboard ([6affbe8](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/6affbe8414b10bd78c19f77408c3ca331a4dc0e1))
+
 # [1.32.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.31.3...v1.32.0) (2022-07-28)
 
 

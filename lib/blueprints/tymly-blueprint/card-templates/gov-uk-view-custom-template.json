@@ -289,6 +289,15 @@
         "id": "$.id",
         "availableEvents": "$.availableEvents"
       }
+    },
+    {
+      "title": "Delete",
+      "color": "attention",
+      "type": "Action.ReplaceCard",
+      "stateMachineName": "tymly_deleteGovUkCustomTemplate_1_0",
+      "input": {
+        "customTemplateId": "$.id"
+      }
     }
   ],
   "templateMeta": {

@@ -233,7 +233,7 @@
           "templates": {
             "label": "{{ data.availableEvents.find(e => e.key === item.event).description }}",
             "sublabel": [
-              "{{ item.offsetLength ? item.offsetLength + item.offsetType.toLowerCase() + 'delay' : 'Send Immediately'}}"
+              "{{ item.offsetLength ? [item.offsetLength, item.offsetType.toLowerCase(), 'delay'].join(' ') : 'Send Immediately'}}"
             ]
           }
         }

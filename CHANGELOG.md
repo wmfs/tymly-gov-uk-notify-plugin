@@ -1,3 +1,11 @@
+## [1.32.3](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.32.2...v1.32.3) (2022-08-09)
+
+
+### 🐛 Bug Fixes
+
+* err when no offsetType/delay ([92a6853](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/92a6853691664f6690f5ced3492bb3ccb3c7238a))
+* formatting of delay message ([a628b6b](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/a628b6bf1d01d83c14163f5a41d4b19010019f7b))
+
 ## [1.32.2](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.32.1...v1.32.2) (2022-08-09)
 
 

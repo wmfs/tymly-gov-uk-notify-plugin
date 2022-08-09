@@ -41,7 +41,7 @@
   },
   "restrictions": [
     {
-      "roleId": "tymly_govUkNotifyAdmin",
+      "roleId": "tymly_govUkNotifyCustomTemplateAdmin",
       "allows": [
         "*"
       ]

@@ -1,3 +1,10 @@
+## [1.32.2](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.32.1...v1.32.2) (2022-08-09)
+
+
+### 🐛 Bug Fixes
+
+* restrict to custom template role for custom template components ([e2bbc3b](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/e2bbc3b4d4fa0ed5955e35f24534f34b37df92ef))
+
 ## [1.32.1](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.32.0...v1.32.1) (2022-08-08)
 
 

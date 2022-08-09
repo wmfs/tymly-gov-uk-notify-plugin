@@ -1,3 +1,10 @@
+# [1.33.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.32.3...v1.33.0) (2022-08-09)
+
+
+### ✨ Features
+
+* ability to delete custom message templates ([cba4014](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/cba40149a23cb9085afa8a755e525ff39d598dac))
+
 ## [1.32.3](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.32.2...v1.32.3) (2022-08-09)
 
 

@@ -1,0 +1,44 @@
+{
+  "Comment": "Delete Custom Notify Message Template",
+  "name": "Delete Custom Notify Message Template",
+  "version": "1.0",
+  "categories": [
+    "govUkNotify"
+  ],
+  "StartAt": "Finding",
+  "States": {
+    "Finding": {
+      "Type": "Task",
+      "InputPath": "$.customTemplateId",
+      "Resource": "module:findingById",
+      "ResourceConfig": {
+        "modelId": "tymly_govUkCustomTemplates"
+      },
+      "ResultPath": "$",
+      "Next": "AwaitingHumanInput"
+    },
+    "AwaitingHumanInput": {
+      "Type": "Task",
+      "Resource": "module:awaitingHumanInput",
+      "ResourceConfig": {
+        "uiName": "tymly_govUkDeleteCustomMessageTemplate",
+        "dataPath": "$"
+      },
+      "Next": "DeleteMessageTemplate"
+    },
+    "DeleteMessageTemplate": {
+      "Type": "Task",
+      "InputPath": "$.customTemplateId",
+      "Resource": "module:deleteCustomMessageTemplate",
+      "End": true
+    }
+  },
+  "restrictions": [
+    {
+      "roleId": "tymly_govUkNotifyCustomTemplateAdmin",
+      "allows": [
+        "*"
+      ]
+    }
+  ]
+}

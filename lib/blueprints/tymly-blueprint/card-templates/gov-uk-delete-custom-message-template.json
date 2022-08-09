@@ -1,0 +1,52 @@
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0",
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "Container",
+      "color": "accent",
+      "items": [
+        {
+          "type": "TextBlock",
+          "size": "medium",
+          "weight": "bolder",
+          "text": "Custom Message Template"
+        }
+      ]
+    },
+    {
+      "type": "TextBlock",
+      "weight": "bolder",
+      "text": "Are you sure you want to delete this custom message template?"
+    },
+    {
+      "type": "FactSet",
+      "facts": [
+        {
+          "title": "Name",
+          "value": "{{ data.name }}"
+        },
+        {
+          "title": "Message Type",
+          "value": "{{ data.messageType === 'mail' ? 'Email template' : 'Text message Template' }}"
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.Cancel",
+      "title": "No"
+    },
+    {
+      "type": "Action.Submit",
+      "title": "Yes, delete"
+    }
+  ],
+  "templateMeta": {
+    "name": "gov-uk-create-custom-template",
+    "title": "Create Custom Message Template",
+    "category": "govUkNotify"
+  }
+}

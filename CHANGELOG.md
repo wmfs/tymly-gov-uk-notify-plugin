@@ -1,3 +1,10 @@
+# [1.34.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.33.0...v1.34.0) (2022-08-10)
+
+
+### 🛠 Builds
+
+* **deps:** update dependency moment to v2.29.4 [security] ([ed77029](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/ed7702963226812ce8e403a0c1ba979c2c0029aa))
+
 # [1.33.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.32.3...v1.33.0) (2022-08-09)
 
 

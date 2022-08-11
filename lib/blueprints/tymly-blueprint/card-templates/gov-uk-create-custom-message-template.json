@@ -46,6 +46,100 @@
       "type": "Container",
       "color": "accent",
       "spacing": "none",
+      "items": [
+        {
+          "type": "TextBlock",
+          "text": "Formatting",
+          "weight": "bolder",
+          "size": "medium",
+          "spacing": "none"
+        },
+        {
+          "type": "TextBlock",
+          "text": "To put a title in your template, use a hash:",
+          "spacing": "none"
+        },
+        {
+          "type": "TextBlock",
+          "text": "# This is a title",
+          "weight": "lighter",
+          "spacing": "none"
+        },
+        {
+          "type": "TextBlock",
+          "text": ""
+        },
+        {
+          "type": "TextBlock",
+          "text": "To make bullet points, use asterisks:",
+          "spacing": "none"
+        },
+        {
+          "type": "TextBlock",
+          "text": "* point 1",
+          "weight": "lighter",
+          "spacing": "none"
+        },
+        {
+          "type": "TextBlock",
+          "text": "* point 2",
+          "weight": "lighter",
+          "spacing": "none"
+        },
+        {
+          "type": "TextBlock",
+          "text": "* point 3",
+          "weight": "lighter",
+          "spacing": "none"
+        },
+        {
+          "type": "TextBlock",
+          "text": ""
+        },
+        {
+          "type": "TextBlock",
+          "text": "To add inset text, use a caret:",
+          "spacing": "none"
+        },
+        {
+          "type": "TextBlock",
+          "text": "^ You must tell us if your circumstances change",
+          "weight": "lighter",
+          "spacing": "none"
+        },
+        {
+          "type": "TextBlock",
+          "text": ""
+        },
+        {
+          "type": "TextBlock",
+          "text": "To add a horizontal line, use three dashes:",
+          "spacing": "none"
+        },
+        {
+          "type": "TextBlock",
+          "text": "First paragraph",
+          "weight": "lighter",
+          "spacing": "none"
+        },
+        {
+          "type": "TextBlock",
+          "text": "---",
+          "weight": "lighter",
+          "spacing": "none"
+        },
+        {
+          "type": "TextBlock",
+          "text": "Second paragraph",
+          "weight": "lighter",
+          "spacing": "none"
+        }
+      ]
+    },
+    {
+      "type": "Container",
+      "color": "accent",
+      "spacing": "none",
       "showWhen": "Array.isArray(data.parameters) && data.parameters.length > 0",
       "items": [
         {
@@ -62,7 +156,7 @@
         },
         {
           "type": "TextBlock",
-          "text": "e.g. \"Hello ((firstName)) ((lastName))\"",
+          "text": "Hello ((firstName)) ((lastName))",
           "weight": "lighter",
           "spacing": "none"
         },

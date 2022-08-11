@@ -80,6 +80,8 @@
           "arrayPath": "data.parameters",
           "color": "accent",
           "hideHeader": true,
+          "disableRowHover": true,
+          "separator": "none",
           "columns": [
             {
               "title": "",

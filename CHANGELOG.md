@@ -1,3 +1,10 @@
+## [1.34.1](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.34.0...v1.34.1) (2022-08-11)
+
+
+### 🐛 Bug Fixes
+
+* remove condition on get ready to send button so can be sent multiple times ([8cab05e](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/8cab05e54e7299bfc104d66d329e6f0f77a82f46))
+
 # [1.34.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.33.0...v1.34.0) (2022-08-10)
 
 

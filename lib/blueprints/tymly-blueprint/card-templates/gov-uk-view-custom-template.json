@@ -59,7 +59,7 @@
             },
             {
               "title": "Message Content",
-              "value": "{{ data.message }}"
+              "value": "<span style=\"word-wrap: break-word; white-space: pre-wrap;\">{{ data.message }}</span>"
             }
           ]
         },

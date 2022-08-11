@@ -43,6 +43,53 @@
       }
     },
     {
+      "type": "Container",
+      "color": "accent",
+      "spacing": "none",
+      "showWhen": "Array.isArray(data.parameters) && data.parameters.length > 0",
+      "items": [
+        {
+          "type": "TextBlock",
+          "text": "Personalisation",
+          "weight": "bolder",
+          "size": "medium",
+          "spacing": "none"
+        },
+        {
+          "type": "TextBlock",
+          "text": "Use double brackets around the parameters you want to use to personalise your message:",
+          "spacing": "none"
+        },
+        {
+          "type": "TextBlock",
+          "text": "e.g. \"Hello ((firstName)) ((lastName))\"",
+          "weight": "lighter",
+          "spacing": "none"
+        },
+        {
+          "type": "TextBlock",
+          "text": ""
+        },
+        {
+          "type": "TextBlock",
+          "text": "These are the parameters you can use in your message:",
+          "spacing": "none"
+        },
+        {
+          "type": "MarkupTable",
+          "arrayPath": "data.parameters",
+          "color": "accent",
+          "hideHeader": true,
+          "columns": [
+            {
+              "title": "",
+              "value": "{{ item }}"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "showWhen": "data.messageType === 'mail'",
       "id": "subject",
       "title": "Subject",

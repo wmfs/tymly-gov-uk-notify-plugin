@@ -63,6 +63,7 @@
           "type": "TextBlock",
           "text": "# This is a title",
           "weight": "lighter",
+          "size": "small",
           "spacing": "none"
         },
         {
@@ -78,18 +79,21 @@
           "type": "TextBlock",
           "text": "* point 1",
           "weight": "lighter",
+          "size": "small",
           "spacing": "none"
         },
         {
           "type": "TextBlock",
           "text": "* point 2",
           "weight": "lighter",
+          "size": "small",
           "spacing": "none"
         },
         {
           "type": "TextBlock",
           "text": "* point 3",
           "weight": "lighter",
+          "size": "small",
           "spacing": "none"
         },
         {
@@ -105,6 +109,7 @@
           "type": "TextBlock",
           "text": "^ You must tell us if your circumstances change",
           "weight": "lighter",
+          "size": "small",
           "spacing": "none"
         },
         {
@@ -120,18 +125,21 @@
           "type": "TextBlock",
           "text": "First paragraph",
           "weight": "lighter",
+          "size": "small",
           "spacing": "none"
         },
         {
           "type": "TextBlock",
           "text": "---",
           "weight": "lighter",
+          "size": "small",
           "spacing": "none"
         },
         {
           "type": "TextBlock",
           "text": "Second paragraph",
           "weight": "lighter",
+          "size": "small",
           "spacing": "none"
         }
       ]
@@ -158,6 +166,7 @@
           "type": "TextBlock",
           "text": "Hello ((firstName)) ((lastName))",
           "weight": "lighter",
+          "size": "small",
           "spacing": "none"
         },
         {

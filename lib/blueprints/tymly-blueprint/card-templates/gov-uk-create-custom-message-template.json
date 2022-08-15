@@ -182,13 +182,15 @@
           "type": "MarkupTable",
           "arrayPath": "data.parameters",
           "color": "accent",
-          "hideHeader": true,
-          "disableRowHover": true,
           "separator": "none",
           "columns": [
             {
-              "title": "",
-              "value": "{{ item }}"
+              "title": "Name",
+              "value": "{{ item.name }}"
+            },
+            {
+              "title": "Description",
+              "value": "{{ item.description }}"
             }
           ]
         }

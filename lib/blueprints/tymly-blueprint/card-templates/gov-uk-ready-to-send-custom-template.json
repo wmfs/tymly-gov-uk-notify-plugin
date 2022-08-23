@@ -17,9 +17,6 @@
     },
     {
       "type": "Container",
-      "bordered": true,
-      "shadowed": true,
-      "spacing": "none",
       "items": [
         {
           "id": "sendType",
@@ -44,9 +41,6 @@
     },
     {
       "type": "Container",
-      "bordered": true,
-      "shadowed": true,
-      "spacing": "none",
       "showWhen": "data.sendType === 'EVENT'",
       "items": [
         {

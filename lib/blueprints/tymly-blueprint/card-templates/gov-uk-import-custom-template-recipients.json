@@ -17,8 +17,6 @@
     },
     {
       "type": "Container",
-      "bordered": true,
-      "shadowed": true,
       "items": [
         {
           "type": "TextBlock",
@@ -59,8 +57,6 @@
     },
     {
       "type": "Container",
-      "bordered": true,
-      "shadowed": true,
       "items": [
         {
           "type": "TextBlock",

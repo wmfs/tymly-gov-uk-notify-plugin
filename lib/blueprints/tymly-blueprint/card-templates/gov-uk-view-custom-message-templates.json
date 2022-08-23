@@ -16,40 +16,45 @@
       ]
     },
     {
-      "id": "templateList",
-      "type": "List",
-      "arrayPath": "data.templates",
-      "clickToLaunch": true,
-      "templates": {
-        "badge": [
-          {
-            "showWhen": "item.status === 'DRAFT'",
-            "text": "Draft",
-            "colour": "standard"
+      "type": "Container",
+      "items": [
+        {
+          "id": "templateList",
+          "type": "List",
+          "arrayPath": "data.templates",
+          "clickToLaunch": true,
+          "templates": {
+            "badge": [
+              {
+                "showWhen": "item.status === 'DRAFT'",
+                "text": "Draft",
+                "colour": "standard"
+              },
+              {
+                "showWhen": "item.status === 'PENDING'",
+                "text": "Pending",
+                "colour": "warning"
+              },
+              {
+                "showWhen": "item.status === 'SENT'",
+                "text": "Sent",
+                "colour": "good"
+              },
+              {
+                "showWhen": "item.status === 'SEND_ON_EVENT'",
+                "text": "Sending on event",
+                "colour": "good"
+              }
+            ],
+            "label": "{{ item.name || 'This template has no name' }}",
+            "sublabel": [
+              "{{ { mail: 'Email template', sms: 'Text message template' }[item.messageType] }}",
+              "Last modified: {{ formatDate(item.modified, 'DD/MM/YY HH:mm') }}"
+            ]
           },
-          {
-            "showWhen": "item.status === 'PENDING'",
-            "text": "Pending",
-            "colour": "warning"
-          },
-          {
-            "showWhen": "item.status === 'SENT'",
-            "text": "Sent",
-            "colour": "good"
-          },
-          {
-            "showWhen": "item.status === 'SEND_ON_EVENT'",
-            "text": "Sending on event",
-            "colour": "good"
-          }
-        ],
-        "label": "{{ item.name || 'This template has no name' }}",
-        "sublabel": [
-          "{{ { mail: 'Email template', sms: 'Text message template' }[item.messageType] }}",
-          "Last modified: {{ formatDate(item.modified, 'DD/MM/YY HH:mm') }}"
-        ]
-      },
-      "notFoundText": "No Templates Found"
+          "notFoundText": "No Templates Found"
+        }
+      ]
     }
   ],
   "actions": [

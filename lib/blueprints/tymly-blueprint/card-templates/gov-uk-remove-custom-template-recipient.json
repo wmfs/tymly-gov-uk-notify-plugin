@@ -16,22 +16,27 @@
       ]
     },
     {
-      "type": "TextBlock",
-      "weight": "bolder",
-      "text": "Are you sure you want to remove this recipient?"
-    },
-    {
-      "type": "FactSet",
-      "facts": [
+      "type": "Container",
+      "items": [
         {
-          "showWhen": "data.messageType === 'mail'",
-          "title": "Email Address",
-          "value": "{{ data.recipient }}"
+          "type": "TextBlock",
+          "weight": "bolder",
+          "text": "Are you sure you want to remove this recipient?"
         },
         {
-          "showWhen": "data.messageType === 'sms'",
-          "title": "Phone Number",
-          "value": "{{ data.recipient }}"
+          "type": "FactSet",
+          "facts": [
+            {
+              "showWhen": "data.messageType === 'mail'",
+              "title": "Email Address",
+              "value": "{{ data.recipient }}"
+            },
+            {
+              "showWhen": "data.messageType === 'sms'",
+              "title": "Phone Number",
+              "value": "{{ data.recipient }}"
+            }
+          ]
         }
       ]
     }

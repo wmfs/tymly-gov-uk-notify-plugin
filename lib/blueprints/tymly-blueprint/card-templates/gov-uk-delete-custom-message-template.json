@@ -16,20 +16,25 @@
       ]
     },
     {
-      "type": "TextBlock",
-      "weight": "bolder",
-      "text": "Are you sure you want to delete this custom message template?"
-    },
-    {
-      "type": "FactSet",
-      "facts": [
+      "type": "Container",
+      "items": [
         {
-          "title": "Name",
-          "value": "{{ data.name }}"
+          "type": "TextBlock",
+          "weight": "bolder",
+          "text": "Are you sure you want to delete this custom message template?"
         },
         {
-          "title": "Message Type",
-          "value": "{{ data.messageType === 'mail' ? 'Email template' : 'Text message Template' }}"
+          "type": "FactSet",
+          "facts": [
+            {
+              "title": "Name",
+              "value": "{{ data.name }}"
+            },
+            {
+              "title": "Message Type",
+              "value": "{{ data.messageType === 'mail' ? 'Email template' : 'Text message Template' }}"
+            }
+          ]
         }
       ]
     }

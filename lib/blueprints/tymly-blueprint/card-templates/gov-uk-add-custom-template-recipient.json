@@ -16,22 +16,27 @@
       ]
     },
     {
-      "showWhen": "data.messageType === 'mail'",
-      "id": "emailAddress",
-      "title": "Email Address",
-      "type": "Input.Email",
-      "validation": {
-        "requiredIf": "data.messageType === 'mail'"
-      }
-    },
-    {
-      "showWhen": "data.messageType === 'sms'",
-      "id": "phoneNumber",
-      "title": "Phone Number",
-      "type": "Input.TelephoneNumber",
-      "validation": {
-        "requiredIf": "data.messageType === 'sms'"
-      }
+      "type": "Container",
+      "items": [
+        {
+          "showWhen": "data.messageType === 'mail'",
+          "id": "emailAddress",
+          "title": "Email Address",
+          "type": "Input.Email",
+          "validation": {
+            "requiredIf": "data.messageType === 'mail'"
+          }
+        },
+        {
+          "showWhen": "data.messageType === 'sms'",
+          "id": "phoneNumber",
+          "title": "Phone Number",
+          "type": "Input.TelephoneNumber",
+          "validation": {
+            "requiredIf": "data.messageType === 'sms'"
+          }
+        }
+      ]
     }
   ],
   "actions": [

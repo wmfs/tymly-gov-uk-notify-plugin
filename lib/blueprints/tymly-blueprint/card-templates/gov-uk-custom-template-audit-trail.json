@@ -16,30 +16,35 @@
       ]
     },
     {
-      "type": "TextBlock",
-      "text": "{{ data.auditTrail.length }} change{{ data.auditTrail.length === 1 ? '' : 's' }}",
-      "weight": "bolder"
-    },
-    {
-      "id": "auditLog",
-      "type": "AdaptiveCard",
-      "arrayPath": "data.auditTrail",
-      "body": [
-        {
-          "type": "Separator"
-        },
+      "type": "Container",
+      "items": [
         {
           "type": "TextBlock",
-          "showWhen": "auditLogItem.change !== 'Insert'",
-          "text": "{{ auditLogItem.change }}",
-          "spacing": "none"
+          "text": "{{ data.auditTrail.length }} change{{ data.auditTrail.length === 1 ? '' : 's' }}",
+          "weight": "bolder"
         },
         {
-          "type": "TextBlock",
-          "text": "{{ auditLogItem.change === 'Insert' ? 'Created' : 'Modified' }} at {{ auditLogItem.modified }}{{ auditLogItem.modifiedBy ? ` by ${auditLogItem.modifiedBy}` : '' }}",
-          "weight": "lighter",
-          "size": "small",
-          "spacing": "none"
+          "id": "auditLog",
+          "type": "AdaptiveCard",
+          "arrayPath": "data.auditTrail",
+          "body": [
+            {
+              "type": "Separator"
+            },
+            {
+              "type": "TextBlock",
+              "showWhen": "auditLogItem.change !== 'Insert'",
+              "text": "{{ auditLogItem.change }}",
+              "spacing": "none"
+            },
+            {
+              "type": "TextBlock",
+              "text": "{{ auditLogItem.change === 'Insert' ? 'Created' : 'Modified' }} at {{ auditLogItem.modified }}{{ auditLogItem.modifiedBy ? ` by ${auditLogItem.modifiedBy}` : '' }}",
+              "weight": "lighter",
+              "size": "small",
+              "spacing": "none"
+            }
+          ]
         }
       ]
     }

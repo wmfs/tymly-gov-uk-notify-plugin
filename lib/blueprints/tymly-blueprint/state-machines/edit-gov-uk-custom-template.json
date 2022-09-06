@@ -10,10 +10,7 @@
     "Finding": {
       "Type": "Task",
       "InputPath": "$.customTemplateId",
-      "Resource": "module:findingById",
-      "ResourceConfig": {
-        "modelId": "tymly_govUkCustomTemplates"
-      },
+      "Resource": "module:findCustomMessageTemplate",
       "ResultPath": "$",
       "Next": "AwaitingHumanInput"
     },

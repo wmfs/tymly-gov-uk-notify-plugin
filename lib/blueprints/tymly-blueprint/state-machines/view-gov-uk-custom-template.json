@@ -65,7 +65,8 @@
             "recipient",
             "statusCode",
             "modified"
-          ]
+          ],
+          "orderBy": ["-modified"]
         }
       },
       "ResultPath": "$.sendReceipts",

@@ -43,6 +43,160 @@
       }
     },
     {
+      "type": "Container",
+      "color": "accent",
+      "spacing": "none",
+      "items": [
+        {
+          "type": "TextBlock",
+          "text": "Formatting",
+          "weight": "bolder",
+          "size": "medium",
+          "spacing": "none"
+        },
+        {
+          "type": "TextBlock",
+          "text": "To put a title in your template, use a hash:",
+          "spacing": "none"
+        },
+        {
+          "type": "TextBlock",
+          "text": "# This is a title",
+          "weight": "lighter",
+          "size": "small",
+          "spacing": "none"
+        },
+        {
+          "type": "TextBlock",
+          "text": ""
+        },
+        {
+          "type": "TextBlock",
+          "text": "To make bullet points, use asterisks:",
+          "spacing": "none"
+        },
+        {
+          "type": "TextBlock",
+          "text": "* point 1",
+          "weight": "lighter",
+          "size": "small",
+          "spacing": "none"
+        },
+        {
+          "type": "TextBlock",
+          "text": "* point 2",
+          "weight": "lighter",
+          "size": "small",
+          "spacing": "none"
+        },
+        {
+          "type": "TextBlock",
+          "text": "* point 3",
+          "weight": "lighter",
+          "size": "small",
+          "spacing": "none"
+        },
+        {
+          "type": "TextBlock",
+          "text": ""
+        },
+        {
+          "type": "TextBlock",
+          "text": "To add inset text, use a caret:",
+          "spacing": "none"
+        },
+        {
+          "type": "TextBlock",
+          "text": "^ You must tell us if your circumstances change",
+          "weight": "lighter",
+          "size": "small",
+          "spacing": "none"
+        },
+        {
+          "type": "TextBlock",
+          "text": ""
+        },
+        {
+          "type": "TextBlock",
+          "text": "To add a horizontal line, use three dashes:",
+          "spacing": "none"
+        },
+        {
+          "type": "TextBlock",
+          "text": "First paragraph",
+          "weight": "lighter",
+          "size": "small",
+          "spacing": "none"
+        },
+        {
+          "type": "TextBlock",
+          "text": "---",
+          "weight": "lighter",
+          "size": "small",
+          "spacing": "none"
+        },
+        {
+          "type": "TextBlock",
+          "text": "Second paragraph",
+          "weight": "lighter",
+          "size": "small",
+          "spacing": "none"
+        }
+      ]
+    },
+    {
+      "type": "Container",
+      "color": "accent",
+      "spacing": "none",
+      "showWhen": "Array.isArray(data.parameters) && data.parameters.length > 0",
+      "items": [
+        {
+          "type": "TextBlock",
+          "text": "Personalisation",
+          "weight": "bolder",
+          "size": "medium",
+          "spacing": "none"
+        },
+        {
+          "type": "TextBlock",
+          "text": "Use double brackets around the parameters you want to use to personalise your message:",
+          "spacing": "none"
+        },
+        {
+          "type": "TextBlock",
+          "text": "Hello ((firstName)) ((lastName))",
+          "weight": "lighter",
+          "size": "small",
+          "spacing": "none"
+        },
+        {
+          "type": "TextBlock",
+          "text": ""
+        },
+        {
+          "type": "TextBlock",
+          "text": "These are the parameters you can use in your message:",
+          "spacing": "none"
+        },
+        {
+          "type": "MarkupTable",
+          "arrayPath": "data.parameters",
+          "color": "accent",
+          "separator": "none",
+          "columns": [
+            {
+              "title": "Name",
+              "value": "{{ item.name }}"
+            },
+            {
+              "title": "Description",
+              "value": "{{ item.description }}"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "showWhen": "data.messageType === 'mail'",
       "id": "subject",
       "title": "Subject",

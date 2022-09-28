@@ -1,3 +1,19 @@
+# [1.35.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.34.1...v1.35.0) (2022-09-28)
+
+
+### ✨ Features
+
+* Fix containers on card templates [sc-16615] ([68bc269](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/68bc2694f55f31a2ab2d451239f66916d52a61e7))
+
+
+### 🛠 Builds
+
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly-test-helpers to v1.22.0 ([b7471a4](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/b7471a49d2373bdacbf2d3e949a577b7cc21bd8e))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly-test-helpers to v1.22.1 ([97a70b6](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/97a70b692336e3a150523fd31834d7fdd0bee686))
+* **deps-dev:** update dependency semantic-release to v19.0.4 ([5b1060f](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/5b1060f3635660ba0c5223cb95aa4cd09d5caa6b))
+* **deps-dev:** update dependency semantic-release to v19.0.5 ([379a54a](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/379a54a75510da98693bba0cb64f363fa0f0e736))
+* **deps-dev:** update dependency uuid to v9 ([031a2d5](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/031a2d5259e61eef25b38d43e58fc1fb4496179c))
+
 ## [1.34.1](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.34.0...v1.34.1) (2022-08-11)
 
 

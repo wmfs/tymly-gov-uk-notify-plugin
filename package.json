@@ -24,7 +24,7 @@
   "main": "./lib/index.js",
   "dependencies": {
     "@wmfs/json-path-input-resolver": "1.1.0",
-    "csv-parse": "5.0.4",
+    "csv-parse": "5.3.1",
     "google-libphonenumber": "^3.2.27",
     "moment": "2.29.4",
     "notifications-node-client": "5.2.1"

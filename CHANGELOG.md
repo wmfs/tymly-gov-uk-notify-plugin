@@ -1,3 +1,15 @@
+# [1.36.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.35.0...v1.36.0) (2022-10-24)
+
+
+### ✨ Features
+
+* change delay to hard 20 seconds regardless of input ([255317a](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/255317a3ce6c3117f445842e2bf1465356532931))
+
+
+### 🛠 Builds
+
+* **deps-dev:** update dependency mocha to v10.1.0 ([d17ad39](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/d17ad398ca203c530ea180298ef810472cd1d60e))
+
 # [1.35.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.34.1...v1.35.0) (2022-09-28)
 
 

@@ -1,3 +1,10 @@
+# [1.37.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.36.0...v1.37.0) (2022-11-01)
+
+
+### 🛠 Builds
+
+* **deps:** update dependency notifications-node-client to v5.2.0 ([9426290](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/94262900a7d50a0d46812e74b81f9fd7d57006d6))
+
 # [1.36.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.35.0...v1.36.0) (2022-10-24)
 
 

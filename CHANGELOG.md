@@ -1,3 +1,12 @@
+# [1.40.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.39.0...v1.40.0) (2022-11-11)
+
+
+### 🛠 Builds
+
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly-test-helpers to v1.22.2 ([c04cde3](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/c04cde31112f70bbe30c3e166f73062263a37cc9))
+* **deps-dev:** update dependency chai to v4.3.7 ([e2cd23e](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/e2cd23ee6a67efd1301018984c0db5ce6b71dfcd))
+* **deps:** update dependency csv-parse to v5.3.2 ([35be458](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/35be45879eb270f7053b8fa02721f5f0323466e1))
+
 # [1.39.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.38.0...v1.39.0) (2022-11-02)
 
 

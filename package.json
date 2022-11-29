@@ -1,6 +1,6 @@
 {
   "name": "@wmfs/tymly-gov-uk-notify-plugin",
-  "version": "0.0.0-semantically-rleased",
+  "version": "0.0.0-semantically-released",
   "description": "Allows sending notifications via sms or email using the GOV UK Notify service with Tymly framework.",
   "homepage": "https://github.com/wmfs/tymly-gov-uk-notify-plugin#readme",
   "author": "West Midlands Fire Service",
@@ -35,7 +35,8 @@
     "@semantic-release/git": "10.0.1",
     "@wmfs/tymly": "1.224.2",
     "@wmfs/tymly-cardscript-plugin": "1.37.0",
-    "@wmfs/tymly-test-helpers": "1.17.1",
+    "@wmfs/tymly-schedule-plugin": "1.3.0",
+    "@wmfs/tymly-test-helpers": "1.22.2",
     "chai": "4.3.7",
     "codecov": "3.8.3",
     "conventional-changelog-metahub": "4.0.1",
@@ -44,13 +45,7 @@
     "nyc": "15.1.0",
     "semantic-release": "19.0.5",
     "standard": "17.0.0",
-    "uuid": "9.0.0",
-    "@semantic-release/changelog": "6.0.1",
-    "@semantic-release/git": "10.0.1",
-    "@semantic-release/exec": "6.0.3",
-    "@wmfs/tymly": "1.224.2",
-    "@wmfs/tymly-test-helpers": "1.22.2",
-    "@wmfs/tymly-cardscript-plugin": "1.37.0"
+    "uuid": "9.0.0"
   },
   "scripts": {
     "lint": "standard",

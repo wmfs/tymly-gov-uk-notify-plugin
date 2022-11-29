@@ -8,6 +8,7 @@ const { pluginPaths, blueprintPaths } = require('./fixtures/tymly-paths')
 
 const recipientsSelect = require('../lib/blueprints/tymly-blueprint/functions/process-gov-uk-recipients')()
 const recipientsUpsert = require('../lib/blueprints/tymly-blueprint/functions/upsert-gov-uk-recipients')()
+const sendConfigUpsert = require('../lib/blueprints/tymly-blueprint/functions/upsert-gov-uk-send-config')()
 const path = require('path')
 
 describe('Custom template tests', function () {
@@ -15,11 +16,21 @@ describe('Custom template tests', function () {
 
   const hasGovNotifyKey = !!process.env.GOV_UK_NOTIFY_API_KEY
 
-  const mailTemplateName = 'test_customMail'
-  const mailMessageType = 'mail'
-  const mailSubject = 'Hello world'
-  const mailMessage = 'Today will be sunny with some clouds'
-  const mailFileName = 'email-inputs-test.csv'
+  const mailTemplate1 = {
+    name: 'test_customMail',
+    type: 'mail',
+    subject: 'Hello World',
+    message: 'Today will be sunny with some clouds',
+    fileName: 'email-inputs-test.csv'
+  }
+
+  const mailTemplate2 = {
+    name: 'test_customDelayedMail',
+    type: 'mail',
+    subject: 'Sorry for the delay',
+    message: 'Light showers forecasted',
+    formSubmitEventName: 'test_formSubmitted'
+  }
 
   const formSubmitEventName = 'test_formSubmitted'
   const smsTemplateName = 'test_customSms'
@@ -50,15 +61,16 @@ describe('Custom template tests', function () {
     statebox = tymlyServices.statebox
     notificationModel = tymlyServices.storage.models.tymly_govUkNotifications
     customTemplateModel = tymlyServices.storage.models.tymly_govUkCustomTemplates
+    sendConfigModel = tymlyServices.storage.models.tymly_customTemplateSendConfig
     recipientModel = tymlyServices.storage.models.tymly_govUkCustomTemplateRecipients
   })
 
-  it('create custom message template as mail', async () => {
+  it('create custom message template 1 as mail', async () => {
     customTemplateId = await notify.createCustomMessageTemplate({
-      templateName: mailTemplateName,
-      messageType: mailMessageType,
-      subject: mailSubject,
-      message: mailMessage
+      templateName: mailTemplate1.name,
+      messageType: mailTemplate1.type,
+      subject: mailTemplate1.subject,
+      message: mailTemplate1.message
     })
 
     const customTemplates = await customTemplateModel.find({})
@@ -69,10 +81,10 @@ describe('Custom template tests', function () {
   it('Select recipient file (mail)', async () => {
     event.body = {
       upload: {
-        serverFilename: path.join(__dirname, 'fixtures', mailFileName),
-        clientFilename: path.join(__dirname, 'fixtures', mailFileName)
+        serverFilename: path.join(__dirname, 'fixtures', mailTemplate1.fileName),
+        clientFilename: path.join(__dirname, 'fixtures', mailTemplate1.fileName)
       },
-      messageType: mailMessageType
+      messageType: mailTemplate1.type
     }
     event.importDirectory = path.join(__dirname, 'fixtures', 'output')
     event.importLogId = {
@@ -152,8 +164,8 @@ describe('Custom template tests', function () {
     expect(recipients.length).to.eql(5)
   })
 
-  it('send custom mail to one recipient', async () => {
-    const notifications = await notify.templates[mailTemplateName].sendMessage(
+  it('send custom mail 1 to one recipient', async () => {
+    const notifications = await notify.templates[mailTemplate1.name].sendMessage(
       {
         emailAddress: 'perm-fail@simulator.notify'
       },
@@ -169,8 +181,8 @@ describe('Custom template tests', function () {
     }
   })
 
-  it('send custom mail to multiple recipients', async () => {
-    const notifications = await notify.templates[mailTemplateName].sendMessage(
+  it('send custom mail 1 to multiple recipients', async () => {
+    const notifications = await notify.templates[mailTemplate1.name].sendMessage(
       [
         {
           emailAddress: 'perm-fail@simulator.notify'
@@ -248,6 +260,96 @@ describe('Custom template tests', function () {
 
     const [receipt] = receipts
     expect(receipt.input.message).to.eql('Hello Robert!! Will it be sunny today?')
+  })
+
+  it('create custom message template 2 as mail', async () => {
+    customTemplateId = await notify.createCustomMessageTemplate({
+      templateName: mailTemplate2.name,
+      messageType: mailTemplate2.type,
+      subject: mailTemplate2.subject,
+      message: mailTemplate2.message,
+      sendOnEvents: [mailTemplate2.formSubmitEventName]
+    })
+
+    const customTemplates = await customTemplateModel.find({})
+    expect(customTemplates.length).to.eql(3)
+    event.customTemplateId = customTemplateId
+  })
+
+  it('upsert send configuration for custom message template 2', async () => {
+    event.id = event.customTemplateId
+    event.sendOnEventsNew = [mailTemplate2.formSubmitEventName]
+    event.offsetLength = 10
+    event.offsetType = 'test'
+
+    await sendConfigUpsert(event, tymlyService)
+
+    const sendConfigs = await sendConfigModel.find({
+      where: {
+        customTemplateId: {
+          equals: event.customTemplateId
+        }
+      }
+    })
+
+    expect(sendConfigs.length).to.eql(1)
+  })
+
+  it('check email notifications sent before event trigger', async () => {
+    const receipts = await notificationModel.find({
+      where: {
+        templateName: {
+          equals: 'customDelayedMail'
+        }
+      }
+    })
+    expect(receipts.length).to.eql(0)
+  })
+
+  /*
+  it('emit notify event simulating form submission', async () => {
+    await notify.emitNotifyEvents(['test_formSubmitted'], {customerName: 'Richard'}, ['perm-fail@simulator.notify'])
+  })
+  */
+
+  it('run state machine to submit a form and fire a notify event', async () => {
+    const execDesc = await statebox.startExecution(
+      {
+        name: 'Richard'
+      },
+      'test_cancelPizzaOrderForm',
+      {
+        sendResponse: 'COMPLETE'
+      }
+    )
+
+    expect(execDesc.status).to.eql('SUCCEEDED')
+  })
+
+  it('check email notifications sent immediately after event trigger', async () => {
+    const receipts = await notificationModel.find({
+      where: {
+        templateName: {
+          equals: 'customDelayedMail'
+        }
+      }
+    })
+    expect(receipts.length).to.eql(0)
+  })
+
+  it('wait 10 seconds', done => setTimeout(done, 10000))
+
+  it('check email notifications sent after delay', async () => {
+    const receipts = await notificationModel.find({
+      where: {
+        templateName: {
+          equals: 'customDelayedMail'
+        }
+      }
+    })
+    expect(receipts.length).to.eql(1)
+    const receipt = receipts[1]
+    expect(receipt.input.message).to.eql('Light showers forecasted')
   })
 
   it('should shutdown Tymly', async () => {

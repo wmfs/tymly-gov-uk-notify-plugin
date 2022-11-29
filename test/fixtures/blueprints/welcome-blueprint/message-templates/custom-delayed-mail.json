@@ -1,0 +1,6 @@
+{
+  "registryLookupApiKey": "test_notifyApiKey",
+  "templateId": "9c174384-40b1-4cfe-9fa6-b19d02dadee4",
+  "messageType": "mail",
+  "custom": true
+}

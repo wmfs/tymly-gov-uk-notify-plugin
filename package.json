@@ -30,7 +30,7 @@
     "notifications-node-client": "5.2.1"
   },
   "devDependencies": {
-    "@semantic-release/changelog": "6.0.1",
+    "@semantic-release/changelog": "6.0.2",
     "@semantic-release/exec": "6.0.3",
     "@semantic-release/git": "10.0.1",
     "@wmfs/tymly": "1.224.2",

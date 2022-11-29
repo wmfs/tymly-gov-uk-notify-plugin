@@ -13,6 +13,8 @@ const path = require('path')
 describe('Custom template tests', function () {
   this.timeout(process.env.TIMEOUT || 15000)
 
+  const hasGovNotifyKey = !!process.env.GOV_UK_NOTIFY_API_KEY
+
   const mailTemplateName = 'test_customMail'
   const mailMessageType = 'mail'
   const mailSubject = 'Hello world'
@@ -158,8 +160,13 @@ describe('Custom template tests', function () {
       customTemplateId
     )
 
-    expect(notifications.length).to.eql(1)
-    expect(notifications[0].statusCode).to.eql(201)
+    if (hasGovNotifyKey) {
+      expect(notifications.length).to.eql(1)
+      expect(notifications[0].statusCode).to.eql(201)
+    } else {
+      expect(notifications.length).to.eql(1)
+      expect(notifications[0].statusCode).to.eql(403)
+    }
   })
 
   it('send custom mail to multiple recipients', async () => {
@@ -174,9 +181,15 @@ describe('Custom template tests', function () {
       ],
       customTemplateId
     )
-    expect(notifications.length).to.eql(2)
-    expect(notifications[0].statusCode).to.eql(201)
-    expect(notifications[1].statusCode).to.eql(201)
+    if (hasGovNotifyKey) {
+      expect(notifications.length).to.eql(2)
+      expect(notifications[0].statusCode).to.eql(201)
+      expect(notifications[1].statusCode).to.eql(201)
+    } else {
+      expect(notifications.length).to.eql(2)
+      expect(notifications[0].statusCode).to.eql(403)
+      expect(notifications[1].statusCode).to.eql(403)
+    }
   })
 
   it('create custom message template as sms', async () => {

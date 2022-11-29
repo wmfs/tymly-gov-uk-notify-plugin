@@ -42,6 +42,7 @@ describe('Custom template tests', function () {
   let statebox
   let notify
   let customTemplateModel
+  let sendConfigModel
   let recipientModel
   let notificationModel
   let customTemplateId
@@ -348,7 +349,7 @@ describe('Custom template tests', function () {
       }
     })
     expect(receipts.length).to.eql(1)
-    const receipt = receipts[1]
+    const receipt = receipts[0]
     expect(receipt.input.message).to.eql('Light showers forecasted')
   })
 

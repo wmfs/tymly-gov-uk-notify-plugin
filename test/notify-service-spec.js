@@ -25,8 +25,9 @@ describe('Notify service tests', function () {
   })
 
   it('check service has loaded message templates', () => {
-    expect(Object.keys(notify.templates).length).to.eql(4)
+    expect(Object.keys(notify.templates).length).to.eql(5)
     expect(notify.templates.test_customMail.isCustomTemplate).to.eql(true)
+    expect(notify.templates.test_customDelayedMail.isCustomTemplate).to.eql(true)
     expect(notify.templates.test_customSms.isCustomTemplate).to.eql(true)
     expect(notify.templates.test_welcomeMail.isCustomTemplate).to.eql(false)
     expect(notify.templates.test_welcomeSms.isCustomTemplate).to.eql(false)
@@ -36,30 +37,30 @@ describe('Notify service tests', function () {
     const templates = notify.listMessageTemplates({ format: 'array' })
 
     expect(Array.isArray(templates)).to.eql(true)
-    expect(templates.length).to.eql(4)
+    expect(templates.length).to.eql(5)
   })
 
-  it('list all message templates as array', () => {
+  it('list all message templates as object', () => {
     const templates = notify.listMessageTemplates({ format: 'object' })
 
     expect(Array.isArray(templates)).to.eql(false)
     expect(typeof templates).to.eql('object')
-    expect(Object.keys(templates).length).to.eql(4)
+    expect(Object.keys(templates).length).to.eql(5)
   })
 
   it('list custom message templates as array', () => {
     const templates = notify.listMessageTemplates({ format: 'array', customOnly: true })
 
     expect(Array.isArray(templates)).to.eql(true)
-    expect(templates.length).to.eql(2)
+    expect(templates.length).to.eql(3)
   })
 
-  it('list custom message templates as array', () => {
+  it('list custom message templates as object', () => {
     const templates = notify.listMessageTemplates({ format: 'object', customOnly: true })
 
     expect(Array.isArray(templates)).to.eql(false)
     expect(typeof templates).to.eql('object')
-    expect(Object.keys(templates).length).to.eql(2)
+    expect(Object.keys(templates).length).to.eql(3)
   })
 
   it('should shutdown Tymly', async () => {

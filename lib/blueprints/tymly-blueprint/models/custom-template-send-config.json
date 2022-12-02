@@ -16,7 +16,7 @@
       "type": "string"
     },
     "offsetType": {
-      "title": "Offset type (hours or mins)",
+      "title": "Offset type (hours or days)",
       "type": "string",
       "enum": [
         "HRS",

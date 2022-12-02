@@ -1,0 +1,30 @@
+{
+  "Comment": "State machine to cancel a pizza order",
+  "StartAt": "EmitNotifyEvent",
+  "States": {
+    "EmitNotifyEvent": {
+      "Type": "Task",
+      "Resource": "module:emitNotifyEvents",
+      "ResourceConfig": {
+        "eventNames": [
+          "test_formSubmitted"
+        ],
+        "parameters": {
+          "customerName": "$.name"
+        },
+        "recipients": [
+          "perm-fail@simulator.notify"
+        ]
+      },
+      "End": true
+    }
+  },
+  "restrictions": [
+    {
+      "roleId": "$everyone",
+      "allows": [
+        "*"
+      ]
+    }
+  ]
+}

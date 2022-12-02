@@ -1,3 +1,36 @@
+# [1.41.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.40.0...v1.41.0) (2022-12-02)
+
+
+### ✨ Features
+
+* added offsettype 'test' to emitnotifyevent which will allow an offset defined in seconds [sc-18164] ([cdf8b5a](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/cdf8b5ae6dcba1a800fcc9d428085c3edca27fc6))
+* added tests for sending a custom message with a delay [sc-18164] ([75f6f75](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/75f6f75f94273dc8116a963ff40683397e1e1048))
+* added tymly-schedule-plugin as devdependency to generate task model in memorystorage during custom-template-spec tests [sc-18164] ([7af18f3](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/7af18f30cff5b270a84840e1797a03656a89b7e5))
+* added tymly-schedule-plugin to tymly-paths for use in custom-template-spec [sc-18164] ([1a92c0f](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/1a92c0f4b4e43d596353d5479f79307b0f20ccbd))
+* created custom-delayed-mail message template, declared template in form-submitted notify-event [sc-18164] ([b1cdd1b](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/b1cdd1bdda35d15bbe50475fbb714829afd3cd88))
+* removed hard-coded delay of 15s, restoring offsettype functionality for prod [sc-18164] ([5cd361b](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/5cd361be47d4153ecfec51271bbca29cf6eda4c4))
+
+
+### 🐛 Bug Fixes
+
+* added custom-template-spec test contigency where running locally with no gov-uk-notify-api-key [sc-18164] ([0323d78](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/0323d789b81b66527e36510ac9d41f99f015d3d3))
+* adjusted expect values in notify-service-spec to accomodate new message-template, fixed typos in test titles [sc-18164] ([0150c21](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/0150c217758081fdcda27e1ed893d2075aad504d))
+* declared sendconfigmodel and fixed delayed message receipt array declaration [sc-18164] ([9eee131](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/9eee131747b01372dab16ab785d5d7c92c44fc81))
+* fixed typo in offsettype title property in custom-template-send-config model [sc-18164] ([0b0eeec](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/0b0eeec7c39629e26d775108f2fb4637a42341a0))
+* move schedule services since it isn't available until after boot ([9b062aa](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/9b062aab0c064b5a416ebadc7e045e1a63428aa2))
+* refactor emit notify events into service function ([9b935f4](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/9b935f48a579c4bd4c9668b820b22d42939d2c2d))
+* updated schedule-plugin dependency [sc-18164] ([b29db6f](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/b29db6f7194977dcb4a8e006fd9518249d9f5417))
+
+
+### 🛠 Builds
+
+* **deps-dev:** update dependency [@semantic-release](https://github.com/semantic-release)/changelog to v6.0.2 ([06a9e9c](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/06a9e9c2daca6fac878bb9927db72d6fd6d85eb4))
+
+
+### 📦 Code Refactoring
+
+* remove unused properties ([167fe89](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/167fe8946eb5ab6dc90d0d2c9d098da728f6e996))
+
 # [1.40.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.39.0...v1.40.0) (2022-11-11)
 
 

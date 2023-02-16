@@ -1,3 +1,18 @@
+# [1.42.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.41.0...v1.42.0) (2023-02-16)
+
+
+### 🛠 Builds
+
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly-schedule-plugin to v1.4.0 ([06052cc](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/06052cc72532958f9817c39c49e2cf337625bc56))
+* **deps-dev:** update dependency mocha to v10.2.0 ([3e36d9a](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/3e36d9a67e793fabe1942aaf951a63709325af8f))
+* **deps-dev:** update dependency semantic-release to v20 ([5d5d8ff](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/5d5d8ff9abd7e73e756d1387625b486fcb7014eb))
+* **deps-dev:** update dependency semantic-release to v20.0.1 ([98d5311](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/98d53117947d52dbc9f3ce7cf356955c73b9f448))
+* **deps-dev:** update dependency semantic-release to v20.0.2 ([0c05ecc](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/0c05ecc017f3051a8e4d90d7d5dbf09eac9d0fc7))
+* **deps-dev:** update dependency semantic-release to v20.0.3 ([093d8df](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/093d8dfcb987721fe5712e8ad228d71baabfe98b))
+* **deps-dev:** update dependency semantic-release to v20.0.4 ([9f6d94b](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/9f6d94b33bcf5ccafaebccea2fca71c2665a7690))
+* **deps-dev:** update dependency semantic-release to v20.1.0 ([1b984c5](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/1b984c5d3f2db1d89a18a1a42b47b4bedc3176d1))
+* **deps:** update dependency notifications-node-client to v5.2.3 ([e235774](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/e23577493f380e8365102d11357fd73081743c8d))
+
 # [1.41.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.40.0...v1.41.0) (2022-12-02)
 
 

@@ -1,3 +1,10 @@
+# [1.45.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.44.0...v1.45.0) (2023-03-13)
+
+
+### 🛠 Builds
+
+* **deps:** update dependency csv-parse to v5.3.6 ([2998780](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/2998780207f8b9dc5d11b41a27c8c79a6a9e4f25))
+
 # [1.44.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.43.0...v1.44.0) (2023-03-13)
 
 

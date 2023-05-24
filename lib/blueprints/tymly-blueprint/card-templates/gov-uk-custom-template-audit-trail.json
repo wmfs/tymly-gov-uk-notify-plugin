@@ -1,6 +1,9 @@
 {
-  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-  "version": "1.0",
+  "templateMeta": {
+    "name": "gov-uk-view-custom-template",
+    "title": "Change history",
+    "category": "govUkNotify"
+  },
   "type": "AdaptiveCard",
   "body": [
     {
@@ -55,9 +58,6 @@
       "title": "Close"
     }
   ],
-  "templateMeta": {
-    "name": "gov-uk-view-custom-template",
-    "title": "Change history",
-    "category": "govUkNotify"
-  }
+  "$schema": "https://raw.githubusercontent.com/wmfs/cardscript-schema/master/lib/schema.json",
+  "version": "1.0"
 }

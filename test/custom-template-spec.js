@@ -307,12 +307,6 @@ describe('Custom template tests', function () {
     expect(receipts.length).to.eql(0)
   })
 
-  /*
-  it('emit notify event simulating form submission', async () => {
-    await notify.emitNotifyEvents(['test_formSubmitted'], {customerName: 'Richard'}, ['perm-fail@simulator.notify'])
-  })
-  */
-
   it('run state machine to submit a form and fire a notify event', async () => {
     const execDesc = await statebox.startExecution(
       {
@@ -338,7 +332,13 @@ describe('Custom template tests', function () {
     expect(receipts.length).to.eql(0)
   })
 
-  it('wait 10 seconds', done => setTimeout(done, 10000))
+  it('wait 15 seconds', done => {
+    console.log(`15 seconds delay starts at:   ${new Date()}`)
+    setTimeout(() => {
+      console.log(`15 seconds delay finishes at: ${new Date()}`)
+      done()
+    }, 15000)
+  })
 
   it('check email notifications sent after delay', async () => {
     const receipts = await notificationModel.find({

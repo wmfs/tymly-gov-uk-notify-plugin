@@ -1,3 +1,25 @@
+# [1.46.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.45.0...v1.46.0) (2023-06-07)
+
+
+### ✨ Features
+
+* minor logging improvements and removed commented out code ([fe9c0d9](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/fe9c0d9483de1c0541f3ed52253fa71db057b797))
+* updated schema for cardscript files ([0af5703](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/0af57036d90e0b60160a0f650597b9b9a53a80b3))
+
+
+### 🛠 Builds
+
+* **deps-dev:** update dependency [@semantic-release](https://github.com/semantic-release)/changelog to v6.0.3 ([4fbd98e](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/4fbd98e4614039f1ca8b6c36f89207c786f02234))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly-schedule-plugin to v1.6.1 ([dee139f](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/dee139f7a1a8b8309ecf11d565a7e1aaf3f19cea))
+* **deps-dev:** update dependency semantic-release to v20.1.3 ([4636922](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/4636922b28707b1f485873c2316f8fe53bee7d22))
+* **deps-dev:** update dependency semantic-release to v21 ([806b075](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/806b075683013fcd0488041b50106827eafb369a))
+* **deps-dev:** update dependency semantic-release to v21.0.3 ([ec9ddfd](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/ec9ddfd933076ba8b6a515dd6eb3eb018275ad59))
+
+
+### 🚨 Tests
+
+* removed commented out code and updated duration of intentional delay + logging improvements ([26a6f72](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/26a6f725e0ced335b1aa34e971b62a324f9cf6b2))
+
 # [1.45.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.44.0...v1.45.0) (2023-03-13)
 
 

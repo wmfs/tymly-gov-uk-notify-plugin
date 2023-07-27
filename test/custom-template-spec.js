@@ -174,7 +174,6 @@ describe('Custom template tests', function () {
     )
 
     if (hasGovNotifyKey) {
-      console.log('GOV KEY: ', process.env.GOV_UK_NOTIFY_API_KEY)
       expect(notifications.length).to.eql(1)
       expect(notifications[0].statusCode).to.eql(201)
     } else {

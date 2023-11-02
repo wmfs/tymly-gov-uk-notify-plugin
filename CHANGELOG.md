@@ -1,3 +1,22 @@
+# [1.47.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.46.0...v1.47.0) (2023-11-02)
+
+
+### ✨ Features
+
+* sms handling for events [sc-20366] ([521992d](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/521992d8b2f55f8846044c0fd0752c5d1e9aa38f))
+
+
+### 🐛 Bug Fixes
+
+* revert syntax for datetime assignment [sc-20366] ([4f947cc](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/4f947ccc559d1a9e56764e2dbb5dadc82ea172b8))
+
+
+### ♻️ Chores
+
+* add temp log to get api key ([77b096c](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/77b096c55fa2c23507f92a7af94fa4720d951d97))
+* remove temp log ([93853d6](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/93853d6484a1bf04659ed815c9d390d828e7ed95))
+* standard ([31b0eb1](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/31b0eb1f23ddb4fa804eb5af29a84895a53ff479))
+
 # [1.46.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.45.0...v1.46.0) (2023-06-07)
 
 

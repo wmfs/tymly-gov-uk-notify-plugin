@@ -1,3 +1,10 @@
+# [1.48.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.47.0...v1.48.0) (2024-02-12)
+
+
+### Bug Fixes
+
+* update release notes generator preset ([01c6bf8](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/01c6bf8a85c413fe2fa1ca3fbec26429c3d42e95))
+
 # [1.47.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.46.0...v1.47.0) (2023-11-02)
 
 

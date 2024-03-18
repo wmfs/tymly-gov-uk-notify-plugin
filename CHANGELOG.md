@@ -1,3 +1,10 @@
+# [1.49.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.48.0...v1.49.0) (2024-03-18)
+
+
+### Features
+
+* [sc-24057] General Tymly Notify Service ([#602](https://github.com/wmfs/tymly-gov-uk-notify-plugin/issues/602)) ([65a26cf](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/65a26cfe5cefc220ed8150f8260c64157e31e5cd))
+
 # [1.48.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.47.0...v1.48.0) (2024-02-12)
 
 

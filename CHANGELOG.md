@@ -1,3 +1,10 @@
+# [1.50.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.49.0...v1.50.0) (2024-09-25)
+
+
+### Features
+
+* **(pin 262) crr dd:** [sc-23400] Keep filters after Task assigned [#624](https://github.com/wmfs/tymly-gov-uk-notify-plugin/issues/624) ([07ca88c](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/07ca88cfce4e9dd34ae9d5707904c219a70e427f))
+
 # [1.49.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.48.0...v1.49.0) (2024-03-18)
 
 

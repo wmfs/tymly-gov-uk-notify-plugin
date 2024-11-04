@@ -35,7 +35,7 @@
     "@semantic-release/git": "10.0.1",
     "@wmfs/tymly": "1.224.2",
     "@wmfs/tymly-cardscript-plugin": "1.37.0",
-    "@wmfs/tymly-schedule-plugin": "1.7.0",
+    "@wmfs/tymly-schedule-plugin": "1.9.0",
     "@wmfs/tymly-test-helpers": "1.24.0",
     "chai": "4.5.0",
     "codecov": "3.8.3",

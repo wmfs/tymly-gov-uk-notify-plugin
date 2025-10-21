@@ -1,3 +1,21 @@
+## [1.56.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.55.0...v1.56.0) (2025-10-21)
+
+### Build system dependencies :hammer:
+
+* **deps-dev:** update dependency @semantic-release/release-notes-generator to v14.1.0 ([#706](https://github.com/wmfs/tymly-gov-uk-notify-plugin/issues/706)) ([6a03167](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/6a03167948c7418cc42334e25c02929f0f7ce62b))
+* **deps-dev:** update dependency chai to v6 ([#703](https://github.com/wmfs/tymly-gov-uk-notify-plugin/issues/703)) ([2ad2815](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/2ad2815f8a82e3d474e481d0413d22689d91504f))
+* **deps-dev:** update dependency chai to v6.2.0 ([#710](https://github.com/wmfs/tymly-gov-uk-notify-plugin/issues/710)) ([0c703ac](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/0c703ac0f127d7c9801b7eae04cd41ee6fb89627))
+* **deps-dev:** update dependency mocha to v11.7.2 ([#704](https://github.com/wmfs/tymly-gov-uk-notify-plugin/issues/704)) ([64e2487](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/64e24876ca4295ced4e937d60cf7bbf275d8c4e6))
+* **deps-dev:** update dependency mocha to v11.7.3 ([#711](https://github.com/wmfs/tymly-gov-uk-notify-plugin/issues/711)) ([2c30713](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/2c3071350b8ed3280412dfc04d10311fd6c77cac))
+* **deps-dev:** update dependency mocha to v11.7.4 ([#712](https://github.com/wmfs/tymly-gov-uk-notify-plugin/issues/712)) ([221ea01](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/221ea01cdef7c8e409cdc94e1a65d3b66a0995ba))
+* **deps-dev:** update dependency semantic-release to v24.2.8 ([#708](https://github.com/wmfs/tymly-gov-uk-notify-plugin/issues/708)) ([6e7a7b5](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/6e7a7b50e7d7594baf6734a486209d8c01701f8d))
+* **deps-dev:** update dependency semantic-release to v24.2.9 ([#709](https://github.com/wmfs/tymly-gov-uk-notify-plugin/issues/709)) ([ebdb37d](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/ebdb37d1804ed125724c0ef845ef0c98f23467c3))
+* **deps-dev:** update dependency semantic-release to v25 ([#713](https://github.com/wmfs/tymly-gov-uk-notify-plugin/issues/713)) ([9b4de6c](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/9b4de6c6969cee9a5c58b737ea6d3062c55feb89))
+* **deps-dev:** update dependency semantic-release to v25.0.1 ([#714](https://github.com/wmfs/tymly-gov-uk-notify-plugin/issues/714)) ([0f3ba8d](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/0f3ba8d3a1a4191ba91a6b11fe902e47f14f95f5))
+* **deps-dev:** update dependency uuid to v12 ([#705](https://github.com/wmfs/tymly-gov-uk-notify-plugin/issues/705)) ([e41dad6](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/e41dad6a73c11a31433d4c981d6c7c15441cf758))
+* **deps-dev:** update dependency uuid to v13 ([#707](https://github.com/wmfs/tymly-gov-uk-notify-plugin/issues/707)) ([40347ba](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/40347bab0587d2a6861a77f0be973cd5e6ee0092))
+* **deps:** revert chai to non-esm ([2e7b209](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/2e7b2098a0342987e36d2e19162183c0b12f2d07))
+
 ## [1.55.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.54.0...v1.55.0) (2025-07-18)
 
 ### Build system dependencies :hammer:

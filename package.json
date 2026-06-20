@@ -46,7 +46,7 @@
     "nyc": "18.0.0",
     "semantic-release": "25.0.5",
     "standard": "17.1.2",
-    "uuid": "14.0.0"
+    "uuid": "14.0.1"
   },
   "scripts": {
     "lint": "standard",

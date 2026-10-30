@@ -1,3 +1,27 @@
+## [1.57.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.56.1...v1.57.0) (2026-10-30)
+
+### Build system dependencies :hammer:
+
+* **deps-dev:** fix conventionalcommit versions [sc-34125] ([643cd7b](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/643cd7b9f96657f11e357b96d46efac444f4a71f))
+* **deps-dev:** update dependency @wmfs/tymly to v1.317.1 ([#748](https://github.com/wmfs/tymly-gov-uk-notify-plugin/issues/748)) ([00b4be5](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/00b4be5247533610c30a5dd75b8e676d22d2b486))
+* **deps-dev:** update dependency @wmfs/tymly-cardscript-plugin to v1.53.1 ([#749](https://github.com/wmfs/tymly-gov-uk-notify-plugin/issues/749)) ([21b915d](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/21b915d596b909bfddc6b1550fd0355415cd95f9))
+* **deps-dev:** update dependency @wmfs/tymly-test-helpers to v1.24.1 ([#750](https://github.com/wmfs/tymly-gov-uk-notify-plugin/issues/750)) ([bceb5be](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/bceb5bebaba1a994dda2cf9f24525ed8d73c9751))
+* **deps-dev:** update dependency conventional-changelog-conventionalcommits to v10.4.0 ([#752](https://github.com/wmfs/tymly-gov-uk-notify-plugin/issues/752)) ([30765f2](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/30765f25f66a4bad65af964601b0d39b071def4f))
+* **deps-dev:** update dependency conventional-changelog-conventionalcommits to v10.4.1 ([#762](https://github.com/wmfs/tymly-gov-uk-notify-plugin/issues/762)) ([ed26adc](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/ed26adc59746354002c6ee8602c9fdcf17bb1ef2))
+* **deps-dev:** update dependency mocha to v12 ([#753](https://github.com/wmfs/tymly-gov-uk-notify-plugin/issues/753)) ([1d3be13](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/1d3be1328891fef2f221f14d7cc7145f0936dc29))
+* **deps-dev:** update dependency mocha to v12.0.1 ([#756](https://github.com/wmfs/tymly-gov-uk-notify-plugin/issues/756)) ([afe21af](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/afe21afbf8330e89c89f3a8dbb85cf11b766cc4b))
+* **deps-dev:** update dependency mocha to v12.0.2 ([#758](https://github.com/wmfs/tymly-gov-uk-notify-plugin/issues/758)) ([e204f27](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/e204f27166bcf3c8742701f563b37427f694beb1))
+* **deps-dev:** update dependency mocha to v12.0.3 ([#759](https://github.com/wmfs/tymly-gov-uk-notify-plugin/issues/759)) ([3a074a8](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/3a074a8d666aa4a062311cde997d335e24334b6b))
+* **deps-dev:** update dependency uuid to v14.0.2 ([#751](https://github.com/wmfs/tymly-gov-uk-notify-plugin/issues/751)) ([0b0ea8f](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/0b0ea8fe9f0c87b17cdd0439368843148104cc64))
+* **deps-dev:** update dependency uuid to v14.0.3 ([#763](https://github.com/wmfs/tymly-gov-uk-notify-plugin/issues/763)) ([9961dad](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/9961dad253f5662f42c947b8396e39c894d8b73d))
+* **deps:** update dependency csv-parse to v7 [security] ([#755](https://github.com/wmfs/tymly-gov-uk-notify-plugin/issues/755)) ([5fcab2e](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/5fcab2e5beaced6d9c484499f4718dac5e30b47b))
+* **deps:** update dependency moment to v2.31.0 [security] ([#761](https://github.com/wmfs/tymly-gov-uk-notify-plugin/issues/761)) ([4b4391a](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/4b4391ab639a8bad294cc2a00ed710963fbd0d4a))
+
+### CICD Configuration Changes :construction_worker:
+
+* use github-app-token orb for release token [sc-34101] ([#767](https://github.com/wmfs/tymly-gov-uk-notify-plugin/issues/767)) ([182d9f2](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/182d9f29af105d6451ecaa87e53b565cbe823b23))
+* use shared renovate preset [sc-34117] ([#766](https://github.com/wmfs/tymly-gov-uk-notify-plugin/issues/766)) ([1ca7c77](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/1ca7c7755d6911fa8a584f341c973df11a965849))
+
 ## [1.56.1](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.56.0...v1.56.1) (2026-08-13)
 
 ## [1.56.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.55.0...v1.56.0) (2025-10-21)

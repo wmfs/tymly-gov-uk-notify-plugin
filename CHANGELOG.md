@@ -1,3 +1,9 @@
+## [1.59.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.58.0...v1.59.0) (2026-11-02)
+
+### Build system dependencies :hammer:
+
+* **deps:** update dependency notifications-node-client to v8.5.0 ([#724](https://github.com/wmfs/tymly-gov-uk-notify-plugin/issues/724)) ([c034386](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/c0343867c60232abc4219d728775721a8d0925c7))
+
 ## [1.58.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.57.0...v1.58.0) (2026-11-02)
 
 ### Build system dependencies :hammer:

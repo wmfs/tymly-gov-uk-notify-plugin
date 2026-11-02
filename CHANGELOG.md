@@ -1,3 +1,9 @@
+## [1.58.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.57.0...v1.58.0) (2026-11-02)
+
+### Build system dependencies :hammer:
+
+* **deps:** update dependency csv-parse to v7.0.3 ([#769](https://github.com/wmfs/tymly-gov-uk-notify-plugin/issues/769)) ([e3ea5fb](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/e3ea5fbc25d9016315afcf07a7f6feee6dec6816))
+
 ## [1.57.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.56.1...v1.57.0) (2026-10-30)
 
 ### Build system dependencies :hammer:

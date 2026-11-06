@@ -1,3 +1,9 @@
+## [1.60.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.59.0...v1.60.0) (2026-11-06)
+
+### Build system dependencies :hammer:
+
+* **deps:** update [@wmfs](https://github.com/wmfs) packages ([#768](https://github.com/wmfs/tymly-gov-uk-notify-plugin/issues/768)) ([13e47ce](https://github.com/wmfs/tymly-gov-uk-notify-plugin/commit/13e47ce58cad46f3d9a7727bba92a095fcb318f0))
+
 ## [1.59.0](https://github.com/wmfs/tymly-gov-uk-notify-plugin/compare/v1.58.0...v1.59.0) (2026-11-02)
 
 ### Build system dependencies :hammer:
